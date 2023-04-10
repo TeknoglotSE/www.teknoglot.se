@@ -18,7 +18,7 @@
     "hexo-generator-seo-friendly-sitemap": "0.0.25",
     "hexo-generator-tag": "^0.2.0",
     "hexo-inject": "^1.0.0",
-    "hexo-migrator-wordpress": "^0.1.2",
+    "hexo-migrator-wordpress": "^2.1.2",
     "hexo-renderer-ejs": "^0.1.1",
     "hexo-renderer-markdown-it-plus": "^1.0.4",
     "hexo-renderer-stylus": "^0.3.3",
