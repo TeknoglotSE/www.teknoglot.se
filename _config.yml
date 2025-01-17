@@ -47,6 +47,8 @@ highlight:
 default_category: Technobabble
 category_map:
   Technobabble: tb
+  Zabbix: zabbix
+  Grafana: grafana
   Microsoft: ms
   Code: code
   Powershell: posh
@@ -96,7 +98,7 @@ tag_map:
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
-time_format: HH:mm:ss
+time_format: HH:mm
 
 # Markdown generator
 markdown_it_plus:
@@ -132,16 +134,16 @@ theme: tg-hueman
 # Minification
 ## Docs: https://github.com/unhealthy/hexo-all-minifier
 html_minifier:
-  enable: false
+  enable: true
   exclude:
 
 css_minifier:
-  enable: false
+  enable: true
   exclude: 
     - '*.min.css'
     
 js_minifier:
-  enable: false
+  enable: true
   mangle: true
   output:
   compress:
