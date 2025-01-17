@@ -16,7 +16,6 @@ customize:
   thumbnail: false
   favicon: /favicon.png
   social_links:
-    twitter: https://twitter.com/teknoglot
     github: https://github.com/stegenfeldt
     rss: /rss.xml
     
@@ -44,6 +43,5 @@ miscellaneous:
     fb_app_id:
     fb_admins:
     twitter_id:
-    google_plus:
   links:
     Atea: http://www.atea.se/
