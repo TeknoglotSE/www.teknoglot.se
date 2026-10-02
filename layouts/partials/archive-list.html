@@ -1,0 +1,34 @@
+{{- /*
+  Archive listing: posts grouped by year, two cards per row.
+
+  Reproduces common/archive.ejs, including two details that look like bugs:
+
+    - the year link carries no trailing slash (/archives/2018), so it relies on
+      the server redirecting;
+    - a year group that straddles a page boundary is re-emitted on each page,
+      and a group ending on an odd number of posts closes with a half-full
+      .article-row rather than being balanced.
+
+  Input is a date-descending Pages collection. Grouping is done by hand rather
+  than with GroupBy, which misbehaves on this Hugo version when its argument
+  has been reassigned in a template.
+*/ -}}
+{{- $pages := . -}}
+{{- $last := "" -}}
+{{- if gt (len $pages) 0 -}}{{- $last = (index $pages (sub (len $pages) 1)).RelPermalink -}}{{- end -}}
+{{- $year := "" -}}
+{{- $row := 0 -}}
+{{- range $p := $pages -}}
+  {{- $y := $p.Params.year -}}
+  {{- if ne $y $year -}}
+    {{- if ne $year "" }}</div></section>{{ end -}}
+    <section class="archives-wrap"><div class="archive-year-wrap"><a href="/archives/{{ $y }}" class="archive-year"><i class="icon fa fa-calendar-o"></i>{{ $y }}</a></div><div class="archives">
+    {{- $year = $y -}}
+    {{- $row = 0 -}}
+  {{- end -}}
+  {{- $row = add $row 1 -}}
+  {{- if eq (mod (sub $row 1) 2) 0 }}<div class="article-row">{{ end -}}
+  {{- partial "summary.html" $p -}}
+  {{- if or (eq (mod $row 2) 0) (eq $p.RelPermalink $last) }}</div>{{ end -}}
+{{- end -}}
+{{- if ne $year "" }}</div></section>{{ end -}}

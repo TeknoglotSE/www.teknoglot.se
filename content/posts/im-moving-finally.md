@@ -1,12 +1,16 @@
 ---
 title: I'm moving (finally)
 date: 2011-02-01 12:10:52
+year: 2011
+month: 02
 lastmod: 2016-05-25T00:33:26+02:00
 url: /tb/im-moving-finally/
 url_encoded: /tb/im-moving-finally/
+description: If you’re seeing this, the move went OK. 😛 Anyway, I have tried to make sure that all the links, images and urls are still intact and that people are automatically redirected to the correct address o
+excerpt: If you’re seeing this, the move went OK. 😛 Anyway, I have tried to make sure that all the links, images and urls are still intact and that people are automatically redirected to the correct address on the new site too. I think I got it right, but who knows? Still fiddling with the themes thought. Sorry for the inconvenience! ps. Post from the old site is a jump ahead.
 cats:
   - tb
-tags:[]
+tags: []
 hexo_id: 376
 ---
 

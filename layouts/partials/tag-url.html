@@ -1,0 +1,16 @@
+{{- /*
+  Look up a tag page's URL by its display name.
+
+  Hugo taxonomies cannot express these URLs: the tag slugs are partly
+  case-preserving (/tag/x64/, /tag/OpsMgr-2012-R2/) and unmapped, so the
+  tag pages are generated as explicit content leaves instead. This resolves a
+  tag name to the matching leaf.
+
+  Input: the tag name. Output: the relative permalink, or empty if not found.
+*/ -}}
+{{- $name := . -}}
+{{- $url := "" -}}
+{{- range where site.Pages "Type" "tagpage" -}}
+  {{- if eq .Params.tag $name -}}{{- $url = .RelPermalink -}}{{- end -}}
+{{- end -}}
+{{- $url -}}

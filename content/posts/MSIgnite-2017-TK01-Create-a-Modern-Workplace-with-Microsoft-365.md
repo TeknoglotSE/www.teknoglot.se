@@ -1,9 +1,13 @@
 ---
 title: "#MSIgnite 2017: TK01 - Create a Modern Workplace with Microsoft 365"
 date: 2017-09-25 12:17:15
+year: 2017
+month: 09
 lastmod: 2017-09-28T10:24:57-07:00
 url: /Events/MSIgnite-2017/MSIgnite-2017-TK01-Create-a-Modern-Workplace-with-Microsoft-365/
 url_encoded: /Events/MSIgnite-2017/MSIgnite-2017-TK01-Create-a-Modern-Workplace-with-Microsoft-365/
+description: TK01 - Create a modern workplace with Microsoft 365 Sep 25, 10:45 am – 12:15 pm  UNSTRUCTURED NOTES AWARENESS NOTICE! Also written on phone, will come back and refine   Arrived late due to escalators
+excerpt: TK01 - Create a modern workplace with Microsoft 365 Sep 25, 10:45 am – 12:15 pm UNSTRUCTURED NOTES AWARENESS NOTICE! Also written on phone, will come back and refine Arrived late due to escalators being bottlenecks. Something about 3d objects in office, PowerPoint. Showing a photo with mixed reality, rotating 3d-space. Office Windows Ink deleting stuff with pen, highlights etc Seems fairly intuitive. Would like to test soon. Word accessibility, colour blindness, proofing with patterns. language improvements. suggestions about better wordings. Excel
 cats:
   - Events
   - Events/MSIgnite-2017

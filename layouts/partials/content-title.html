@@ -1,0 +1,28 @@
+{{- /*
+  Page title bar. One shape per page type, taken from the rendered output.
+
+    home     <em class="page-title-link" data-url="home">Home</em>
+    post     category breadcrumb, links with class "page-title-link"
+    page     <em class="page-title-link" data-url="{path}/index.html">About</em>
+    category <i folder-open></i>Category: <em class="page-title-link">{name}</em>
+    tag      <i tag></i>Tag: <em>{name}</em>          (note: no class on the em)
+    archive  <i archive></i>Archive
+    archive year  <i archive></i>Archive: {year}
+
+  The tag <em> genuinely lacks a class in Hexo's output. It is reproduced.
+*/ -}}
+<div class="main-body-header"><h1 class="header">
+{{- if .IsHome -}}
+<em class="page-title-link" data-url="home">Home</em>
+{{- else if eq .Type "posts" -}}
+{{- partial "cat-breadcrumb.html" (dict "cats" .Params.cats "cls" "page-title-link") -}}
+{{- else if eq .Type "topic" -}}
+<i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">{{ .Title }}</em>
+{{- else if eq .Type "tagpage" -}}
+<i class="icon fa fa-tag"></i>Tag: <em>{{ .Title }}</em>
+{{- else if eq .Type "archive" -}}
+{{- if .Params.year }}<i class="icon fa fa-archive"></i>Archive: {{ .Params.year }}{{ else }}<i class="icon fa fa-archive"></i>Archive{{ end -}}
+{{- else -}}
+<em class="page-title-link" data-url="{{ .RelPermalink }}index.html">{{ .Title }}</em>
+{{- end -}}
+</h1></div>

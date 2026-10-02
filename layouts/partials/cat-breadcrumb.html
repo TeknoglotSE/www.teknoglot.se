@@ -1,0 +1,39 @@
+{{- /*
+  Category breadcrumb, shared by summary cards, the recent-posts widget and the
+  post page title bar.
+
+  Hexo calls list_categories(post.categories, {depth: 2, style: 'none',
+  separator: '<i class="icon fa fa-angle-right"></i>'}). The effect is: every
+  category chain on the post is expanded to its full ancestor chain, the
+  resulting names are deduplicated, sorted by name, and joined by the separator.
+
+  So a post filed under ms/windows/winxp renders as
+  Microsoft > Windows > Windows XP, not just "Windows XP". The post with the
+  inline flow-array categories renders all five of its nodes, even though its
+  permalink uses only the last chain.
+
+  Input: dict with cats (the post's `cats`) and cls (link class).
+*/ -}}
+{{- $chains := .cats -}}
+{{- $cls := .cls -}}
+{{- $topics := where site.Pages "Type" "topic" -}}
+{{- $expanded := slice -}}
+{{- range $chains -}}
+  {{- $acc := "" -}}
+  {{- range split . "/" -}}
+    {{- $acc = cond (eq $acc "") . (printf "%s/%s" $acc .) -}}
+    {{- $expanded = $expanded | append $acc -}}
+  {{- end -}}
+{{- end -}}
+{{- $expanded = uniq $expanded -}}
+{{- $pages := slice -}}
+{{- range $expanded -}}
+  {{- $chain := . -}}
+  {{- range $topics -}}
+    {{- if eq .Params.cat $chain -}}
+      {{- $pages = $pages | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $pages = sort $pages "Title" -}}
+{{- range $i, $p := $pages -}}{{ if $i }}<i class="icon fa fa-angle-right"></i>{{ end }}<a class="{{ $cls }}" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>{{ end -}}

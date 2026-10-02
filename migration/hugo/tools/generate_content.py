@@ -72,7 +72,7 @@ def yaml_scalar(value):
 
 def yaml_list(items, indent=""):
     if not items:
-        return "[]"
+        return " []"
     return "\n" + "\n".join('%s- %s' % (indent, yaml_scalar(i)) for i in items)
 
 
@@ -99,6 +99,21 @@ def main():
         fail("findings/taxonomy.json missing - run extract_permalinks.py first")
     with open(tax_path, encoding="utf-8") as fh:
         tax = json.load(fh)
+
+    desc_path = os.path.join(FINDINGS, "descriptions.json")
+    if not os.path.exists(desc_path):
+        fail("findings/descriptions.json missing - "
+             "run extract_descriptions.js first")
+    with open(desc_path, encoding="utf-8") as fh:
+        descriptions = json.load(fh)
+
+    exc_path = os.path.join(FINDINGS, "excerpts.json")
+    if not os.path.exists(exc_path):
+        fail("findings/excerpts.json missing - "
+             "run extract_excerpts.js first")
+    with open(exc_path, encoding="utf-8") as fh:
+        excerpts = json.load(fh)
+
     rows = tax["posts"]
     if len(rows) != 63:
         fail("expected 63 posts in taxonomy.json, found %d" % len(rows))
@@ -119,7 +134,8 @@ def main():
     topics_dir = os.path.join(CONTENT, "topics")
     tags_dir = os.path.join(CONTENT, "tags")
     pages_dir = os.path.join(CONTENT, "pages")
-    for d in (posts_dir, topics_dir, tags_dir, pages_dir):
+    archives_dir = os.path.join(CONTENT, "archives")
+    for d in (posts_dir, topics_dir, tags_dir, pages_dir, archives_dir):
         os.makedirs(d)
 
     # --- posts ------------------------------------------------------------
@@ -137,13 +153,31 @@ def main():
         lastmod = git_last_commit_iso(
             os.path.join("source", "_posts", r["file"]))
 
+        desc = descriptions.get(r["dir"])
+        if not desc:
+            fail("no description for %s (key %r)" % (r["file"], r["dir"]))
+        exc = excerpts.get(r["slug"])
+        if not exc:
+            fail("no excerpt for %s" % r["slug"])
+
         chains = [c["slug"] for c in r["categories"]]
         tags = r["tags"]
+
+        # Year and month as plain strings, for archive grouping. Derived from the
+        # front-matter wall-clock date, which is what Hexo's post.date.year()
+        # saw. Filtering on these avoids Hugo's Date.Year accessor, which does
+        # not behave in `where` on this version.
+        m = re.match(r"^(\d{4})-(\d{2})", date)
+        if not m:
+            fail("unparseable date %r in %s" % (date, r["file"]))
+        year_s, month_s = m.group(1), m.group(2)
 
         fm = []
         fm.append("---")
         fm.append("title: %s" % yaml_scalar(r["title"]))
         fm.append("date: %s" % yaml_scalar(date))
+        fm.append("year: %s" % yaml_scalar(year_s))
+        fm.append("month: %s" % yaml_scalar(month_s))
         if lastmod:
             fm.append("lastmod: %s" % yaml_scalar(lastmod))
         # Explicit permalink: the whole point of this generator.
@@ -153,6 +187,12 @@ def main():
         # separately for sitemap generation.
         fm.append("url: /%s" % yaml_scalar(r["dir"]))
         fm.append("url_encoded: %s" % yaml_scalar(r["url"]))
+        # read from master's built output; not recomputable, see
+        # tools/extract_descriptions.js for why
+        fm.append("description: %s" % yaml_scalar(desc))
+        # harvested from master's rendered cards; contains a non-breaking space
+        # in at least one post, and is emitted unescaped as Hexo did
+        fm.append("excerpt: %s" % yaml_scalar(exc["excerpt"]))
         fm.append("cats:%s" % yaml_list(chains, "  "))
         fm.append("tags:%s" % yaml_list(tags, "  "))
         # preserved for reference only; never used for routing
@@ -189,9 +229,15 @@ def main():
 
     for c in tax["categories"]:
         slug = c["url"].replace("/topics/", "").strip("/")
-        posts = cat_posts.get(slug, [])
-        # order by date desc, matching master's listings
-        posts = sorted(posts, key=lambda p: p["date_local"], reverse=True)
+        # A parent counts every distinct post beneath it, not just posts filed
+        # directly at that node. master shows Windows = 2 (its own post plus
+        # Windows XP), so the count must be prefix-based and deduplicated.
+        prefix = slug + "/"
+        count = 0
+        for r in rows:
+            if any(ch == slug or ch.startswith(prefix)
+                   for ch in (x["slug"] for x in r["categories"])):
+                count += 1
         parent = slug.rsplit("/", 1)[0] if "/" in slug else ""
         depth = slug.count("/") + 1
         fm = [
@@ -200,8 +246,9 @@ def main():
             "type: topic",
             "url: %s" % yaml_scalar(c["url"]),
             "cat: %s" % yaml_scalar(slug),
+            "cat_parent: %s" % yaml_scalar(parent),
             "chain_depth: %d" % depth,
-            "post_count: %d" % len(posts),
+            "post_count: %d" % count,
             "---",
             "",
         ]
@@ -240,10 +287,51 @@ def main():
         with open(path, "w", encoding="utf-8") as fh:
             fh.write("\n".join(fm))
 
+    # --- archive pages -----------------------------------------------------
+    # The shape of the archive tree is read from master's output rather than
+    # derived, because it is not simply "every year that has posts": the tree
+    # holds a page per year and per month, and only the root is paginated.
+    archives_root = os.path.join(REPO, "docs", "archives")
+    archive_paths = []
+    for root, dirs, files in os.walk(archives_root):
+        dirs[:] = [d for d in dirs
+                   if not d.startswith("._") and d != "page"]
+        if "index.html" not in files:
+            continue
+        rel = os.path.relpath(root, archives_root).replace(os.sep, "/")
+        if rel == ".":
+            rel = ""
+        archive_paths.append(rel)
+    archive_paths.sort(key=lambda p: (p.count("/"), p))
+
+    archive_written = 0
+    for rel in archive_paths:
+        url = "/archives/" + (rel + "/" if rel else "")
+        fm = [
+            "---",
+            "title: %s" % yaml_scalar("Archive"),
+            "type: archive",
+            "url: %s" % yaml_scalar(url),
+            "archive_path: %s" % yaml_scalar(rel),
+        ]
+        if rel:
+            parts = rel.split("/")
+            fm.append("year: %s" % yaml_scalar(parts[0]))
+            if len(parts) > 1:
+                fm.append("month: %s" % yaml_scalar(parts[1]))
+        fm.append("---")
+        fm.append("")
+        path = os.path.join(archives_dir, rel, "_index.md")
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.write("\n".join(fm))
+        archive_written += 1
+
     # --- standalone pages -------------------------------------------------
     about_src = os.path.join(REPO, "source", "About", "index.md")
     raw, body = split_front_matter(about_src)
     date = front_matter_date(raw) or "2025-01-17 11:34:00"
+    about_desc = descriptions.get("About/")
     fm = [
         "---",
         "title: About",
@@ -253,14 +341,17 @@ def main():
             or date),
         "url: /About/",
         "layout: page",
-        "---",
     ]
+    if about_desc:
+        fm.append("description: %s" % yaml_scalar(about_desc))
+    fm.append("---")
     with open(os.path.join(pages_dir, "about.md"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(fm) + "\n" + body)
 
     print("posts    : %d" % written)
     print("topics   : %d" % len(tax["categories"]))
     print("tags     : %d" % len(tax["tags"]))
+    print("archives : %d" % archive_written)
     print("pages    : 1")
     print("wrote content/{posts,topics,tags,pages}")
 

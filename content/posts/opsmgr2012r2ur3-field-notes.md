@@ -1,9 +1,13 @@
 ---
 title: OpsMgr 2012 R2 UR3 - Field Notes [#opsmgr]
 date: 2014-09-02 11:30:18
+year: 2014
+month: 09
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2012/opsmgr2012r2ur3-field-notes/
 url_encoded: /ms/opsmgr2012/opsmgr2012r2ur3-field-notes/
+description: Quick and unrefined notes on Update Roll-up 3 for System Center 2012 R2 - Operations Manager.  Preparation Usual routine, check the KB for instructions and known issues. Double-check with Holman’s blo
+excerpt: Quick and unrefined notes on Update Roll-up 3 for System Center 2012 R2 - Operations Manager. Preparation Usual routine, check the KB for instructions and known issues. Double-check with Holman’s blog and take note of any irregularities. Download, curse your favourite deity and re-try in IE. Unpack the CAB-files (why do you keep putting them in CAB-files?) and throw away all the unnecessary language-specific console patches. Notify affected parts of the organisation, I’ve had the benefit to work with good release managers at all clients so far, so no biggie. Then try to close as many consoles as possible to avoid any blocks in database. Make sure you have the credentials for the Data Access service account at hand. Issues - So Far (updated 2014-09-02) The SQL Script for the OpsDW was deadlocked at all sites and customers without exception. It’s easily fixed by stopping the management server services. A few dashboards (the 2012 versions) went blank. Self-healed after some aggregation job over night. From what I’ve noticed, only the SLA Dashboards are affected but never all of them. Agents behind daisy-chained Gateways is not identified as in need of an update. “Repairing” them from the Console is one work-around that seems to work consistently. A few agents that was updated using Windows Update did not report as updated. Repair fixed that nuisance. Had to flush the cache on a few Gateways to avoid heartbeat failures from their agents. Only daisy-chained ones if I recall correctly.
 cats:
   - ms
   - ms/opsmgr2012

@@ -4,6 +4,7 @@ date: 2025-01-17 11:34:00
 lastmod: 2025-01-17T11:56:37+01:00
 url: /About/
 layout: page
+description: Who’s stegenfeldt? A Solution Architech at Atea Sverige AB based in Sweden with a focus on IT-monitoring, Observability and closely related automations. For the past decade or two, the focus has been
 ---
 # Who's stegenfeldt?
 A Solution Architech at [Atea Sverige AB](https://www.atea.se/) based in Sweden with a focus on IT-monitoring, Observability and closely related automations.

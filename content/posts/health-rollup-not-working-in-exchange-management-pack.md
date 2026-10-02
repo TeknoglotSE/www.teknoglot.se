@@ -1,9 +1,13 @@
 ---
 title: Health Rollup not working in Exchange Management Pack
 date: 2009-10-14 12:17:08
+year: 2009
+month: 10
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/health-rollup-not-working-in-exchange-management-pack/
 url_encoded: /ms/opsmgr2007/health-rollup-not-working-in-exchange-management-pack/
+description: I’ve wrestled a bit with a critical status on one of the Organization States at a clients site that wont go back to green despite all the underlying monitors have gone back to green. And apparently I
+excerpt: I’ve wrestled a bit with a critical status on one of the Organization States at a clients site that wont go back to green despite all the underlying monitors have gone back to green. And apparently I am not alone on this one. Others, like me, has read and re-read the MP-guide i search for a monitor/rule/discovery for overrides forgotten, and I don’t know how many times I’ve made a small change and tried resetting the health once again. Anyhow. Marius Sutara posted an answer on TechNet forums last week with a “fix” (-ish), or rather the acknowledgement that the problem is not a 40c. The problem might be related to other MP as well, but I’ve only seen it on the new Exchange MP so far. In that same post, Pete Zerger provided some links to two nifty little tools that will help you reset the health of the monitor. In case you wonder why on earth I post when there’s allready a “solution” out there; Pagerank, baby! Not for me, but for the forum post making it show up earlier on google.
 cats:
   - ms
   - ms/opsmgr2007

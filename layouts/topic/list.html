@@ -1,0 +1,18 @@
+{{- /*
+  Category listing.
+
+  Posts are selected by exact membership of this node's chain in their `cats`.
+  That is enough to be descendant-inclusive because Hexo already stored every
+  ancestor on the post, so /topics/ms/windows/ lists the Windows XP post too
+  (2 posts), matching the sidebar count of 2.
+
+  Listings are year-grouped and two-per-row, same as the home page.
+*/ -}}
+{{ define "main" }}
+{{- $chain := .Params.cat -}}
+{{- $posts := where site.RegularPages "Type" "posts" -}}
+{{- $posts = where $posts "Params.cats" "intersect" (slice $chain) -}}
+{{- $posts = $posts.ByDate.Reverse -}}
+{{- partial "archive-list.html" $posts -}}
+{{- partial "pagination.html" (.Paginate $posts) -}}
+{{ end }}

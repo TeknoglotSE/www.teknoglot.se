@@ -1,9 +1,13 @@
 ---
 title: "OpsMgr 2012 Agent & Gateway Failover - The Basics [#opsmgr, #powershell]"
 date: 2012-05-30 14:12:37
+year: 2012
+month: 05
 lastmod: 2017-06-05T10:13:43+02:00
 url: /ms/opsmgr2012/opsmgr-2012-agent-gateway-failover-the-basics/
 url_encoded: /ms/opsmgr2012/opsmgr-2012-agent-gateway-failover-the-basics/
+description: I have previously posted a few scripts on managing and configuring fail-over management servers on gateways and agents in System Center Operations Manager 2007 R2. Now that System Center 2012 Operatio
+excerpt: I have previously posted a few scripts on managing and configuring fail-over management servers on gateways and agents in System Center Operations Manager 2007 R2. Now that System Center 2012 Operations Manager is RTM and users are starting to explore the differences between the versions I see more and more questions on how you do, in OpsMgr 2012, what you did in OpsMgr 2007. In a few posts henceforth I will go through Agent and Gateway server fail-over configuration and management. In this first post I’ll look at the very basics of fail-over configuration, the cmdlets to use and some one-liners.
 cats:
   - ms
   - ms/opsmgr2012

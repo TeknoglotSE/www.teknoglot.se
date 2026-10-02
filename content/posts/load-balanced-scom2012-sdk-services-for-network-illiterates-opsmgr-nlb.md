@@ -1,9 +1,13 @@
 ---
 title: "Load-balanced SCOM2012 SDK Services for Network Illiterates [#opsmgr, #nlb]"
 date: 2012-05-18 13:16:51
+year: 2012
+month: 05
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2012/load-balanced-scom2012-sdk-services-for-network-illiterates-opsmgr-nlb/
 url_encoded: /ms/opsmgr2012/load-balanced-scom2012-sdk-services-for-network-illiterates-opsmgr-nlb/
+description: Prelude Now that System Center Operations Manager no longer has that pesky Root Management Server role; a server role that in larger environments quickly became the choking point and made creating a
+excerpt: Prelude Now that System Center Operations Manager no longer has that pesky Root Management Server role; a server role that in larger environments quickly became the choking point and made creating a fully Highly Available SCOM-environment both complex and frustrating to support and with little gain at that. With that gone and the SDK Service, or Data Access Service, thriving on all the Management Servers HA suddenly became pretty simple. All you have to do in SCOM2012 to make sure your management groups keep on kicking is to have at-least two Management Servers and your databases clustered. This new distributed architecture does not only give easy HA, it also makes it possible to connect to the SDK-service—be it using the Operations Console or powershell to name two options—on any Management Server. This, in turn, provides for a completely new level of scalability. Choked on sessions? Deploy a new Management Server! Anyway… given all this scalability and HA, would it not be nice if you could load-balance all these SDK-sessions you will be running from System Center Virtual Machine Manager, System Center Service Manager, System Center Orchestrator, regular scheduled powershell scripts and what-not? Of course it would! And you can! The simple solution is to use the built-in Network Load Balancer (NLB for short) feature in Windows Server and that’s what we’re going to discuss in this post. Before we go, I’d like to point to a great article written by Justin Cook that is covering most bases but in a less for-dummies way. So, yeah… I suppose this is the for-dummies version then. 😉 Enjoy!
 cats:
   - ms
   - ms/opsmgr2012

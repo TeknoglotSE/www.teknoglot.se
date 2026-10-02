@@ -1,9 +1,13 @@
 ---
 title: "#OpsMgr 1801 Upgrade - The Fail Anthology"
 date: 2018-08-27 15:42:17
+year: 2018
+month: 08
 lastmod: 2019-07-30T16:15:14+02:00
 url: /ms/opsmgr2016/om1801-upgrade-gotchas/
 url_encoded: /ms/opsmgr2016/om1801-upgrade-gotchas/
+description: A Collection of OpsMgr Upgrade Fails I’ll be frank on this one; Microsoft really dropped the ball on the 1801 setup program. No upgrade or update has been this ridden with faults and obscure errors,
+excerpt: A Collection of OpsMgr Upgrade Fails I’ll be frank on this one; Microsoft really dropped the ball on the 1801 setup program. No upgrade or update has been this ridden with faults and obscure errors, not even the infamous SCOM 2007 SP1 setup. And this is not only errors that will abort the installation, they will actively remove your existing SCOM Components and cause a restore, either from snapshot/checkpoint or from backup. MAKE SURE YOUR BACKUPS ARE WORKING!!! Rollbacks don’t work in 1801, at all. You have been warned. Here’s my list of the issues I’ve seen and wrestled so far. .NET 3.5 Pre-requisites Although neither SCOM 2016 nor 1801 actually has a .NET 3.5 requirement, the setup think it does. The Prerequisute checker isn’t aware though, meaning it will happily try to upgrade and then fail. And, boy, does it fail spectacularly! When the upgrade failes, it’s supposed to perform a rollback, and reading the setup log it actually do try. Unfortunatly, the “rollback” will remove any existing SCOM Roles in the server. O_o Yes, thats right. Your Management Server is no longer a Management Server! Workaround Make sure all SCOM Management Servers have .NET Framework 3.5 installed before attempting an upgrade.
 cats:
   - ms
   - ms/opsmgr2016

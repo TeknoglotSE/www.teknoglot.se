@@ -1,9 +1,13 @@
 ---
 title: MSMQ 3 MP for OpsMgr v.6.0.6587.0 Released
 date: 2009-04-28 15:30:18
+year: 2009
+month: 04
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/msmq-3-mp-for-opsmgr-v6065870-released/
 url_encoded: /ms/opsmgr2007/msmq-3-mp-for-opsmgr-v6065870-released/
+description: "Last friday, 24&#x2F;4 -09,  Microsoft released an updated Management Pack for MSMQ 3.0.  Quick Details               File Name:        Message Queuing System Center Operations Manager 2007 MP.MSI"
+excerpt: "Last friday, 24/4 -09,  Microsoft released an updated Management Pack for MSMQ 3.0. Quick Details File Name: Message Queuing System Center Operations Manager 2007 MP.MSI Version: 6.0.6587.0 Date Published: 4/24/2009 Language: English Download Size: 502 KB Release History 6/3/2008 - Initial Release, version 6.0.6278.23. Refer to the MP guide for further details.* 4/24/2009 - Undated release, version 6.0.6587.0. Refer to the MP guide for further details. The MP Guide does not really say much about what’s updated and I don’t know how much more than the reporting they have fixed. I can just state the fact that support for clustered MSMQ 3 instances is still missing."
 cats:
   - ms
   - ms/opsmgr2007

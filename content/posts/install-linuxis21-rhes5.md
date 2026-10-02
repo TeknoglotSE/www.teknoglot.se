@@ -1,9 +1,13 @@
 ---
 title: Installing Linux Integration Services v2.1 on Red Hat ES 5
 date: 2010-08-31 12:06:04
+year: 2010
+month: 08
 lastmod: 2018-08-28T15:16:14+02:00
 url: /linux/rhes/install-linuxis21-rhes5/
 url_encoded: /linux/rhes/install-linuxis21-rhes5/
+description: Ok, so I got the task to install the Linux Integration Service for Hyper-V R2 on a RedHat Enterprise Server 5. Something that turned out to be a bit more to handle than I would have thought. So here’s
+excerpt: "Ok, so I got the task to install the Linux Integration Service for Hyper-V R2 on a RedHat Enterprise Server 5. Something that turned out to be a bit more to handle than I would have thought. So here’s a little How-To. Preparations Read the documentation provided in the Linux Integration Services download. Much of the information in this article is in there, but some parts are not. Otherwise I would not have bothered writing about it. 😉 I’m not going to go through the OS installation process here, but make sure to select the “Software Development” packages since you will be needing it. In case you missed it, you can install them later by running these commands. # yum groupinstall \"Development Tools\"# yum install kernel-headers I’m not actually sure that you need to run the kernel-headers install manually or if it’s included in the “Development Tools” package. The first gotcha i ran into was the fact that the link to the Linux Integration Services–previously known as Linux Integration Components or LinuxIC–on RedHat’s information pages gave me a 404 and a redirect to a bing-search that returned the exact same 404. The page have simply been removed by Microsoft without any form of redirection to the new page. Anyway, a search on http://download.microsoft.com for “Linux Integration Components” do return the new page, and that’s where I learned about the new name. Thank you for making it easy for us Microsoft! Here’s a direct link to the search on the current name. And here’s a direct link to the actual download page. This download contains an ISO file that you can mount using the Hyper-V- or VMM-console, or you can do as I did and download the ISO to the virtual machine, mount it locally, copy the files and unmount it. Like this. # mkdir /mnt/ISO# mount -o loop /root/LinuxIC v21.iso /mnt/ISO# mkdir /opt/linux_ic_v21_rtm# cp /mnt/ISO/* -R /opt/linux_ic_v21_rtm/# umount /mnt/ISO"
 cats:
   - linux
   - linux/rhes

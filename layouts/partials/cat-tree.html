@@ -1,0 +1,31 @@
+{{- /*
+  Recursive category tree, shared by the nav (max 2 levels, no counts) and the
+  sidebar widget (unlimited depth, with counts).
+
+  Ordering is by display name using Go's byte-wise string comparison, which is
+  what Hexo's warehouse comparator does. That is case-SENSITIVE, and it shows:
+  "Microsoft" sorts before "Mikrotik" ('c' < 'k'), and "SQL Server" before
+  "Windows". A case-folded sort would order these differently, so do not
+  "fix" this.
+
+  Input: dict with
+    depth  current level, 1-based
+    max    deepest level to render
+    parent chain of the parent node, "" at the top
+    cls    class stem, e.g. "main-nav-list" or "category-list"
+    counts whether to render the count span
+*/ -}}
+{{- $depth := .depth -}}
+{{- $max := .max -}}
+{{- $cls := .cls -}}
+{{- $topics := where site.Pages "Type" "topic" -}}
+{{- $nodes := where $topics "Params.cat_parent" (default "" .parent) -}}
+{{- $nodes = sort $nodes "Title" -}}
+{{- range $nodes -}}
+<li class="{{ $cls }}-item"><a class="{{ $cls }}-link" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ if $.counts }}<span class="{{ $cls }}-count">{{ .Params.post_count }}</span>{{ end }}{{ if lt $depth $max -}}
+<ul class="{{ $cls }}-child">
+{{- partial "cat-tree.html" (dict "depth" (add $depth 1) "max" $max "parent" .Params.cat "cls" $cls "counts" $.counts) -}}
+</ul>
+{{- end -}}
+</li>
+{{- end -}}

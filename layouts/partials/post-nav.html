@@ -1,0 +1,27 @@
+{{- /*
+  Prev/next navigation, shown in the sidebar on post pages only.
+
+  Hexo's post.prev is the NEWER post and post.next the OLDER one. In Hugo the
+  equivalent is the next/previous element of the date-sorted sequence, which is
+  inverted relative to Hexo's naming.
+*/ -}}
+{{- $all := where site.RegularPages "Type" "posts" -}}
+{{- $all = $all.ByDate.Reverse -}}
+{{- $idx := -1 -}}
+{{- range $i, $p := $all -}}{{ if eq $p.RelPermalink $.RelPermalink }}{{ $idx = $i }}{{ end }}{{ end -}}
+{{- $newer := "" -}}
+{{- $older := "" -}}
+{{- if ge $idx 0 -}}
+  {{- if gt $idx 0 -}}{{- $newer = index $all (sub $idx 1) -}}{{- end -}}
+  {{- if lt $idx (sub (len $all) 1) -}}{{- $older = index $all (add $idx 1) -}}{{- end -}}
+{{- end -}}
+{{- if or $newer $older -}}
+<nav id="article-nav">
+{{- with $newer -}}
+<a href="{{ .RelPermalink }}" id="article-nav-newer" class="article-nav-link-wrap"><strong class="article-nav-caption">Newer</strong><p class="article-nav-title">{{ .Title }}</p><i class="icon fa fa-chevron-right" id="icon-chevron-right"></i></a>
+{{- end -}}
+{{- with $older -}}
+<a href="{{ .RelPermalink }}" id="article-nav-older" class="article-nav-link-wrap"><strong class="article-nav-caption">Older</strong><p class="article-nav-title">{{ .Title }}</p><i class="icon fa fa-chevron-left" id="icon-chevron-left"></i></a>
+{{- end -}}
+</nav>
+{{- end -}}
