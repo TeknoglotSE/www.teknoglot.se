@@ -1,0 +1,26 @@
+{{- /*
+  The one paginator for a listing page.
+
+  Both the list layout and head.html need it: the list renders the cards, and
+  head needs the paginated path for og:url, because the canonical URL reflects the
+  page actually being served (/archives/2009/page/2/index.html) rather than the
+  section root.
+
+  Sharing this partial guarantees both callers pass identical arguments, since
+  Hugo returns the same paginator for the same call. Calling .Paginate with two
+  different collections on one page would silently produce two paginators and
+  the two callers would disagree.
+*/ -}}
+{{- $all := where site.RegularPages "Type" "posts" -}}
+{{- $all = $all.ByDate.Reverse -}}
+{{- $sel := $all -}}
+{{- if eq .Type "topic" -}}
+  {{- $sel = where $sel "Params.cats" "intersect" (slice .Params.cat) -}}
+{{- else if eq .Type "tagpage" -}}
+  {{- $sel = where $sel "Params.tags" "intersect" (slice .Params.tag) -}}
+{{- else if eq .Type "archive" -}}
+  {{- with .Params.year }}{{ $sel = where $sel "Params.year" . }}{{ end -}}
+  {{- with .Params.month }}{{ $sel = where $sel "Params.month" . }}{{ end -}}
+{{- end -}}
+{{- /* explicit return: a partial's value is otherwise rendered as a string */ -}}
+{{- return (.Paginate $sel) -}}

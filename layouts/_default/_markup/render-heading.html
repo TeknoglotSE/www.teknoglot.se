@@ -1,0 +1,23 @@
+{{- /*
+  Heading render hook.
+
+  Collapse runs of reserved characters in heading anchors so that a RUN of
+  punctuation produces a single dash. Goldmark's "github" anchors do not collapse,
+  which would make
+
+      # BRK1039 - Windows Server Software Defined
+
+  come out as id="brk1039---windows-server-software-defined" instead of
+  master's id="brk1039-windows-server-software-defined". The visible text is
+  unchanged either way; only the id differs.
+
+  Duplicate heading IDs are pinned in the affected content source.
+
+  Verified during the conversion and retained as ordinary Hugo behavior.
+*/ -}}
+{{- $id := replaceRE "-{2,}" "-" .Anchor -}}
+{{- $id = trim $id "-" -}}
+{{- /* markdown-it-anchor's linkWrapper: an empty permalink anchor ahead of the
+       heading text. It is unstyled in style.css, so invisible either way, but
+       it is part of the markup. */ -}}
+<h{{ .Level }}{{ with .Attributes }}{{ range $k, $v := . }}{{ if ne $k "id" }} {{ $k }}="{{ $v }}"{{ end }}{{ end }}{{ end }} id="{{ $id }}"><a class="markdownIt-Anchor" href="#{{ $id }}"></a> {{ .Text | safeHTML }}</h{{ .Level }}>

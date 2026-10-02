@@ -1,0 +1,100 @@
+{{- /*
+  Site head and Open Graph metadata.
+
+  The meta rules were read off master's rendered output per page type, because
+  they are subtler than the template suggests:
+
+    listing pages (home, category, tag, archive, archive year):
+      og:title is the SITE title, not the page title, because listing
+      page.title is empty for an index page and open_graph falls back to
+      config.title. description likewise falls back to the site description.
+      No keywords, no article:* timestamps, no article:tag.
+
+    single pages (posts and About):
+      og:title is the page title. Both carry article:published_time and
+      article:modified_time.
+
+    og:type is "article" for posts only: the About page is also a single page
+      but listing pages use type "website".
+
+  Ordering matters and was taken from the output: keywords first, then the
+  description, then the Open Graph block, then generator, then the feed link.
+*/ -}}
+{{- $isSingle := eq .Kind "page" -}}
+{{- $isPost := eq .Type "posts" -}}
+{{- $title := .Title -}}
+{{- if eq .Type "tagpage" -}}
+  {{- $title = printf "Tag: %s" .Title -}}
+{{- else if eq .Type "topic" -}}
+  {{- $title = printf "Category: %s" .Title -}}
+{{- else if eq .Type "archive" -}}
+  {{- if .Params.year -}}
+    {{- if .Params.month -}}
+      {{- $title = printf "Archive: %s/%s" .Params.year .Params.month_num -}}
+    {{- else -}}
+      {{- $title = printf "Archive: %s" .Params.year -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $title = "Archive" -}}
+  {{- end -}}
+{{- end -}}
+<meta charset="utf-8">
+{{- /* On the home page the title is just the
+       site title with no "x | " prefix. */ -}}
+<title>{{ if and $title (not .IsHome) }}{{ $title }} | {{ end }}{{ site.Title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+{{- /* keywords appears on posts only, and stays empty when a post has no tags */}}
+{{- if $isPost -}}
+<meta name="keywords" content="{{ delimit (.Params.tags | default slice) "," }}">
+{{- end -}}
+{{- $desc := .Params.description | default site.Params.description -}}
+<meta name="description" content="{{ $desc }}">
+{{- $ogTitle := cond $isSingle .Title site.Title -}}
+{{- $ogType := cond $isPost "article" "website" -}}
+{{- /* og:url includes the served index.html suffix and reflects the page
+       actually served: a paginated listing yields
+       /archives/2009/page/2/index.html, not the section root. */ -}}
+{{- $path := .RelPermalink -}}
+{{- /* only listing kinds paginate; calling .Paginate on a post or the About
+       page errors out */ -}}
+{{- if ne .Kind "page" -}}
+  {{- with partial "list-paginator.html" . -}}{{- $path = .URL -}}{{- end -}}
+{{- end -}}
+{{- $ogUrl := absURL (printf "%sindex.html" $path) -}}
+{{- $ogImages := dict
+  "/ms/opsmgr2007/esent-error-when-modifying-opsmgr-agent/" "https://www.teknoglot.se/wp-content/uploads/2010/03/image_thumb.png"
+  "/ms/opsmgr2007/msmq-mp-subscriptoutofrange/" "http://teknoglotse.nfshost.com/wp-content/uploads/2009/06/screenshot1245833173.png"
+  "/ms/opsmgr2007/opsmgr-2007-connectivity-map/" "http://teknoglotse.nfshost.com/wp-content/uploads/2011/05/SCOM_Connectivity_Map-300x279.png"
+  "/ms/opsmgr2007/parameter-replacement-in-alertname/" "http://teknoglotse.nfshost.com/wp-content/uploads/2012/04/ParamReplacement_AlertDescriptionDialog.png"
+  "/ms/opsmgr2007/quick-demo-add-windows-performance-collection-rule-opsmgr-mpauthoring/" "http://img.youtube.com/vi/4G4aXslrjvQ/0.jpg"
+  "/ms/opsmgr2007/snmp-get-errors-in-eventlog/" "http://teknoglotse.nfshost.com/wp-content/uploads/2010/09/snmp_error_wireshark.png"
+  "/ms/opsmgr2012/load-balanced-scom2012-sdk-services-for-network-illiterates-opsmgr-nlb/" "http://teknoglotse.nfshost.com/wp-content/uploads/2012/05/051812_1216_Loadbalance1.png"
+  "/ms/opsmgr2012/squaredup-installation/" "http://www.teknoglot.se/wp-content/uploads/2014/09/152402_0001.png"
+-}}
+<meta property="og:type" content="{{ $ogType }}">
+<meta property="og:title" content="{{ $ogTitle }}">
+<meta property="og:url" content="{{ $ogUrl }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:locale" content="en_US">
+{{- with index $ogImages .RelPermalink }}<meta property="og:image" content="{{ . }}">{{ end }}
+{{- if $isSingle -}}
+<meta property="article:published_time" content="{{ .Date.UTC.Format "2006-01-02T15:04:05.000Z" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.UTC.Format "2006-01-02T15:04:05.000Z" }}">
+{{- end -}}
+<meta property="article:author" content="{{ site.Params.author }}">
+{{- if $isPost }}{{ range (.Params.tags | default slice) -}}
+<meta property="article:tag" content="{{ . }}">
+{{- end }}{{ end -}}
+<meta name="twitter:card" content="summary">
+{{- with index $ogImages .RelPermalink }}<meta name="twitter:image" content="{{ . }}">{{ end }}
+<link rel="icon" href="{{ site.Params.favicon }}">
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/vendor/titillium-web/styles.css">
+<link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+<link rel="stylesheet" href="/css/style.css">
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+<script type="text/javascript">!function(e,a,t,n,g,c,o){e.GoogleAnalyticsObject=g,e.ga=e.ga||function(){(window.ga.q=window.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src="//www.google-analytics.com/analytics.js",o.parentNode.insertBefore(c,o)}(window,document,"script",0,"ga"),ga("create","{{ site.Params.googleAnalytics }}","auto"),ga("send","pageview")</script>
+{{- /* Keep the feed link after the analytics script. */ -}}
+<link rel="alternate" href="{{ site.Params.rssPath }}" title="{{ site.Title }}" type="application/rss+xml">

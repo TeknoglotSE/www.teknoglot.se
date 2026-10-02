@@ -1,0 +1,33 @@
+<aside id="sidebar"><a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+<div class="sidebar-top"><p>follow:</p><ul class="social-links">
+{{- range site.Params.socialLinks -}}
+<li><a class="social-tooltip" title="{{ index . 0 }}" href="{{ index . 1 }}" target="_blank"><i class="icon fa fa-{{ index . 0 }}"></i></a></li>
+{{- end -}}
+</ul></div>
+{{- if eq .Type "posts" -}}
+{{- partial "post-nav.html" . -}}
+{{- end -}}
+<div class="widgets-container">
+<div class="widget-wrap"><h3 class="widget-title">recents</h3><div class="widget">
+<ul id="recent-post" class="no-thumbnail">
+{{- range first 5 (where site.RegularPages "Type" "posts").ByDate.Reverse -}}
+<li><div class="item-inner">
+<p class="item-category">{{ partial "cat-breadcrumb.html" (dict "cats" .Params.cats "cls" "article-category-link") }}</p>
+<p class="item-title"><a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a></p>
+<p class="item-date"><time datetime="{{ .Date.UTC.Format "2006-01-02T15:04:05.000Z" }}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time></p>
+</div></li>
+{{- end -}}
+</ul>
+</div></div>
+<div class="widget-wrap widget-list"><h3 class="widget-title">categories</h3><div class="widget">
+<ul class="category-list">
+{{- partial "cat-tree.html" (dict "depth" 1 "max" 99 "parent" "" "cls" "category-list" "counts" true) -}}
+</ul>
+</div></div>
+{{- partial "widget-tagcloud.html" . -}}
+<div class="widget-wrap widget-list"><h3 class="widget-title">links</h3><div class="widget"><ul>
+{{- range site.Params.links -}}<li><a href="{{ index . 1 }}">{{ index . 0 }}</a></li>
+{{- end -}}
+</ul></div></div>
+</div>
+</aside>

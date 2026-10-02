@@ -1,0 +1,43 @@
+{{- /*
+  Archive listing: posts grouped by year, two cards per row.
+
+  Reproduces common/archive.ejs, including two details that look like bugs:
+
+    - the year link carries no trailing slash (/archives/2018), so it relies on
+      the server redirecting;
+    - a year group that straddles a page boundary is re-emitted on each page.
+
+  A row closes after every second card, and also at the end of each year group,
+  so a group holding an odd number of posts ends with a half-full .article-row
+  rather than leaving the row open into the next group.
+
+  Input is a date-descending Pages collection. Group boundaries are found by
+  looking ahead at the next post's year. GroupBy is avoided deliberately: it
+  raises a reflect error on this Hugo version when its receiver has been
+  reassigned in a template.
+*/ -}}
+{{- $pages := . -}}
+{{- $n := len $pages -}}
+{{- $year := "" -}}
+{{- $row := 0 -}}
+{{- range $i, $p := $pages -}}
+  {{- $y := $p.Params.year -}}
+  {{- $isLast := eq (add $i 1) $n -}}
+  {{- $nextYear := "" -}}
+  {{- if not $isLast -}}{{- $nextYear = (index $pages (add $i 1)).Params.year -}}{{- end -}}
+  {{- if ne $y $year -}}
+    {{- if ne $year "" }}</div></section>{{ end -}}
+    <section class="archives-wrap">
+    <div class="archive-year-wrap"><a href="/archives/{{ $y }}" class="archive-year"><i class="icon fa fa-calendar-o"></i>{{ $y }}</a></div>
+    <div class="archives">
+    {{- $year = $y -}}
+    {{- $row = 0 -}}
+  {{- end -}}
+  {{- $row = add $row 1 -}}
+  {{- if eq (mod (sub $row 1) 2) 0 }}<div class="article-row">{{ end -}}
+  {{- partial "summary.html" $p -}}
+  {{- /* close the row on every second card, when the year changes, or at the
+         end of the page */ -}}
+  {{- if or (eq (mod $row 2) 0) (ne $y $nextYear) $isLast }}</div>{{ end -}}
+{{- end -}}
+{{- if ne $year "" }}</div></section>{{ end -}}

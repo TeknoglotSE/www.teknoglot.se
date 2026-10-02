@@ -1,0 +1,22 @@
+<header id="header"><div id="header-outer" class="outer"><div class="container"><div class="container-inner">
+<div id="header-title"><h1 class="logo-wrap"><a href="/" class="logo"></a></h1></div>
+<div id="header-inner" class="nav-container">
+<a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+<div class="nav-container-inner">
+<ul id="main-nav">
+<li class="main-nav-list-item"><a class="main-nav-list-link" href="/">Home</a></li>
+{{- /* legacy generator drops list_categories() straight inside <ul id="main-nav">, which
+       emits a bare <ul class="main-nav-list"> child. That nesting is invalid
+       but is reproduced here so the DOM matches byte for byte. */ -}}
+<ul class="main-nav-list">
+{{- partial "cat-tree.html" (dict "page" . "depth" 1 "max" 2 "cls" "main-nav-list" "counts" false) -}}
+</ul>
+<li class="main-nav-list-item"><a class="main-nav-list-link" href="/About/">About</a></li>
+</ul>
+<nav id="sub-nav">
+<div id="search-form-wrap"><form class="search-form"><input type="text" class="ins-search-input search-form-input" placeholder="Search"> <button type="submit" class="search-form-submit"></button></form>
+<div class="ins-search"><div class="ins-search-mask"></div><div class="ins-search-container"><div class="ins-input-wrapper"><input type="text" class="ins-search-input" placeholder="Type something..."> <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span></div><div class="ins-section-wrapper"><div class="ins-section-container"></div></div></div></div>
+<script>!function(T){T.INSIGHT_CONFIG={TRANSLATION:{POSTS:"Posts",PAGES:"Pages",CATEGORIES:"Categories",TAGS:"Tags",UNTITLED:"(Untitled)"},ROOT_URL:"/",CONTENT_URL:"/content.json"}}(window)</script><script src="/js/insight.js"></script>
+</div>
+</nav>
+</div></div></div></div></div></header>

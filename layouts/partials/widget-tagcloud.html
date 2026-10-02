@@ -1,0 +1,47 @@
+{{- /*
+  Tag cloud.
+
+  legacy generator's helper (node_modules/legacy generator/dist/plugins/helper/tagcloud.js) does NOT
+  scale linearly with a tag's post count. It sorts the DISTINCT counts, then
+  places each tag by the RANK of its count among them:
+
+      sizes   = distinct counts, ascending
+      ratio   = sizes.indexOf(tag.length) / (sizes.length - 1)
+      size    = min_font + (max_font - min_font) * ratio
+      style   = font-size: parseFloat(size.toFixed(2))px
+
+  With distinct counts {1,2,3,4,7,8,9,13,28} that yields
+  10, 11.25, 12.5, 13.75, 15, 16.25, 17.5, 18.75, 20 px.
+
+  A linear-in-count reading of the formula would give, say, 10.37px for a
+  2-post tag instead of 11.25px, so the ranking must be reproduced exactly.
+
+  Tags are ordered by name, byte-wise and case-sensitively, which is why "GSM"
+  precedes "Gist" and "x64" renders last. Hugo's `sort` collates rather than
+  comparing bytes, so the order is pinned from master's rendered cloud as
+  cloud_order and sorted numerically here. See tools/generate_content.py.
+*/ -}}
+{{- $tagpages := sort (where site.Pages "Type" "tagpage") "Params.cloud_order" -}}
+{{- $allCounts := slice -}}
+{{- range $tagpages -}}{{- $allCounts = $allCounts | append .Params.post_count -}}{{- end -}}
+{{- $distinct := sort (uniq $allCounts) -}}
+{{- $span := sub (len $distinct) 1 -}}
+{{- $minF := site.Params.tagcloudMinFont -}}
+{{- $maxF := site.Params.tagcloudMaxFont -}}
+<div class="widget-wrap widget-float">
+<h3 class="widget-title">tag cloud</h3>
+<div class="widget tagcloud">
+{{- range $tagpages -}}
+{{- $count := .Params.post_count -}}
+{{- $rank := 0 -}}
+{{- range $distinct -}}{{- if lt . $count -}}{{- $rank = add $rank 1 -}}{{- end -}}{{- end -}}
+{{- $ratio := 0.0 -}}
+{{- if gt $span 0 -}}{{- $ratio = div (float $rank) (float $span) -}}{{- end -}}
+{{- $size := add (float $minF) (mul (sub $maxF $minF) $ratio) -}}
+{{- $fmt := printf "%.2f" $size -}}
+{{- $fmt = replaceRE `(\.\d*?)0+$` "$1" $fmt -}}
+{{- $fmt = replaceRE `\.0?$` "" $fmt -}}
+<a href="{{ .RelPermalink }}" style="font-size: {{ $fmt }}px;">{{ .Title }}</a>
+{{- end -}}
+</div>
+</div>

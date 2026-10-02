@@ -1,0 +1,18 @@
+{{- /*
+  Link render hook.
+
+  _config.yml sets external_link: true, which makes markdown-it append
+  target="_blank" rel="noopener". Across master's 136 content links, the 125 that
+  carry it are absolute http(s) URLs pointing off-site, while the 10 that do not
+  all point at www.teknoglot.se itself. So "external" means a different host,
+  not merely an absolute URL. Scheme-less links such as "www.atea.com" also
+  stay untagged.
+
+  This hook covers markdown links only, matching the scope of legacy generator's setting:
+  raw <a> tags typed into post bodies pass through untouched.
+*/ -}}
+{{- $dest := .Destination -}}
+{{- $u := urls.Parse $dest -}}
+{{- $siteHost := (urls.Parse site.BaseURL).Host -}}
+{{- $external := and (eq .Page.Type "posts") (in (slice "http" "https") $u.Scheme) (ne $u.Host $siteHost) -}}
+<a href="{{ $dest }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>

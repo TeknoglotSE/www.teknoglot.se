@@ -1,0 +1,97 @@
+baseURL = "https://www.teknoglot.se/"
+locale = "en"
+title = "teknoglot:"
+themeColor = "#dd3333"
+
+# Rendered dates are local wall-clock; the datetime attributes are UTC.
+timeZone = "Europe/Stockholm"
+
+# Every page carries an explicit `url` in its front matter, pinned from
+# The explicit URLs preserve the site's established public paths.
+#
+# Hugo's taxonomies are switched off for the existing custom topic/tag pages.
+# Left on, the `tags` key in front
+# matter makes Hugo claim content/tags/ as its own taxonomy term container, and
+# the generated tag leaves silently vanish from the build. The categories and
+# tags here are plain front-matter data, not taxonomies: their URLs are nested
+# (/topics/ms/opsmgr2012/), partly case-preserving (/topics/Events/, /tag/x64/)
+# and partly orphaned, none of which a Hugo taxonomy can express.
+[taxonomies]
+
+publishDir = "docs"
+
+# Hugo emits a /page/1/ copy of every paginated list. The published site has no
+# so suppress them: 167 extra pages otherwise. The global key covers content
+# aliases, the pagination key covers these.
+disableAliases = true
+
+[pagination]
+  disableAliases = true
+  pagerSize = 10
+
+# Single newlines in the source render as <br>. Goldmark calls this
+# hardWraps, and without it roughly half the posts render differently.
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # The original renderer ran with breaks enabled, so a single newline in
+      # the source becomes a <br>. This lives under `renderer`, not directly
+      # under `goldmark`; set in the wrong place it is silently ignored, which
+      # cost a long debugging detour. master has 903 <br> in article bodies.
+      hardWraps = true
+      # raw <acronym>, <span>, <table>, <script> in post bodies
+      unsafe = true
+    [markup.goldmark.parser]
+      # Slugified IDs on content headings, e.g.
+      # "# BRK1039 - Windows Server Software Defined" becomes
+      # id="brk1039-windows-server-software-defined"
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+  [markup.highlight]
+    # no line numbers, matching line_number: false
+    lineNos = false
+    # no per-block <code> wrapper class, matching markdown-it-plus
+    noClasses = false
+    style = "github"
+    wrapperClass = "highlight"
+    tabWidth = 4
+
+[outputFormats]
+  # Custom search index consumed by Insight.js at /content.json
+  [outputFormats.contentjson]
+    mediaType = "application/json"
+    baseName = "content"
+    isPlainText = true
+    notAlternative = true
+  # Keep the established public feed URL while using Hugo's built-in RSS
+  # renderer. No custom RSS template is involved.
+  [outputFormats.RSS]
+    baseName = "rss"
+
+[outputs]
+  home = ["HTML", "contentjson", "RSS"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+
+[services]
+  [services.rss]
+    limit = -1
+
+[params]
+  author = "Samuel Tegenfeldt"
+  description = "Techspeak for the socially diminished."
+  rssPath = "/rss.xml"
+  favicon = "/favicon.png"
+  disqusShortname = "teknoglotse"
+  googleAnalytics = "UA-382656-8"
+  perPage = 10
+  # Tagcloud: min 10px, max 20px, interpolated by the RANK of a tag's
+  # post count among the distinct counts, not linearly by the count itself.
+  tagcloudMinFont = 10
+  tagcloudMaxFont = 20
+  links = [["Atea", "http://www.atea.se/"]]
+  socialLinks = [["github", "https://github.com/stegenfeldt"], ["rss", "/rss.xml"]]

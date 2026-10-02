@@ -1,0 +1,5 @@
+{{ define "main" }}
+{{- $p := partial "list-paginator.html" . -}}
+{{- partial "archive-list.html" $p.Pages -}}
+{{- partial "pagination.html" $p -}}
+{{ end }}

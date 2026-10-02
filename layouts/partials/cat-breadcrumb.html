@@ -1,0 +1,43 @@
+{{- /*
+  Category breadcrumb, shared by summary cards, the recent-posts widget and the
+  post page title bar.
+
+  legacy generator calls list_categories(post.categories, {depth: 2, style: 'none',
+  separator: '<i class="icon fa fa-angle-right"></i>'}). The effect is: every
+  category chain on the post is expanded to its full ancestor chain, the
+  resulting nodes are deduplicated, sorted, and joined by the separator.
+
+  The sort here is by the category CHAIN, not by display name, which is the
+  opposite of the nav and sidebar trees. For the post with the inline
+  flow-array categories the chains sort as
+
+      Fieldnotes, Fieldnotes/OpsMgr, ms, ms/opsmgr1801, ms/opsmgr1807
+
+  which renders as Fieldnotes > OpsMgr > Microsoft > OpsMgr 1801 > OpsMgr 2007.
+  Sorting by display name would put Microsoft second instead.
+
+  Input: dict with cats (the post's `cats`) and cls (link class).
+*/ -}}
+{{- $chains := .cats -}}
+{{- $cls := .cls -}}
+{{- $topics := where site.Pages "Type" "topic" -}}
+{{- $expanded := slice -}}
+{{- range $chains -}}
+  {{- $acc := "" -}}
+  {{- range split . "/" -}}
+    {{- $acc = cond (eq $acc "") . (printf "%s/%s" $acc .) -}}
+    {{- $expanded = $expanded | append $acc -}}
+  {{- end -}}
+{{- end -}}
+{{- $expanded = uniq $expanded -}}
+{{- $pages := slice -}}
+{{- range $expanded -}}
+  {{- $chain := . -}}
+  {{- range $topics -}}
+    {{- if eq .Params.cat $chain -}}
+      {{- $pages = $pages | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $pages = sort $pages "Params.cat" -}}
+{{- range $i, $p := $pages -}}{{ if $i }}<i class="icon fa fa-angle-right"></i>{{ end }}<a class="{{ $cls }}" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>{{ end -}}

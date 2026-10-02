@@ -1,0 +1,61 @@
+{{- /*
+  Pagination.
+
+  Reproduces legacy generator's paginator(). The window was measured against master's
+  rendered output across all seven home pages:
+
+    page 1 -> 1 2 3 ... 7          (no prev)
+    page 2 -> 1 2 3 4 ... 7
+    page 3 -> 1 2 3 4 5 ... 7
+    page 4 -> 1 2 3 4 5 6 7        (no ellipsis anywhere)
+    page 5 -> 1 ... 3 4 5 6 7
+    page 6 -> 1 ... 4 5 6 7
+    page 7 -> 1 ... 5 6 7          (no next)
+
+  So: page 1 and the last page are always linked, plus the two pages either
+  side of the current one. An ellipsis marks a gap only when at least one page
+  is actually hidden, which is why page 4 shows no ellipsis even though its
+  window (2..6) does not reach either end.
+
+  Hrefs come from Hugo's own pagers, which is what reproduces the
+  base-relative quirk that page 1 of a category links to /topics/ms/ rather
+  than /topics/ms/page/1/.
+
+  Year and month archives with ten posts or fewer hold a single page and render
+  no nav at all.
+*/ -}}
+{{- $p := . -}}
+{{- if gt $p.TotalPages 1 -}}
+{{- $cur := $p.PageNumber -}}
+{{- $total := $p.TotalPages -}}
+{{- $lo := sub $cur 2 -}}
+{{- $hi := add $cur 2 -}}
+{{- if lt $lo 1 -}}{{- $lo = 1 -}}{{- end -}}
+{{- if gt $hi $total -}}{{- $hi = $total -}}{{- end -}}
+<nav id="page-nav">
+<span class="pages">Page {{ $cur }} of {{ $total }}</span>
+{{- if gt $cur 1 -}}
+<a class="extend prev" rel="prev" href="{{ (index $p.Pagers (sub $cur 2)).URL }}">&laquo;</a>
+{{- end -}}
+{{- /* page 1, when it sits outside the window */ -}}
+{{- if gt $lo 1 -}}
+<a class="page-number" href="{{ (index $p.Pagers 0).URL }}">1</a>
+{{- if gt $lo 2 }}<span class="space">&hellip;</span>{{ end -}}
+{{- end -}}
+{{- range seq $lo $hi -}}
+{{- if eq . $cur -}}
+<span class="page-number current">{{ . }}</span>
+{{- else -}}
+<a class="page-number" href="{{ (index $p.Pagers (sub . 1)).URL }}">{{ . }}</a>
+{{- end -}}
+{{- end -}}
+{{- /* last page, when it sits outside the window */ -}}
+{{- if lt $hi $total -}}
+{{- if gt $total (add $hi 1) }}<span class="space">&hellip;</span>{{ end -}}
+<a class="page-number" href="{{ (index $p.Pagers (sub $total 1)).URL }}">{{ $total }}</a>
+{{- end -}}
+{{- if lt $cur $total -}}
+<a class="extend next" rel="next" href="{{ (index $p.Pagers $cur).URL }}">&raquo;</a>
+{{- end -}}
+</nav>
+{{- end -}}
