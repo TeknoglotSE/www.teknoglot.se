@@ -3,14 +3,15 @@
   sidebar widget (unlimited depth, with counts).
 
   Ordering is by display name using Go's byte-wise string comparison, which is
-  what legacy generator's warehouse comparator does. That is case-SENSITIVE, and it shows:
+  what the published site does. That is case-SENSITIVE, and it shows:
   "Microsoft" sorts before "Mikrotik" ('c' < 'k'), and "SQL Server" before
   "Windows". A case-folded sort would order these differently, so do not
   "fix" this.
 
   A child <ul> is emitted only when the node actually has children. Emitting an
   empty one would show up as <ul class="main-nav-list-child"></ul> for the
-  childless categories (Mikrotik, Technobabble), which master does not have.
+  childless categories (Mikrotik, Technobabble), which the published site does
+  not show.
 
   Input: dict with
     depth  current level, 1-based

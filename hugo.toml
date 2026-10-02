@@ -6,24 +6,29 @@ themeColor = "#dd3333"
 # Rendered dates are local wall-clock; the datetime attributes are UTC.
 timeZone = "Europe/Stockholm"
 
-# Every page carries an explicit `url` in its front matter, pinned from
-# The explicit URLs preserve the site's established public paths.
+# The generated site is committed to docs/ for GitHub Pages.
 #
-# Hugo's taxonomies are switched off for the existing custom topic/tag pages.
-# Left on, the `tags` key in front
-# matter makes Hugo claim content/tags/ as its own taxonomy term container, and
-# the generated tag leaves silently vanish from the build. The categories and
-# tags here are plain front-matter data, not taxonomies: their URLs are nested
-# (/topics/ms/opsmgr2012/), partly case-preserving (/topics/Events/, /tag/x64/)
-# and partly orphaned, none of which a Hugo taxonomy can express.
-[taxonomies]
-
+# These two keys MUST sit above the first table header in this file. TOML reads
+# a bare key as belonging to the table it follows, so putting them after
+# [taxonomies] silently nests them under it and Hugo falls back to public/.
 publishDir = "docs"
 
-# Hugo emits a /page/1/ copy of every paginated list. The published site has no
-# so suppress them: 167 extra pages otherwise. The global key covers content
-# aliases, the pagination key covers these.
+# Hugo emits a /page/1/ copy of every paginated list, which the published site
+# does not have: 167 extra pages otherwise. The global key covers content
+# aliases, the pagination key below covers pagers.
 disableAliases = true
+
+# Every page carries an explicit `url` in its front matter. These preserve the
+# site's established public paths.
+#
+# Native taxonomies stay off. The tags/categories here are plain front-matter
+# data, not taxonomies: their URLs are nested (/topics/ms/opsmgr2012/), partly
+# case-preserving (/topics/Events/, /tag/x64/) and partly orphaned, none of
+# which a Hugo taxonomy can express. Enabling one would also make Hugo claim
+# content/tags/ as its term container and the existing tag leaves would
+# silently vanish from the build. Layouts for section/taxonomy/term kinds exist
+# in layouts/_default/ for future content that does not collide with these.
+[taxonomies]
 
 [pagination]
   disableAliases = true
@@ -34,10 +39,9 @@ disableAliases = true
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      # The original renderer ran with breaks enabled, so a single newline in
-      # the source becomes a <br>. This lives under `renderer`, not directly
-      # under `goldmark`; set in the wrong place it is silently ignored, which
-      # cost a long debugging detour. master has 903 <br> in article bodies.
+      # A single newline in the source becomes a <br>; the existing posts rely
+      # on it in roughly half their bodies. This key lives under `renderer`, not
+      # directly under `goldmark`, and is silently ignored in the wrong place.
       hardWraps = true
       # raw <acronym>, <span>, <table>, <script> in post bodies
       unsafe = true
@@ -51,9 +55,9 @@ disableAliases = true
         block = true
         title = true
   [markup.highlight]
-    # no line numbers, matching line_number: false
+    # no line numbers
     lineNos = false
-    # no per-block <code> wrapper class, matching markdown-it-plus
+    # highlight class on the wrapping <pre>
     noClasses = false
     style = "github"
     wrapperClass = "highlight"

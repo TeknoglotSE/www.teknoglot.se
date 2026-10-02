@@ -1,0 +1,16 @@
+{{- /*
+  Native taxonomy index (kind "taxonomy"), e.g. /tags/.
+
+  Lists the terms of the taxonomy rather than posts. Hugo supplies the terms
+  via .Data.Terms; .Site.Taxonomies gives the name and the list of terms to
+  walk. This renders only if a taxonomy is ever enabled in hugo.toml.
+*/ -}}
+{{ define "main" }}
+{{- $taxonomy := .Data.Plural -}}
+{{- $terms := .Data.Terms.ByCount -}}
+<ul class="taxonomy-terms">
+{{- range $terms }}
+  <li><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a> <span class="term-count">{{ .Count }}</span></li>
+{{- end }}
+</ul>
+{{ end }}

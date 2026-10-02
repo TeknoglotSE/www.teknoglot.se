@@ -1,0 +1,12 @@
+{{- /*
+  Native taxonomy term page (kind "term"), e.g. /tags/linux/.
+
+  Lists the pages carrying the term. Renders only if a taxonomy is enabled in
+  hugo.toml; the existing /topics/ and /tag/ pages are ordinary content with
+  their own layouts (layouts/topic/list.html, layouts/tagpage/list.html).
+*/ -}}
+{{ define "main" }}
+{{- $p := partial "list-paginator.html" . -}}
+{{- partial "archive-list.html" $p.Pages -}}
+{{- partial "pagination.html" $p -}}
+{{ end }}

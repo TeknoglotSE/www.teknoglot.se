@@ -2,10 +2,9 @@
   Category breadcrumb, shared by summary cards, the recent-posts widget and the
   post page title bar.
 
-  legacy generator calls list_categories(post.categories, {depth: 2, style: 'none',
-  separator: '<i class="icon fa fa-angle-right"></i>'}). The effect is: every
-  category chain on the post is expanded to its full ancestor chain, the
-  resulting nodes are deduplicated, sorted, and joined by the separator.
+  Every category chain on the post is expanded to its full ancestor chain, the
+  resulting nodes are deduplicated, sorted, and joined by an angle-right
+  separator icon.
 
   The sort here is by the category CHAIN, not by display name, which is the
   opposite of the nav and sidebar trees. For the post with the inline

@@ -1,15 +1,15 @@
 {{- /*
   Plain-text body for content.json's `text` field.
 
-  Hugo's .Plain does not match master's text. Two reasons, both verified
-  against the real bytes:
+  Hugo's .Plain does not match the text the site has always published. Two
+  reasons, both verified against the real bytes:
 
     1. markdown-it with breaks:true replaces the newline itself with <br>, so
        stripping tags leaves "others.The main". Goldmark emits <br> AND keeps
        the newline, which collapses to "others. The main". So the br and the
        whitespace after it go before the tags come off.
     2. .Plain leaves the typographer's entities, e.g. &rsquo;, as literal text
-       where master has the decoded character.
+       where the published site has the decoded character.
 
   Order matters: br first, then strip tags, then collapse whitespace, then
   unescape.

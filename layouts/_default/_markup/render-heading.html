@@ -7,13 +7,11 @@
 
       # BRK1039 - Windows Server Software Defined
 
-  come out as id="brk1039---windows-server-software-defined" instead of
-  master's id="brk1039-windows-server-software-defined". The visible text is
+  come out as id="brk1039---windows-server-software-defined" instead of the
+  published id="brk1039-windows-server-software-defined". The visible text is
   unchanged either way; only the id differs.
 
-  Duplicate heading IDs are pinned in the affected content source.
-
-  Verified during the conversion and retained as ordinary Hugo behavior.
+  Duplicate suffixes are pinned in the affected content source.
 */ -}}
 {{- $id := replaceRE "-{2,}" "-" .Anchor -}}
 {{- $id = trim $id "-" -}}

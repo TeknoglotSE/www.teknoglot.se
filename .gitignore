@@ -1,5 +1,8 @@
 public/
 
+# Hugo's build lock, created and removed by every build.
+.hugo_build.lock
+
 # AppleDouble sidecar files. This volume regenerates them as files are
 # edited, and they previously caused "non-monotonic index" git errors.
 ._*

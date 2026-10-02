@@ -1,8 +1,8 @@
 {{- /*
   Tag cloud.
 
-  legacy generator's helper (node_modules/legacy generator/dist/plugins/helper/tagcloud.js) does NOT
-  scale linearly with a tag's post count. It sorts the DISTINCT counts, then
+  The published cloud does NOT scale linearly with a tag's post count. It sorts
+  the DISTINCT counts, then
   places each tag by the RANK of its count among them:
 
       sizes   = distinct counts, ascending
@@ -18,8 +18,8 @@
 
   Tags are ordered by name, byte-wise and case-sensitively, which is why "GSM"
   precedes "Gist" and "x64" renders last. Hugo's `sort` collates rather than
-  comparing bytes, so the order is pinned from master's rendered cloud as
-  cloud_order and sorted numerically here. See tools/generate_content.py.
+  comparing bytes, so the order is pinned as a cloud_order front-matter key and
+  sorted numerically here.
 */ -}}
 {{- $tagpages := sort (where site.Pages "Type" "tagpage") "Params.cloud_order" -}}
 {{- $allCounts := slice -}}

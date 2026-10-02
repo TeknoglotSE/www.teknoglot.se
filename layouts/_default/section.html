@@ -1,0 +1,12 @@
+{{- /*
+  Native section index (kind "section"), e.g. /posts/.
+
+  Uses the same listing card and pagination as every other index so a new
+  section looks identical to the existing ones. The paginator partial selects
+  the section's own pages for this kind; see layouts/partials/list-paginator.html.
+*/ -}}
+{{ define "main" }}
+{{- $p := partial "list-paginator.html" . -}}
+{{- partial "archive-list.html" $p.Pages -}}
+{{- partial "pagination.html" $p -}}
+{{ end }}

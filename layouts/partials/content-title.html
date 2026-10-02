@@ -8,13 +8,21 @@
     tag      <i tag></i>Tag: <em>{name}</em>          (note: no class on the em)
     archive  <i archive></i>Archive
     archive year  <i archive></i>Archive: {year}
+    section  <em class="page-title-link" data-url="{path}index.html">{title}
+    taxonomy <i folder-open></i>{title}          (native, unused while [taxonomies] is empty)
+    term     <i tag></i>{title}                  (native, unused while [taxonomies] is empty)
 
-  The tag <em> genuinely lacks a class in legacy generator's output. It is reproduced.
+  The tag <em> genuinely lacks a class in the published site's output. It is reproduced.
 */ -}}
+{{- /*
+  A post is a regular page of type "posts". The posts SECTION carries that same
+  type, so the type test alone does not tell the two apart.
+*/ -}}
+{{- $isPost := and (eq .Type "posts") (eq .Kind "page") -}}
 <div class="main-body-header"><h1 class="header">
 {{- if .IsHome -}}
 <em class="page-title-link" data-url="home">Home</em>
-{{- else if eq .Type "posts" -}}
+{{- else if $isPost -}}
 {{- partial "cat-breadcrumb.html" (dict "cats" .Params.cats "cls" "page-title-link") -}}
 {{- else if eq .Type "topic" -}}
 <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">{{ .Title }}</em>
@@ -22,6 +30,10 @@
 <i class="icon fa fa-tag"></i>Tag: <em>{{ .Title }}</em>
 {{- else if eq .Type "archive" -}}
 {{- if .Params.year }}{{ if .Params.month }}<i class="icon fa fa-archive"></i>Archive: {{ .Params.year }}/{{ .Params.month_num }}{{ else }}<i class="icon fa fa-archive"></i>Archive: {{ .Params.year }}{{ end }}{{ else }}<i class="icon fa fa-archive"></i>Archive{{ end -}}
+{{- else if eq .Kind "taxonomy" -}}
+<i class="icon fa fa-folder-open"></i>{{ .Title }}
+{{- else if eq .Kind "term" -}}
+<i class="icon fa fa-tag"></i>{{ .Title }}
 {{- else -}}
 <em class="page-title-link" data-url="{{ .RelPermalink }}index.html">{{ .Title }}</em>
 {{- end -}}

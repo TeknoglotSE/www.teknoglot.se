@@ -1,9 +1,9 @@
 {{- /*
   Prev/next navigation, shown in the sidebar on post pages only.
 
-  legacy generator's post.prev is the NEWER post and post.next the OLDER one. In Hugo the
-  equivalent is the next/previous element of the date-sorted sequence, which is
-  inverted relative to legacy generator's naming.
+  "newer" points forward in the date-descending sequence and "older" backward.
+  Hugo's own Prev/Next are inverted relative to those labels, so the indexes are
+  resolved explicitly below rather than via .NextInSection/.PrevInSection.
 */ -}}
 {{- $all := where site.RegularPages "Type" "posts" -}}
 {{- $all = $all.ByDate.Reverse -}}

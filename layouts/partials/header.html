@@ -5,9 +5,9 @@
 <div class="nav-container-inner">
 <ul id="main-nav">
 <li class="main-nav-list-item"><a class="main-nav-list-link" href="/">Home</a></li>
-{{- /* legacy generator drops list_categories() straight inside <ul id="main-nav">, which
-       emits a bare <ul class="main-nav-list"> child. That nesting is invalid
-       but is reproduced here so the DOM matches byte for byte. */ -}}
+{{- /* The published markup nests a bare <ul class="main-nav-list"> directly
+       inside <ul id="main-nav">, which is invalid HTML. It is reproduced so
+       the DOM matches the deployed site. */ -}}
 <ul class="main-nav-list">
 {{- partial "cat-tree.html" (dict "page" . "depth" 1 "max" 2 "cls" "main-nav-list" "counts" false) -}}
 </ul>
