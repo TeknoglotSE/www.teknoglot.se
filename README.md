@@ -61,11 +61,10 @@ repository does not push automatically.
 
 ## Permalinks are permanent
 
-Every URL the site has ever served is in `permalinks.txt`. Check it after any
-build:
+Every URL the site serves is in `permalinks.txt`. Check it before committing:
 
 ```sh
-hugo --cleanDestinationDir && python3 tools/permalinks.py
+python3 tools/permalinks.py
 ```
 
 It exits non-zero and lists additions and removals if the set moved. Adding a
@@ -76,9 +75,16 @@ removal needs a redirect on the old path before the manifest is updated:
 python3 tools/permalinks.py --update
 ```
 
-Paths are recorded site-relative, so changing the domain is not a permalink
-change. The manifest is generated from the build, so run `--update` only
-against a fresh `hugo --cleanDestinationDir`, never against a stale `docs/`.
+The check reads the **git index**, not the files on disk, because this volume
+is case-insensitive and `core.ignorecase` is set. The filesystem reports
+whichever casing it happens to hold while the index records what will actually
+be deployed, and the web server is case-sensitive. That gap shipped a real
+outage once: the tree held `docs/Linux/` while every link pointed at
+`/linux/`, and ten URLs 404'd. Only the index can see it, so no build is
+needed to check.
+
+Paths in the manifest are site-relative, so changing the domain is not a
+permalink change. Letter case is significant.
 
 ## Assets
 

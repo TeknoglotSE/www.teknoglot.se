@@ -1,29 +1,28 @@
 #!/usr/bin/env python3
 """Guard the published URL set.
 
-Every page the site serves is an index.html under the publish directory, so
-the permalink set is exactly the set of directory paths that hold one. This
-script snapshots that set into permalinks.txt and fails when it moves.
+Reads the paths recorded in the git index, not the ones on disk. That matters:
+this repository lives on a case-insensitive volume with core.ignorecase=true, so
+the filesystem cannot be trusted about letter case, while the index is exactly
+what gets deployed. A build that writes docs/linux/ against a committed
+docs/Linux/ is invisible to `git status` here and becomes a 404 on the
+case-sensitive web server, which is precisely the bug this guards against.
 
-The URLs are recorded as site-relative paths, not absolute ones, so changing
-the domain does not read as a permalink change.
+Because the index is authoritative, no build is needed to check:
 
     python3 tools/permalinks.py            verify (exit 1 on any difference)
     python3 tools/permalinks.py --update   rewrite the manifest deliberately
 
-Build first. A stale docs/ verifies the stale set and passes:
-
-    hugo --cleanDestinationDir && python3 tools/permalinks.py
-
-Review any reported addition or removal before running --update. Adding a
-post adds a URL and that is expected; losing one is a broken inbound link.
+Review any reported addition or removal before running --update. Adding a post
+adds a URL and that is expected; losing one is a broken inbound link.
 """
 
 import argparse
 import pathlib
+import subprocess
 import sys
 
-PUBLISH_DIR = pathlib.Path("docs")
+PUBLISH_DIR = "docs"
 MANIFEST = pathlib.Path("permalinks.txt")
 
 HEADER = """\
@@ -33,22 +32,32 @@ HEADER = """\
 # address. Permalinks are permanent: if a line has to go, the old path needs a
 # redirect first.
 #
-# Regenerate with: hugo --cleanDestinationDir && python3 tools/permalinks.py --update
+# Paths are site-relative, so changing the domain is not a permalink change.
+# Letter case IS significant: the web server is case-sensitive even though this
+# development volume is not.
+#
+# Regenerate with: python3 tools/permalinks.py --update
 """
 
 
-def is_metadata(path):
-    """Skip AppleDouble sidecars, which this filesystem keeps recreating."""
-    return any(part.startswith("._") or part == ".DS_Store" for part in path.parts)
+def collect_from_index(publish_dir):
+    """Published URLs implied by the paths staged in the git index."""
+    result = subprocess.run(
+        ["git", "ls-files", "-z", "--", publish_dir],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        sys.exit(f"git ls-files failed: {result.stderr.strip()}")
 
-
-def collect(publish_dir):
+    prefix = f"{publish_dir}/"
     urls = set()
-    for index in publish_dir.rglob("index.html"):
-        if is_metadata(index.relative_to(publish_dir)):
+    for entry in result.stdout.split("\0"):
+        if not entry.startswith(prefix) or not entry.endswith("/index.html"):
             continue
-        directory = index.parent.relative_to(publish_dir).as_posix()
-        urls.add("/" if directory == "." else f"/{directory}/")
+        directory = entry[len(prefix) : -len("/index.html")]
+        urls.add("/" if not directory else f"/{directory}/")
     return urls
 
 
@@ -62,14 +71,13 @@ def main():
     parser.add_argument(
         "--update",
         action="store_true",
-        help="rewrite permalinks.txt from the current build instead of verifying",
+        help="rewrite permalinks.txt from the git index instead of verifying",
     )
     args = parser.parse_args()
 
-    if not PUBLISH_DIR.is_dir():
-        sys.exit(f"{PUBLISH_DIR}/ not found. Run from the repository root.")
-
-    current = collect(PUBLISH_DIR)
+    current = collect_from_index(PUBLISH_DIR)
+    if not current:
+        sys.exit(f"no {PUBLISH_DIR}/**/index.html paths in the index. Run from the repository root.")
 
     if args.update:
         MANIFEST.write_text(
