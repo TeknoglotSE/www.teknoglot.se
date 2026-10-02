@@ -4,6 +4,5 @@ type: tagpage
 url: /tag/HowTo/
 tag: HowTo
 tag_slug: HowTo
-post_count: 1
 cloud_order: 17
 ---

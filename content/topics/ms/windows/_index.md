@@ -5,5 +5,4 @@ url: /topics/ms/windows/
 cat: ms/windows
 cat_parent: ms
 chain_depth: 2
-post_count: 2
 ---

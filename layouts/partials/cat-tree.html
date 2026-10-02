@@ -28,7 +28,7 @@
 {{- $nodes = sort $nodes "Title" -}}
 {{- range $nodes -}}
 {{- $kids := where $topics "Params.cat_parent" .Params.cat -}}
-<li class="{{ $cls }}-item"><a class="{{ $cls }}-link" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ if $.counts }}<span class="{{ $cls }}-count">{{ .Params.post_count }}</span>{{ end }}{{ if and (lt $depth $max) (gt (len $kids) 0) -}}
+<li class="{{ $cls }}-item"><a class="{{ $cls }}-link" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ if $.counts }}<span class="{{ $cls }}-count">{{ partial "post-count.html" (dict "kind" "topic" "value" .Params.cat) }}</span>{{ end }}{{ if and (lt $depth $max) (gt (len $kids) 0) -}}
 <ul class="{{ $cls }}-child">
 {{- partial "cat-tree.html" (dict "depth" (add $depth 1) "max" $max "parent" .Params.cat "cls" $cls "counts" $.counts) -}}
 </ul>

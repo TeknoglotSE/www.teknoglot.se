@@ -4,6 +4,5 @@ type: tagpage
 url: /tag/NVidia/
 tag: NVidia
 tag_slug: NVidia
-post_count: 1
 cloud_order: 35
 ---

@@ -4,6 +4,5 @@ type: tagpage
 url: /tag/Video/
 tag: Video
 tag_slug: Video
-post_count: 1
 cloud_order: 80
 ---

@@ -23,7 +23,7 @@
 */ -}}
 {{- $tagpages := sort (where site.Pages "Type" "tagpage") "Params.cloud_order" -}}
 {{- $allCounts := slice -}}
-{{- range $tagpages -}}{{- $allCounts = $allCounts | append .Params.post_count -}}{{- end -}}
+{{- range $tagpages -}}{{- $allCounts = $allCounts | append (partial "post-count.html" (dict "kind" "tag" "value" .Params.tag)) -}}{{- end -}}
 {{- $distinct := sort (uniq $allCounts) -}}
 {{- $span := sub (len $distinct) 1 -}}
 {{- $minF := site.Params.tagcloudMinFont -}}
@@ -32,7 +32,7 @@
 <h3 class="widget-title">tag cloud</h3>
 <div class="widget tagcloud">
 {{- range $tagpages -}}
-{{- $count := .Params.post_count -}}
+{{- $count := partial "post-count.html" (dict "kind" "tag" "value" .Params.tag) -}}
 {{- $rank := 0 -}}
 {{- range $distinct -}}{{- if lt . $count -}}{{- $rank = add $rank 1 -}}{{- end -}}{{- end -}}
 {{- $ratio := 0.0 -}}

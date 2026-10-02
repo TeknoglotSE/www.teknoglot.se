@@ -5,5 +5,4 @@ url: /topics/ms/opsmgr2012/
 cat: ms/opsmgr2012
 cat_parent: ms
 chain_depth: 2
-post_count: 11
 ---

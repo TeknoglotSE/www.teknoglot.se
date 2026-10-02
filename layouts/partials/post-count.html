@@ -1,0 +1,15 @@
+{{- /*
+  Number of posts carrying a category chain or a tag.
+
+  This is what the listing pages actually select, so a count derived here can
+  never drift from the list beside it. It used to be a post_count field pinned
+  on every leaf, which is how topics/ms came to advertise 42 while the page
+  paginated 40.
+
+  Input: dict with
+    kind   "topic" to match a category chain, anything else to match a tag
+    value  the cat chain, e.g. "ms/opsmgr2012", or the tag as written
+*/ -}}
+{{- $posts := where site.RegularPages "Type" "posts" -}}
+{{- $field := cond (eq .kind "topic") "Params.cats" "Params.tags" -}}
+{{- return (len (where $posts $field "intersect" (slice .value))) -}}

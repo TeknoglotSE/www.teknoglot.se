@@ -5,5 +5,4 @@ url: /topics/linux/rhes/
 cat: linux/rhes
 cat_parent: linux
 chain_depth: 2
-post_count: 1
 ---

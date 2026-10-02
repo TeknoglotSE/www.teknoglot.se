@@ -4,6 +4,5 @@ type: tagpage
 url: /tag/RHES5/
 tag: RHES5
 tag_slug: RHES5
-post_count: 1
 cloud_order: 51
 ---
