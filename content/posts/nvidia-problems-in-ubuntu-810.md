@@ -1,8 +1,6 @@
 ---
 title: NVidia problems in Ubuntu 8.10
 date: 2008-11-10 09:20:14
-year: "2008"
-month: "11"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /linux/ubuntu/nvidia-problems-in-ubuntu-810/
 description: "[updated, scroll down if you want to skip some nonsense] So, I did an upgrade to Ubuntu Studio 8.10 (basically Ubuntu with rt-kernel and lots of nice media-related packages easily accessible and a ski"

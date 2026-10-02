@@ -1,8 +1,6 @@
 ---
 title: Let's split!
 date: 2009-04-16 03:27:06
-year: "2009"
-month: "04"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /tb/lets-split/
 description: Now would you look at that. Since my old site, Tranquillity.se, got messy and unfocused I have now started a new one. That’s right, you’re looking at it. Instead of blogging about mostly anything like

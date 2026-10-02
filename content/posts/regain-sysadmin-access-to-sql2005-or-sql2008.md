@@ -1,8 +1,6 @@
 ---
 title: (re)Gain sysadmin access to SQL2005 or SQL2008
 date: 2009-11-19 14:08:10
-year: "2009"
-month: "11"
 lastmod: 2016-06-14T13:18:36+02:00
 url: /ms/sql/regain-sysadmin-access-to-sql2005-or-sql2008/
 description: In SQL Server 2005 and 2008 the local Administrators account is not sysadmin by default. This makes it even more important that the one setting up the Database also remembers to add a SQL Server admin

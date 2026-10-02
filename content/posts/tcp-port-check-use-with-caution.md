@@ -1,8 +1,6 @@
 ---
 title: "The TCP Port Check: Use with caution!"
 date: 2009-08-27 14:39:43
-year: "2009"
-month: "08"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/tcp-port-check-use-with-caution/
 description: Just wanted to raise a word of caution about the TCP Port Check in Operations Manager 2007. Some customers have notices the the system-logs on some Unix machines are completely swamped with “connectio

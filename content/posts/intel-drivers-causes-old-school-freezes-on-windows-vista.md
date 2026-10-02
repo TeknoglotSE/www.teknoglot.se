@@ -1,8 +1,6 @@
 ---
 title: Intel Drivers causes old-school freezes on Windows Vista
 date: 2007-12-01 12:31:55
-year: "2007"
-month: "12"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/winvista/intel-drivers-causes-old-school-freezes-on-windows-vista/
 description: I recently got a nice new Lenovo ThinkPad T61 laptop at work to replace the old T42 I had earlier. Totally nice with 2,2GHz dual-core, Windows Vista and stuff. Now, there seems to be a problem with so

@@ -1,8 +1,6 @@
 ---
 title: ESENT Error When Modifying OpsMgr Agent
 date: 2010-03-19 10:34:17
-year: "2010"
-month: "03"
 lastmod: 2018-08-28T15:16:14+02:00
 url: /ms/opsmgr2007/esent-error-when-modifying-opsmgr-agent/
 description: Getting ESENT Kerys are required to install this application when you are trying to modify/change an agent installation?  This seems to be  most common on Windows 2008 and i guess it’s because of the

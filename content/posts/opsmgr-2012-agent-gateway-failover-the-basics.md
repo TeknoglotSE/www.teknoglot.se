@@ -1,8 +1,6 @@
 ---
 title: "OpsMgr 2012 Agent & Gateway Failover - The Basics [#opsmgr, #powershell]"
 date: 2012-05-30 14:12:37
-year: "2012"
-month: "05"
 lastmod: 2017-06-05T10:13:43+02:00
 url: /ms/opsmgr2012/opsmgr-2012-agent-gateway-failover-the-basics/
 description: I have previously posted a few scripts on managing and configuring fail-over management servers on gateways and agents in System Center Operations Manager 2007 R2. Now that System Center 2012 Operatio

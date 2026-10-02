@@ -1,8 +1,6 @@
 ---
 title: Bulk disable ACS Forwarders (with wildcards)
 date: 2011-07-07 10:59:24
-year: "2011"
-month: "07"
 lastmod: 2017-06-05T10:13:43+02:00
 url: /ms/opsmgr2007/bulk-disable-acs-forwarders-with-wildcards/
 description: Here’s a little something-something for the wicked. Me and my apprentice is currently decommissioning an entire Management Group with a thousand (-ish) agents. Long story short, we got a new Managemen

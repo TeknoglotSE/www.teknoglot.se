@@ -1,8 +1,6 @@
 ---
 title: Rant - The Concept of Booth-Babes
 date: 2012-05-08 18:18:05
-year: "2012"
-month: "05"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /tb/rant-the-concept-of-booth-babes/
 description: Background Having visited a few conferences in the last years I have spotted a trend I didn’t think I would see in the IT-Pro sphere. You could probably call me naïve for that but logically we should

@@ -21,10 +21,10 @@
 {{- $year := "" -}}
 {{- $row := 0 -}}
 {{- range $i, $p := $pages -}}
-  {{- $y := $p.Params.year -}}
+  {{- $y := $p.Date.Format "2006" -}}
   {{- $isLast := eq (add $i 1) $n -}}
   {{- $nextYear := "" -}}
-  {{- if not $isLast -}}{{- $nextYear = (index $pages (add $i 1)).Params.year -}}{{- end -}}
+  {{- if not $isLast -}}{{- $nextYear = (index $pages (add $i 1)).Date.Format "2006" -}}{{- end -}}
   {{- if ne $y $year -}}
     {{- if ne $year "" }}</div></section>{{ end -}}
     <section class="archives-wrap">

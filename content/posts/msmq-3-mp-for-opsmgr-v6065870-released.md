@@ -1,8 +1,6 @@
 ---
 title: MSMQ 3 MP for OpsMgr v.6.0.6587.0 Released
 date: 2009-04-28 15:30:18
-year: "2009"
-month: "04"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/msmq-3-mp-for-opsmgr-v6065870-released/
 description: "Last friday, 24/4 -09,  Microsoft released an updated Management Pack for MSMQ 3.0.  Quick Details               File Name:        Message Queuing System Center Operations Manager 2007 MP.MSI"

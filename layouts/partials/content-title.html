@@ -29,7 +29,7 @@
 {{- else if eq .Type "tagpage" -}}
 <i class="icon fa fa-tag"></i>Tag: <em>{{ .Title }}</em>
 {{- else if eq .Type "archive" -}}
-{{- if .Params.year }}{{ if .Params.month }}<i class="icon fa fa-archive"></i>Archive: {{ .Params.year }}/{{ .Params.month_num }}{{ else }}<i class="icon fa fa-archive"></i>Archive: {{ .Params.year }}{{ end }}{{ else }}<i class="icon fa fa-archive"></i>Archive{{ end -}}
+{{- if .Params.year }}{{ if .Params.month }}<i class="icon fa fa-archive"></i>Archive: {{ .Params.year }}/{{ .Params.month }}{{ else }}<i class="icon fa fa-archive"></i>Archive: {{ .Params.year }}{{ end }}{{ else }}<i class="icon fa fa-archive"></i>Archive{{ end -}}
 {{- else if eq .Kind "taxonomy" -}}
 <i class="icon fa fa-folder-open"></i>{{ .Title }}
 {{- else if eq .Kind "term" -}}

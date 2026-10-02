@@ -1,8 +1,6 @@
 ---
 title: Virtual OpenVPN Server at Home
 date: 2011-09-28 08:37:39
-year: "2011"
-month: "09"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /linux/virtual-openvpn-server-at-home/
 description: I was going to write a post on how to install and configure your own virtual SSL-VPN server as I had in mind to make one myself as a means to surf safely while on hotspots and to access my System Cent

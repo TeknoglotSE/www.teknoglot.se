@@ -1,8 +1,6 @@
 ---
 title: Event Id 4001 – “Cannot Add Type” in [#SQL] MP 6.6.4.0 for [#OpsMgr2012]
 date: 2016-02-15 12:22:28
-year: "2016"
-month: "02"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2012/Event-Id-4001-–-“Cannot-Add-Type”-in-SQL-MP-6-6-4-0-for-OpsMgr2012/
 description: Was troubleshooting this little error message for a customer after deploying the SQL Server Management Pack version 6.6.4.0. The event is the generic “Health Service Script” with id 4001. Management G

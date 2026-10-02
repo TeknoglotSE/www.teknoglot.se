@@ -1,8 +1,6 @@
 ---
 title: OpsMgr 2012 R2 UR3 - Field Notes [#opsmgr]
 date: 2014-09-02 11:30:18
-year: "2014"
-month: "09"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2012/opsmgr2012r2ur3-field-notes/
 description: Quick and unrefined notes on Update Roll-up 3 for System Center 2012 R2 - Operations Manager.  Preparation Usual routine, check the KB for instructions and known issues. Double-check with Holman’s blo

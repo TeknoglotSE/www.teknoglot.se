@@ -1,8 +1,6 @@
 ---
 title: "#MSIgnite 2017: TK01 - Create a Modern Workplace with Microsoft 365"
 date: 2017-09-25 12:17:15
-year: "2017"
-month: "09"
 lastmod: 2017-09-28T10:24:57-07:00
 url: /Events/MSIgnite-2017/MSIgnite-2017-TK01-Create-a-Modern-Workplace-with-Microsoft-365/
 description: TK01 - Create a modern workplace with Microsoft 365 Sep 25, 10:45 am – 12:15 pm  UNSTRUCTURED NOTES AWARENESS NOTICE! Also written on phone, will come back and refine   Arrived late due to escalators

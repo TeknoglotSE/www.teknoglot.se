@@ -28,16 +28,18 @@
 {{- else if eq .Type "topic" -}}
   {{- $title = printf "Category: %s" .Title -}}
 {{- else if eq .Type "archive" -}}
-  {{- if .Params.year -}}
-    {{- if .Params.month -}}
-      {{- $title = printf "Archive: %s/%s" .Params.year .Params.month_num -}}
+    {{- /* year and month are numbers in front matter, so month prints unpadded:
+           the established title is "Archive: 2018/8", not "2018/08". */ -}}
+    {{- if .Params.year -}}
+      {{- if .Params.month -}}
+        {{- $title = printf "Archive: %v/%v" .Params.year .Params.month -}}
+      {{- else -}}
+        {{- $title = printf "Archive: %v" .Params.year -}}
+      {{- end -}}
     {{- else -}}
-      {{- $title = printf "Archive: %s" .Params.year -}}
+      {{- $title = "Archive" -}}
     {{- end -}}
-  {{- else -}}
-    {{- $title = "Archive" -}}
   {{- end -}}
-{{- end -}}
 <meta charset="utf-8">
 {{- /* On the home page the title is just the
        site title with no "x | " prefix. */ -}}

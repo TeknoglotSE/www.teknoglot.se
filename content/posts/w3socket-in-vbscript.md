@@ -1,8 +1,6 @@
 ---
 title: w3Socket in VBScript
 date: 2007-04-21 16:10:05
-year: "2007"
-month: "04"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /code/vbs/w3socket-in-vbscript/
 description: I’ve been doing quite a lot of VBScripting in a couple of projects lately. The current one requires med to connect to a couple of telnet servers and look for… stuff. Since we’re not in VB6 och .Net i

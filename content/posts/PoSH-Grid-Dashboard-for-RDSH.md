@@ -1,8 +1,6 @@
 ---
 title: PoSH Grid Dashboard for RDSH [#opsmgr]
 date: 2016-06-14 00:01:27
-year: "2016"
-month: "06"
 lastmod: 2016-07-05T22:00:35+02:00
 url: /ms/opsmgr2012/PoSH-Grid-Dashboard-for-RDSH/
 description: "TLDR Customer wanted to see all RDS Host servers in a view with their current total session count. Decided to use a powershell grid dashboard, and share the script. Here’s the gist of it: SCOM_RDSH_T"

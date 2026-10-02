@@ -1,8 +1,6 @@
 ---
 title: "SquaredUp Installation - Manual? Pfffft! [#opsmgr #squaredup]"
 date: 2014-09-09 16:38:36
-year: "2014"
-month: "09"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2012/squaredup-installation/
 description: Story-time I saw SquaredUp some year or two ago while googling about on behalf of a customer looking for a dashboard kind of thingy. It looked good and fairly simple, but for some reason it never cli

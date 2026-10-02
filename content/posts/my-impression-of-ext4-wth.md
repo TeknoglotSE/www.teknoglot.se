@@ -1,8 +1,6 @@
 ---
 title: My impression of EXT4 -- WTH!?
 date: 2009-09-17 19:43:47
-year: "2009"
-month: "09"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /linux/my-impression-of-ext4-wth/
 description: Ok, so I reinstalled my linux partition with Ubuntu 9.04 x64 and decided to try EXT4 on the root partition. Like, yesterday. Managed to get the Citrix client running (way more easy on Ubuntu than Fedo

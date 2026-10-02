@@ -1,8 +1,6 @@
 ---
 title: Linux Discovery – Not Enough Entropy
 date: 2009-12-02 12:37:08
-year: "2009"
-month: "12"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /linux/sles/linux-discovery-not-enough-entropy/
 description: "Error Description Here’s a little trouble-shooting guide for discovering Linux systems from OpsMgr R2 when getting the following error from the wizard: <stdout>Generating certificate with hostn"

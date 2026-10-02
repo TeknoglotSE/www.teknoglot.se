@@ -1,8 +1,6 @@
 ---
 title: "#OpsMgr 1801 Upgrade - The Fail Anthology"
 date: 2018-08-27 15:42:17
-year: "2018"
-month: "08"
 lastmod: 2019-07-30T16:15:14+02:00
 url: /ms/opsmgr2016/om1801-upgrade-gotchas/
 description: A Collection of OpsMgr Upgrade Fails I’ll be frank on this one; Microsoft really dropped the ball on the 1801 setup program. No upgrade or update has been this ridden with faults and obscure errors,

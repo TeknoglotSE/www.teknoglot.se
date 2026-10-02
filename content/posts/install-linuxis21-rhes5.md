@@ -1,8 +1,6 @@
 ---
 title: Installing Linux Integration Services v2.1 on Red Hat ES 5
 date: 2010-08-31 12:06:04
-year: "2010"
-month: "08"
 lastmod: 2018-08-28T15:16:14+02:00
 url: /linux/rhes/install-linuxis21-rhes5/
 description: Ok, so I got the task to install the Linux Integration Service for Hyper-V R2 on a RedHat Enterprise Server 5. Something that turned out to be a bit more to handle than I would have thought. So here’s

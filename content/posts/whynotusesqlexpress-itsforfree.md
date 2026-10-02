@@ -1,8 +1,6 @@
 ---
 title: Why not use SQL Express? It’s for free!
 date: 2009-08-21 10:38:55
-year: "2009"
-month: "08"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/sql/whynotusesqlexpress-itsforfree/
 description: Background I get this question every now and then and every time I find myself completely flabbergasted and having to look things up once again. To avoid wasting my time on the same question once aga

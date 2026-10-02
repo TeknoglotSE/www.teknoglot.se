@@ -1,8 +1,6 @@
 ---
 title: Move complete, welcome to teknoglot.se!
 date: 2011-02-04 14:07:41
-year: "2011"
-month: "02"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /tb/move-complete-welcome-to-teknoglot-se/
 description: Oh my God, I actually moved my blog for real. I think I’ve been putting this upp for nearly half a year now and even though I actually went and bought a “real” domain-name for it. But now it’d done. T

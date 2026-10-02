@@ -1,8 +1,6 @@
 ---
 title: Introduction to TG WinAutoSvc v1
 date: 2011-04-29 11:35:47
-year: "2011"
-month: "04"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2012/introduction-to-tg-winautosvc-v1/
 description: Background For quite some time now I’ve had this idea spinning around in my head to write a couple of blog-posts about some of the more useful techniques available when building management packs. Man

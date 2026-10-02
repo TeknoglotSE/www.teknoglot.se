@@ -1,8 +1,6 @@
 ---
 title: "Set-SCOMMaintenanceMode Deluxe ed. [#opsmgr #powershell]"
 date: 2016-10-13 00:21:03
-year: "2016"
-month: "10"
 lastmod: 2016-12-07T17:48:05+01:00
 url: /ms/opsmgr2012/Set-SCOMMaintenanceModeDeluxe/
 description: Untimely, perhaps While most of us are waiting for SCOM 2016 RTM to be generally available i’ve completely forgot to blog about my little Set-SCOMMaintenanceModeDeluxe.ps1 script I wrote a while ago.

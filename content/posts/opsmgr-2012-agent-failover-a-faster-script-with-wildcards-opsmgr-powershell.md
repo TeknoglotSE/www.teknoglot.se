@@ -1,8 +1,6 @@
 ---
 title: "OpsMgr 2012 Agent Failover – A Faster Script with Wildcards [#opsmgr, #powershell]"
 date: 2012-06-28 14:28:36
-year: "2012"
-month: "06"
 lastmod: 2017-06-05T10:13:43+02:00
 url: /ms/opsmgr2012/opsmgr-2012-agent-failover-a-faster-script-with-wildcards-opsmgr-powershell/
 description: Now we’re gonna make things even faster! In the previous post on the subject of Agent Fail-over in Operations Manager 2012 we created a script that will go through a selection of agents and make sure

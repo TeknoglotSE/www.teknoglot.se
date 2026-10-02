@@ -1,8 +1,6 @@
 ---
 title: Parameter Replacement in AlertName
 date: 2012-04-09 22:04:48
-year: "2012"
-month: "04"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/parameter-replacement-in-alertname/
 description: …and why you should not use it  A Disclaimer I have had serious doubts about actually writing this article for almost a year now for reasons that I will explain further on. But as others have discove

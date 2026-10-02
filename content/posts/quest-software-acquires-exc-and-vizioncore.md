@@ -1,8 +1,6 @@
 ---
 title: Quest Software acquires eXc and VizionCore
 date: 2008-01-30 12:09:18
-year: "2008"
-month: "01"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /tb/quest-software-acquires-exc-and-vizioncore/
 description: Yes, I am officially slow. But never mind. Quest Software is a rather nice software developer with some interesting products for a wide range of Microsoft systems – like Site Administrator and Recover

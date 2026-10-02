@@ -19,8 +19,8 @@
 {{- else if eq .Type "tagpage" -}}
   {{- $sel = where $sel "Params.tags" "intersect" (slice .Params.tag) -}}
 {{- else if eq .Type "archive" -}}
-  {{- with .Params.year }}{{ $sel = where $sel "Params.year" . }}{{ end -}}
-  {{- with .Params.month }}{{ $sel = where $sel "Params.month" . }}{{ end -}}
+  {{- with .Params.year }}{{ $sel = where $sel "Date.Year" . }}{{ end -}}
+  {{- with .Params.month }}{{ $sel = where $sel "Date.Month" . }}{{ end -}}
 {{- else if in (slice "section" "taxonomy" "term") .Kind -}}
   {{- /* A native section or term lists its own pages, not every post on the
          site. This branch must stay last: the legacy types above are _index.md

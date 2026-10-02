@@ -1,8 +1,6 @@
 ---
 title: "#MSIgnite 2017: BRK1039 - Windows Server Software Defined"
 date: 2017-09-26 10:23:13
-year: "2017"
-month: "09"
 lastmod: 2017-09-28T18:15:59-04:00
 url: /Events/MSIgnite-2017/MSIgnite-2017-BRK1039-Windows-Server-Software-Defined/
 description: BRK1039 - Windows Server Software Defined The fastest route to the benefits of hyper-converged infrastructure WinSrv 2016, “Most cloud ready OS”, “Security” etc Talking about how WS2016 makes it poss

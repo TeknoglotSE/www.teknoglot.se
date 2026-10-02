@@ -1,8 +1,6 @@
 ---
 title: "Cloudflare as Dynamic DNS [#cloudflare #mikrotik #script]"
 date: 2014-08-25 13:37:36
-year: "2014"
-month: "08"
 lastmod: 2018-08-28T15:16:14+02:00
 url: /mikrotik/cloudflare-dynamic-dns-mikrotik/
 description: Background I have, for a time, been using CloudFlare for CDN, Optimizations and DNS Management for this and a few other domains. At the same time, I’ve been using DynDNS to provide name resolution to

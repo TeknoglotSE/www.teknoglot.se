@@ -1,8 +1,6 @@
 ---
 title: Microsoft Adds support for SUSE 11 in OpsMgr R2
 date: 2009-10-16 07:59:10
-year: "2009"
-month: "10"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/microsoft-adds-support-for-suse-11-in-opsmgr-r2/
 description: This update hasn’t showed up in the MP Catalog yet, but the System Center Operations Manager 2007 R2 Cross Platform Update can be downloaded here. Besides SUSE 11 support, here’s the short overview.

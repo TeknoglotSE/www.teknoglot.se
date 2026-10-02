@@ -1,8 +1,6 @@
 ---
 title: Health Rollup not working in Exchange Management Pack
 date: 2009-10-14 12:17:08
-year: "2009"
-month: "10"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/health-rollup-not-working-in-exchange-management-pack/
 description: I’ve wrestled a bit with a critical status on one of the Organization States at a clients site that wont go back to green despite all the underlying monitors have gone back to green. And apparently I

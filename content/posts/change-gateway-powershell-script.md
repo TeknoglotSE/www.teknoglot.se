@@ -1,8 +1,6 @@
 ---
 title: Change Gateway Powershell Script
 date: 2010-03-31 15:27:08
-year: "2010"
-month: "03"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/change-gateway-powershell-script/
 description: This script has pretty much already been covered in my previous post about Changing or Replacing an Operations Manager Gateway Server. This time I’ve basically put parameter support in it to make it e

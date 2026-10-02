@@ -1,8 +1,6 @@
 ---
 title: In transit, again
 date: 2016-06-01 21:03:35
-year: "2016"
-month: "06"
 lastmod: 2016-06-02T01:29:59+02:00
 url: /tb/in-transit-again/
 description: We’re moving! Yep. Again. Although, it’s been a year or two since the last time.  The reason(s) Ok, so I’ve using Wordpress for quite a long time now and it’s been good. Mostly. It’s a fairly solid p

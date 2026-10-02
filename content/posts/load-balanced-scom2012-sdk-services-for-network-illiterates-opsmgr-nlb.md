@@ -1,8 +1,6 @@
 ---
 title: "Load-balanced SCOM2012 SDK Services for Network Illiterates [#opsmgr, #nlb]"
 date: 2012-05-18 13:16:51
-year: "2012"
-month: "05"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2012/load-balanced-scom2012-sdk-services-for-network-illiterates-opsmgr-nlb/
 description: Prelude Now that System Center Operations Manager no longer has that pesky Root Management Server role; a server role that in larger environments quickly became the choking point and made creating a

@@ -1,8 +1,6 @@
 ---
 title: Silly Hibernation doo-doo on WinXP
 date: 2006-12-03 12:55:52
-year: "2006"
-month: "12"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/windows/winxp/silly-hibernation-doo-doo-on-winxp/
 description: I recently added another 500MB of RAM to my computer… and there was much rejoice. However, after a few days it started to behave erraticly when pressing the Fn+F12 combo (on a ThinkPad that means “Hib

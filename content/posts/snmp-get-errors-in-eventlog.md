@@ -1,8 +1,6 @@
 ---
 title: SNMP GET Errors in OpsMgr EventLog
 date: 2010-09-02 22:28:07
-year: "2010"
-month: "09"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/snmp-get-errors-in-eventlog/
 description: I’ve been building a little SNMP Management Pack in the past few days to discover and monitor a bunch of PowerWare UPS’s, which turned out to take quite a lot more energy and time than expected. Mostl

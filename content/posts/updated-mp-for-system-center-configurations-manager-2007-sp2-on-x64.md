@@ -1,8 +1,6 @@
 ---
 title: "Updated: MP for System Center Configurations Manager 2007 SP2 on x64"
 date: 2009-11-03 12:13:00
-year: "2009"
-month: "11"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/updated-mp-for-system-center-configurations-manager-2007-sp2-on-x64/
 description: Microsoft has released an updated MP for SCCM SP2 (v6.0.6000.2, released on 10/28/2009) for OpsMgr R2. The update basically contains support for x64 that was missing in the previous release.  The Conf

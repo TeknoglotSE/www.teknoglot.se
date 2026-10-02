@@ -1,8 +1,6 @@
 ---
 title: Windows Server 2008 NLB MP for OpsMgr released
 date: 2009-04-29 12:59:54
-year: "2009"
-month: "04"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/windows-server-2008-nlb-m-for-opsmgr-released/
 description: Don’t know how I missed this when writing the last post, but Microsoft released the MP for Windows Server 2008 NLB yesterday (28/4 -09). This is the initial release for Win2k8 NLB so I guess we just h

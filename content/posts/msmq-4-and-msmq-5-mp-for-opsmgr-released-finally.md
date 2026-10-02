@@ -1,8 +1,6 @@
 ---
 title: MSMQ 4 and MSMQ 5 MP for OpsMgr Released! (finally)
 date: 2010-04-06 12:09:57
-year: "2010"
-month: "04"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/msmq-4-and-msmq-5-mp-for-opsmgr-released-finally/
 description: After a long wait (definitely more than 90 days) the management packs for MSMQ 4 (Windows 2008) and MSMQ 5 (Windows 2008 R2) are finally released. Both seem to be fully Cluster aware and pretty much h

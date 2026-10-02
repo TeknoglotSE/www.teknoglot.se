@@ -1,8 +1,6 @@
 ---
 title: "Updated: Operations Manager 2007 R2 Management Pack"
 date: 2009-10-14 11:29:00
-year: "2009"
-month: "10"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/updated-operations-manager-2007-r2-management-pack/
 description: "Microsoft released an updated MP (v6.1.7533.0, released on 10/8/2009) for monitoring the health the Operations Manager components. Most significant updates, according to me, would seem to be:  Fixed a"

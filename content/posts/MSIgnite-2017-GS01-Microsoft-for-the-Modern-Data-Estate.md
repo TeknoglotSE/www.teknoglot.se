@@ -1,8 +1,6 @@
 ---
 title: "#MSIgnite 2017: GS01 - Microsoft for the Modern Data Estate"
 date: 2017-09-25 15:34:36
-year: "2017"
-month: "09"
 lastmod: 2017-09-28T10:10:35-07:00
 url: /Events/MSIgnite-2017/MSIgnite-2017-GS01-Microsoft-for-the-Modern-Data-Estate/
 description: GS01 - Microsoft for the modern data estate Sep 25, 2:15 pm – 3:30 pm  Quick Notes  Massive and growing amounts of data. Companies that out-develop themselves. Some companies have learned to leverage

@@ -1,8 +1,6 @@
 ---
 title: "MSMQ Management Pack: Subscript Out of Range"
 date: 2009-06-24 09:51:01
-year: "2009"
-month: "06"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/msmq-mp-subscriptoutofrange/
 description: "UPDATE: This problem seems to be fixed in the latest update! The MSMQ Management Pack seems to have a few problems with it’s discovery script that can lead to the following error showing up in the log"

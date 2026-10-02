@@ -1,8 +1,6 @@
 ---
 title: "Quick Demo - Add Windows Performance Collection Rule [#opsmgr, #mpauthoring]"
 date: 2013-02-21 09:25:39
-year: "2013"
-month: "02"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/quick-demo-add-windows-performance-collection-rule-opsmgr-mpauthoring/
 description: By request, I uploaded a short clip demonstrating how you would add a windows performance counter to a performance collection rule using the Authoring Console. It is a fairly simple task to complete b

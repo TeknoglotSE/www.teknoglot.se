@@ -1,8 +1,6 @@
 ---
 title: Updated MSMQ Management Pack v6.0.6615.0!
 date: 2009-12-23 09:57:38
-year: "2009"
-month: "12"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/updated-msmq-management-pack/
 description: "Microsoft has released an update to the MSMQ (version 3) management pack. System Center Pack for: Message Queuing 3.0Version:      6.0.6615.0Released on:  12/14/2009Message Queuing (also known as MSMQ"

@@ -1,8 +1,6 @@
 ---
 title: Replace/Change a Gateway Server
 date: 2009-09-24 12:32:35
-year: "2009"
-month: "09"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/replacechange-a-gateway-server/
 description: Description of problem If you are looking into replacing an (or just switching to another primary) Operations Manager 2007 Gateway Server for any reason, there’s a little more to consider than just r

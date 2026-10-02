@@ -1,8 +1,6 @@
 ---
 title: "Quick-Hack: Send SMS through Powershell [#powershell]"
 date: 2012-05-15 15:14:00
-year: "2012"
-month: "05"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /code/posh/quick-hack-send-sms-through-powershell-powershell/
 description: Decided to do a quick-hack/fast-publish on this one as I have had a bit less time to create a nice clean production-ready version as of yet… and people has been asking about how far off the article is

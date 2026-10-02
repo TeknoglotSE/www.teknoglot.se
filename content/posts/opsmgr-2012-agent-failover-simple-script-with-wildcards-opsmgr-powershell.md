@@ -1,8 +1,6 @@
 ---
 title: "OpsMgr 2012 Agent Failover - Simple Script with Wildcards [#opsmgr, #powershell]"
 date: 2012-06-21 10:58:13
-year: "2012"
-month: "06"
 lastmod: 2017-06-05T10:13:43+02:00
 url: /ms/opsmgr2012/opsmgr-2012-agent-failover-simple-script-with-wildcards-opsmgr-powershell/
 description: In the last post, OpsMgr 2012 Agent & Gateway Failover – The Basics, we looked at the basics of the Agent and Gateway fail-over configuration cmdlets and how to use them in a direct and interactiv

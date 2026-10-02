@@ -1,8 +1,6 @@
 ---
 title: "#MSIgnite 2017: KEY01 - Vision Keynote"
 date: 2017-09-25 10:05:33
-year: "2017"
-month: "09"
 lastmod: 2017-09-28T10:02:10-07:00
 url: /Events/MSIgnite-2017/MSIgnite-2017-KEY01-Vision-Keynote/
 description: KEY01 - Vision Keynote Sep 25, 9:00 am – 10:00 am  UNSTRUCTURED NOTES! Also, mixed Swedish and English, sorry for that. Will update at a later time  O365, all in one place… Live sändning med AI övers

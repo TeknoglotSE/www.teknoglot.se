@@ -1,8 +1,6 @@
 ---
 title: NetworkAdapterCheck.vbs fails on Windows 2000
 date: 2009-04-26 11:21:18
-year: "2009"
-month: "04"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/networkadaptercheck-fails-on-win2k/
 description: Problem Here’s my summary of the problems with the NetworkAdapterCheck.vbs script in the Windows Server 2000 Operating System Management Pack för Operations Manager 2007 that is causing the failed to

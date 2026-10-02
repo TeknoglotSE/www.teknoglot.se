@@ -1,8 +1,6 @@
 ---
 title: OpsMgr 2007 R2 Documentation
 date: 2011-08-08 22:52:27
-year: "2011"
-month: "08"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/opsmgr-2007-r2-documentation/
 description: Here a link to the System Center Operations Manager 2007 R2 Documentation for those of you out there who keeps asking of its whereabouts and then tell me to not tell you to google for it. So now I can

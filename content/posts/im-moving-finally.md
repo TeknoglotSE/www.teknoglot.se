@@ -1,8 +1,6 @@
 ---
 title: I'm moving (finally)
 date: 2011-02-01 12:10:52
-year: "2011"
-month: "02"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /tb/im-moving-finally/
 description: If you’re seeing this, the move went OK. 😛 Anyway, I have tried to make sure that all the links, images and urls are still intact and that people are automatically redirected to the correct address o

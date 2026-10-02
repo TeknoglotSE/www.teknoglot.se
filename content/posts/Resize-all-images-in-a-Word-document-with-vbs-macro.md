@@ -1,8 +1,6 @@
 ---
 title: "Resize all images in a Word document with #vbs #macro"
 date: 2016-07-05 22:08:26
-year: "2016"
-month: "07"
 lastmod: 2016-07-05T23:26:16+02:00
 url: /code/vbs/Resize-all-images-in-a-Word-document-with-vbs-macro/
 description: TLDR Quick and dirty macro to resize all images in a word document to 145 mm. I am lazy like that. Get the gist of it here.  The “Why” Ok, so. I am a consultant, as you may know. And as a consultant,

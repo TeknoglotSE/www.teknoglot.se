@@ -1,8 +1,6 @@
 ---
 title: Cannot Delete Files with Long Paths?
 date: 2009-10-21 09:39:17
-year: "2009"
-month: "10"
 lastmod: 2018-08-28T15:29:58+02:00
 url: /ms/windows/cannot-delete-files-with-long-paths/
 description: What do you do when you cannot delete a file or folder on a windows server? Check the file permissions! And if that doesn’t help? Check the share permissions! Yes, if it is a shared folder. And if tha
