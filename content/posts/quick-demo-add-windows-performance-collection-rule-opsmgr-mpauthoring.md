@@ -5,9 +5,7 @@ year: "2013"
 month: "02"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2007/quick-demo-add-windows-performance-collection-rule-opsmgr-mpauthoring/
-url_encoded: /ms/opsmgr2007/quick-demo-add-windows-performance-collection-rule-opsmgr-mpauthoring/
 description: By request, I uploaded a short clip demonstrating how you would add a windows performance counter to a performance collection rule using the Authoring Console. It is a fairly simple task to complete b
-hexo_slug: quick-demo-add-windows-performance-collection-rule-opsmgr-mpauthoring
 excerpt: By request, I uploaded a short clip demonstrating how you would add a windows performance counter to a performance collection rule using the Authoring Console. It is a fairly simple task to complete but does require the Authoring Console, obviously, and a better target class than what I use in the demo. The demo also assumes that this counter exist on all the targeted servers in your environment. It would be wise, when making your management pack, to check that it’s there on all targeted operating systems, and that’s what I use Performance Monitor for. (just search for perfmon in your start menu or run perfmon.exe) Enjoy.
 cats:
   - ms
@@ -17,7 +15,6 @@ tags:
   - Management Pack
   - MP Development
   - Video
-hexo_id: 764
 ---
 
 By request, I uploaded a short clip demonstrating how you would add a windows performance counter to a performance collection rule using the Authoring Console.

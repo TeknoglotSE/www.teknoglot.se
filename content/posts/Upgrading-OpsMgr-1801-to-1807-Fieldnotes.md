@@ -5,9 +5,7 @@ year: "2018"
 month: "09"
 lastmod: 2019-07-30T16:15:14+02:00
 url: /ms/opsmgr1801/Upgrading-OpsMgr-1801-to-1807-Fieldnotes/
-url_encoded: /ms/opsmgr1801/Upgrading-OpsMgr-1801-to-1807-Fieldnotes/
 description: My Fieldnotes are quick, unrefined notations and reflections from the field.  Content may be obvious and unnecessary to some, useful to others.The main purpose is for them to be used as a searchable n
-hexo_slug: Upgrading-OpsMgr-1801-to-1807-Fieldnotes
 excerpt: My Fieldnotes are quick, unrefined notations and reflections from the field. Content may be obvious and unnecessary to some, useful to others.The main purpose is for them to be used as a searchable notebook.These Notes are not to be seen as a manual, a how-to or a set ofinstructions, but rather a collection of thoughts, reflectionsand experiences from my field-work. Abstract Upgrades from OpsMgr (SCOM) 1801 to 1807 is generally a safe operation. Can be done using Windows Update if you want to, but I would suggest only letting Management Servers, Reporting Servers and Web Console servers pre-load the update for a controlled update at a suitable time. I general, the updates goes smooth, but you still have to run the SQL-script(s) and import the updated Management Packs provided with the update. This should be done directly after updating the last Management Server. Links Official Documentation Download Location Announcement Blog What’s New! - Webinar Recording List of fixes Notes Updating the Management Servers Fairly quick update, may need a restart afterwards. On occasion, especially if the patch has to wait on shutting down the management server services (healthservice, omsdk, cshost) due to backlogs or high load, it might fail at replacing the binaries. You will notice this as the management server will go grey in the SCOM Console and you might find connectivity errors in the OperationsManager eventlog. If this happens, can be fixed by simply applying the patch again after a reboot.
 cats:
   - ms
@@ -17,7 +15,6 @@ cats:
   - ms/opsmgr1801
 tags:
   - Fieldnotes
-migration_notes: "inline flow array(s): [Fieldnotes,OpsMgr], [Microsoft,OpsMgr 1807], [Microsoft,OpsMgr 1801]"
 ---
 
 ```text

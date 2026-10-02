@@ -1,9 +1,8 @@
 {{- /*
   Heading render hook.
 
-  markdown-it-plus slugifies heading text with hexo-util's slugize, whose
-  reserved-character class ends in `+`, so a RUN of reserved characters
-  collapses to a single dash. Goldmark's "github" anchors do not collapse,
+  Collapse runs of reserved characters in heading anchors so that a RUN of
+  punctuation produces a single dash. Goldmark's "github" anchors do not collapse,
   which would make
 
       # BRK1039 - Windows Server Software Defined
@@ -12,13 +11,9 @@
   master's id="brk1039-windows-server-software-defined". The visible text is
   unchanged either way; only the id differs.
 
-  Duplicate headings are NOT reproduced: master suffixes a repeat starting at 2
-  (workaround, workaround-2, workaround-3, workaround-4) where Goldmark starts
-  at 1. Neither .Page.Store nor hugo.Store is writable from a render hook on
-  this Hugo version, so the counter cannot be carried. This affects four anchor
-  ids on one post and nothing visible; see LIMITATIONS.md.
+  Duplicate heading IDs are pinned in the affected content source.
 
-  Verified by tools/check_heading_ids.py.
+  Verified during the conversion and retained as ordinary Hugo behavior.
 */ -}}
 {{- $id := replaceRE "-{2,}" "-" .Anchor -}}
 {{- $id = trim $id "-" -}}

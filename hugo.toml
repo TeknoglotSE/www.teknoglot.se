@@ -4,14 +4,13 @@ title = "teknoglot:"
 themeColor = "#dd3333"
 
 # Rendered dates are local wall-clock; the datetime attributes are UTC.
-# Hexo did the same via timezone: Europe/Stockholm.
 timeZone = "Europe/Stockholm"
 
 # Every page carries an explicit `url` in its front matter, pinned from
-# master's emitted permalinks. Nothing here should be relied on to derive a
-# path; see migration/hugo/findings/permalinks.md.
+# The explicit URLs preserve the site's established public paths.
 #
-# Hugo's taxonomies are switched off entirely. Left on, the `tags` key in front
+# Hugo's taxonomies are switched off for the existing custom topic/tag pages.
+# Left on, the `tags` key in front
 # matter makes Hugo claim content/tags/ as its own taxonomy term container, and
 # the generated tag leaves silently vanish from the build. The categories and
 # tags here are plain front-matter data, not taxonomies: their URLs are nested
@@ -21,7 +20,7 @@ timeZone = "Europe/Stockholm"
 
 publishDir = "docs"
 
-# Hugo emits a /page/1/ copy of every paginated list. master has none of these,
+# Hugo emits a /page/1/ copy of every paginated list. The published site has no
 # so suppress them: 167 extra pages otherwise. The global key covers content
 # aliases, the pagination key covers these.
 disableAliases = true
@@ -30,12 +29,12 @@ disableAliases = true
   disableAliases = true
   pagerSize = 10
 
-# Hexo's `breaks: true` turns single newlines into <br>. Goldmark calls this
+# Single newlines in the source render as <br>. Goldmark calls this
 # hardWraps, and without it roughly half the posts render differently.
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      # Hexo's markdown-it-plus runs with breaks: true, so a single newline in
+      # The original renderer ran with breaks enabled, so a single newline in
       # the source becomes a <br>. This lives under `renderer`, not directly
       # under `goldmark`; set in the wrong place it is silently ignored, which
       # cost a long debugging detour. master has 903 <br> in article bodies.
@@ -43,7 +42,7 @@ disableAliases = true
       # raw <acronym>, <span>, <table>, <script> in post bodies
       unsafe = true
     [markup.goldmark.parser]
-      # markdown-it-plus puts slugified ids on content headings, e.g.
+      # Slugified IDs on content headings, e.g.
       # "# BRK1039 - Windows Server Software Defined" becomes
       # id="brk1039-windows-server-software-defined"
       autoHeadingID = true
@@ -61,7 +60,7 @@ disableAliases = true
     tabWidth = 4
 
 [outputFormats]
-  # hexo-generator-json-content, consumed by Insight.js at /content.json
+  # Custom search index consumed by Insight.js at /content.json
   [outputFormats.contentjson]
     mediaType = "application/json"
     baseName = "content"
@@ -90,7 +89,7 @@ disableAliases = true
   disqusShortname = "teknoglotse"
   googleAnalytics = "UA-382656-8"
   perPage = 10
-  # Hexo's tagcloud: min 10px, max 20px, interpolated by the RANK of a tag's
+  # Tagcloud: min 10px, max 20px, interpolated by the RANK of a tag's
   # post count among the distinct counts, not linearly by the count itself.
   tagcloudMinFont = 10
   tagcloudMaxFont = 20

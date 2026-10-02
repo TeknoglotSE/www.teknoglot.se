@@ -5,9 +5,7 @@ year: "2014"
 month: "08"
 lastmod: 2018-08-28T15:16:14+02:00
 url: /mikrotik/cloudflare-dynamic-dns-mikrotik/
-url_encoded: /mikrotik/cloudflare-dynamic-dns-mikrotik/
 description: Background I have, for a time, been using CloudFlare for CDN, Optimizations and DNS Management for this and a few other domains. At the same time, I’ve been using DynDNS to provide name resolution to
-hexo_slug: cloudflare-dynamic-dns-mikrotik
 excerpt: Background I have, for a time, been using CloudFlare for CDN, Optimizations and DNS Management for this and a few other domains. At the same time, I’ve been using DynDNS to provide name resolution to my home network/lab. Browsing around the CloudFlare JSON API I noticed that I can update DNS records through some fairly simple HTTP GET requests, and since the RouterOS (the operating system used by Mikrotik’s routerboards) has support for some pretty decent scripting I decided to let my router update CloudFlare for some custom and free dynamic DNS resolution. Attribution My current script is a modified version of a script developed by Konstantin Antselovich. Original script: http://konstant1n.livejournal.com/9759.html Original Author website: http://konstantin.antselovich.com/ Thanks! How you do it What you need RouterOS v6+ for HTTPS support Cloudflare API key, aka “Token”, found at the account page Cloudflare DNS Zone name Cloudflare Record Id (more on that later) Cloudflare subdomain name Name of the external router interface
 cats:
   - mikrotik
@@ -18,7 +16,6 @@ tags:
   - Invoke-RestMethod
   - Mikrotik
   - RouterOS
-hexo_id: 796
 ---
 
 # Background

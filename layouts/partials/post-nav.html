@@ -1,9 +1,9 @@
 {{- /*
   Prev/next navigation, shown in the sidebar on post pages only.
 
-  Hexo's post.prev is the NEWER post and post.next the OLDER one. In Hugo the
+  legacy generator's post.prev is the NEWER post and post.next the OLDER one. In Hugo the
   equivalent is the next/previous element of the date-sorted sequence, which is
-  inverted relative to Hexo's naming.
+  inverted relative to legacy generator's naming.
 */ -}}
 {{- $all := where site.RegularPages "Type" "posts" -}}
 {{- $all = $all.ByDate.Reverse -}}

@@ -5,15 +5,12 @@ year: "2012"
 month: "06"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /tb/menu-problems/
-url_encoded: /tb/menu-problems/
 description: The menus are looking a bit off as you may have noticed. I guess it’s an issue with WordPress 3.4 and Superfish and are trying to figure out where it goes haywire. Sorry for the inconvenience.  Update
-hexo_slug: menu-problems
 excerpt: The menus are looking a bit off as you may have noticed. I guess it’s an issue with WordPress 3.4 and Superfish and are trying to figure out where it goes haywire. Sorry for the inconvenience. Update I switched the theme to at least get the navigation working while I try to figure out what the problem with the regular theme is.
 cats:
   - tb
 tags:
   - Teknoglot
-hexo_id: 677
 ---
 
 The menus are looking a bit off as you may have noticed.

@@ -5,9 +5,7 @@ year: "2017"
 month: "09"
 lastmod: 2017-09-28T18:15:59-04:00
 url: /Events/MSIgnite-2017/MSIgnite-2017-BRK1039-Windows-Server-Software-Defined/
-url_encoded: /Events/MSIgnite-2017/MSIgnite-2017-BRK1039-Windows-Server-Software-Defined/
 description: BRK1039 - Windows Server Software Defined The fastest route to the benefits of hyper-converged infrastructure WinSrv 2016, “Most cloud ready OS”, “Security” etc Talking about how WS2016 makes it poss
-hexo_slug: MSIgnite-2017-BRK1039-Windows-Server-Software-Defined
 excerpt: BRK1039 - Windows Server Software Defined The fastest route to the benefits of hyper-converged infrastructure WinSrv 2016, “Most cloud ready OS”, “Security” etc Talking about how WS2016 makes it possible to define Network, Compute and Storage in software, as virtual machines/Applicances. WSSD Microsoft defines reference architecture, Solution vendors make and certify hardware packages, customers use and get rekommendations from Microsoft and vendors. Benefits Pre-validated Partner validated against reference architecture Time to value Up and running quickly Optimized OOB Less guesswork Tuned for the hardware solution Hardware Choice Select best match from vendors Converged Storage VMs on SMB3 on S2D on SOFS Cluster
 cats:
   - Events

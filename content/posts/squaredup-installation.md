@@ -5,9 +5,7 @@ year: "2014"
 month: "09"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2012/squaredup-installation/
-url_encoded: /ms/opsmgr2012/squaredup-installation/
 description: Story-time I saw SquaredUp some year or two ago while googling about on behalf of a customer looking for a dashboard kind of thingy. It looked good and fairly simple, but for some reason it never cli
-hexo_slug: squaredup-installation
 excerpt: Story-time I saw SquaredUp some year or two ago while googling about on behalf of a customer looking for a dashboard kind of thingy. It looked good and fairly simple, but for some reason it never clicked with the customer and we ended up going for some custom-made dashboards with a little scripting and some DB-queries. I kind of liked the look of their product though and have kept an eye on them now and then. Fast-forward to may 21st this year and the release of version 1.8 and a whole slew of nifty little features. What specifically piqued my interest was the linked dashboards, SharePoint integration and the included SLA and Map plugins. This basically ticked a lot of boxes many of my customers have looked for and something we’ve normally been looking into… err… other products for. That, coupled with some new videos on their Youtube-channel, a few well-placed tweets and a little mail-correspondence had me setting it up in my portable little lab. One of the interesting points is how, supposedly easy, it is to set the portal up. So I reset my lab – PDT is just wonderful – and decided to go for the hail-dummy approach. No manual, no preparations, no check-lists… Next-next-next then hopefully a working portal.
 cats:
   - ms
@@ -16,7 +14,6 @@ tags:
   - OpsMgr
   - Field Notes
   - SquaredUp
-hexo_id: 835
 ---
 
 # Story-time

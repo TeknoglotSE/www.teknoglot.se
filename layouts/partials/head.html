@@ -1,12 +1,11 @@
 {{- /*
-  Reproduces themes/tg-hueman/layout/common/head.ejs plus the Open Graph block
-  Hexo injects.
+  Site head and Open Graph metadata.
 
   The meta rules were read off master's rendered output per page type, because
   they are subtler than the template suggests:
 
     listing pages (home, category, tag, archive, archive year):
-      og:title is the SITE title, not the page title, because Hexo's
+      og:title is the SITE title, not the page title, because listing
       page.title is empty for an index page and open_graph falls back to
       config.title. description likewise falls back to the site description.
       No keywords, no article:* timestamps, no article:tag.
@@ -16,7 +15,7 @@
       article:modified_time.
 
     og:type is "article" for posts only: the About page is also a single page
-    but Hexo types it "website", because its type is page, not post.
+      but listing pages use type "website".
 
   Ordering matters and was taken from the output: keywords first, then the
   description, then the Open Graph block, then generator, then the feed link.
@@ -40,7 +39,7 @@
   {{- end -}}
 {{- end -}}
 <meta charset="utf-8">
-{{- /* On the home page Hexo's page.title is empty, so the title is just the
+{{- /* On the home page the title is just the
        site title with no "x | " prefix. */ -}}
 <title>{{ if and $title (not .IsHome) }}{{ $title }} | {{ end }}{{ site.Title }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -52,7 +51,7 @@
 <meta name="description" content="{{ $desc }}">
 {{- $ogTitle := cond $isSingle .Title site.Title -}}
 {{- $ogType := cond $isPost "article" "website" -}}
-{{- /* og:url keeps Hexo's /index.html suffix quirk, and reflects the page
+{{- /* og:url includes the served index.html suffix and reflects the page
        actually served: a paginated listing yields
        /archives/2009/page/2/index.html, not the section root. */ -}}
 {{- $path := .RelPermalink -}}
@@ -97,5 +96,5 @@
 <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
 <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
 <script type="text/javascript">!function(e,a,t,n,g,c,o){e.GoogleAnalyticsObject=g,e.ga=e.ga||function(){(window.ga.q=window.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),o=a.getElementsByTagName(t)[0],c.async=1,c.src="//www.google-analytics.com/analytics.js",o.parentNode.insertBefore(c,o)}(window,document,"script",0,"ga"),ga("create","{{ site.Params.googleAnalytics }}","auto"),ga("send","pageview")</script>
-{{- /* the feed link is emitted last, after the analytics script, matching hexo */ -}}
+{{- /* Keep the feed link after the analytics script. */ -}}
 <link rel="alternate" href="{{ site.Params.rssPath }}" title="{{ site.Title }}" type="application/rss+xml">

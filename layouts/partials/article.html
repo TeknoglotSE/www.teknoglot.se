@@ -1,27 +1,24 @@
 {{- /*
   Post / page body. Reproduces common/article.ejs and the post/tag partial.
 
-  Hexo keys the article element on `layout`, not type: "post" for posts and
-  "page" for the About page. The tag list carries itemprop="keywords" and
-  rel="tag".
+  The article element and tag list carry the site's semantic attributes.
 
-  The Disqus thread id is a hash Hexo derived from the page URL; it cannot be
-  reproduced, so comment threads get new identifiers. Recorded as a limitation;
-  existing threads stay reachable under their old ids.
+  Disqus identifiers are intentionally left empty; the comment integration
+  resolves the page URL at runtime.
 */ -}}
 {{- $layout := cond (eq .Type "posts") "post" "page" -}}
-<article id="{{ $layout }}-{{ .Params.hexo_slug }}" class="article article-single article-type-{{ $layout }}" itemscope itemprop="blogPost">
+<article id="{{ $layout }}-{{ .File.ContentBaseName }}" class="article article-single article-type-{{ $layout }}" itemscope itemprop="blogPost">
 <div class="article-inner">
 <header class="article-header"><h1 class="article-title" itemprop="name">{{ .Title }}</h1></header>
 <div class="article-subtitle">
-{{- /* Hexo links the date through url_for(page.path). A post's path ends in a
+{{- /* A post's path ends in a
        slash, but the About page's is "About/index.html", so its date link
        really does include index.html. Reproduced. */ -}}
 <a href="{{ if eq $layout "post" }}{{ .RelPermalink }}{{ else }}{{ printf "%sindex.html" .RelPermalink }}{{ end }}" class="article-date"><time datetime="{{ .Date.UTC.Format "2006-01-02T15:04:05.000Z" }}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time></a>
 {{- if .Params.tags }}
 <ul class="article-tag-list" itemprop="keywords">
-{{- /* The visible list is sorted by name (Hexo's list_tags defaults to
-        orderby name), unlike the keywords and article:tag metas, which keep
+{{- /* The visible list is sorted by name, unlike the keywords and article:tag
+        metadata, which keep
         front-matter order. */ -}}
 {{- range $tag := sort .Params.tags }}
 <li class="article-tag-list-item"><a class="article-tag-list-link" href="{{ partial "tag-url.html" $tag }}" rel="tag">{{ $tag }}</a></li>

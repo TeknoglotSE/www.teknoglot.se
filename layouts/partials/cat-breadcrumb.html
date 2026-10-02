@@ -2,7 +2,7 @@
   Category breadcrumb, shared by summary cards, the recent-posts widget and the
   post page title bar.
 
-  Hexo calls list_categories(post.categories, {depth: 2, style: 'none',
+  legacy generator calls list_categories(post.categories, {depth: 2, style: 'none',
   separator: '<i class="icon fa fa-angle-right"></i>'}). The effect is: every
   category chain on the post is expanded to its full ancestor chain, the
   resulting nodes are deduplicated, sorted, and joined by the separator.
