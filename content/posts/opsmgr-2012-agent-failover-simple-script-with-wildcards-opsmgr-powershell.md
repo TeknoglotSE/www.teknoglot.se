@@ -1,12 +1,13 @@
 ---
 title: "OpsMgr 2012 Agent Failover - Simple Script with Wildcards [#opsmgr, #powershell]"
 date: 2012-06-21 10:58:13
-year: 2012
-month: 06
+year: "2012"
+month: "06"
 lastmod: 2017-06-05T10:13:43+02:00
 url: /ms/opsmgr2012/opsmgr-2012-agent-failover-simple-script-with-wildcards-opsmgr-powershell/
 url_encoded: /ms/opsmgr2012/opsmgr-2012-agent-failover-simple-script-with-wildcards-opsmgr-powershell/
 description: In the last post, OpsMgr 2012 Agent &amp; Gateway Failover – The Basics, we looked at the basics of the Agent and Gateway fail-over configuration cmdlets and how to use them in a direct and interactiv
+hexo_slug: opsmgr-2012-agent-failover-simple-script-with-wildcards-opsmgr-powershell
 excerpt: In the last post, OpsMgr 2012 Agent & Gateway Failover – The Basics, we looked at the basics of the Agent and Gateway fail-over configuration cmdlets and how to use them in a direct and interactive setting. This is absolutely useful when you got this specific agent that you need to configure with a specific fail-over management server. To spice it up a little, we are going to add a little intelligence to it and enable wild-card selections while at it. The scenario we are building this script for is that now and then you want to make sure that certain agents have fail-over management servers configured. You also want to make sure that all management servers that are not the primary management server of any selected agent will be in that list of fail-over servers. This would include any new management servers as well as exclude any removed ones. In short, make sure your agent fail-over settings are up-to-date with the current environment.
 cats:
   - ms

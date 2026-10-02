@@ -1,0 +1,28 @@
+{{- /*
+  Heading render hook.
+
+  markdown-it-plus slugifies heading text with hexo-util's slugize, whose
+  reserved-character class ends in `+`, so a RUN of reserved characters
+  collapses to a single dash. Goldmark's "github" anchors do not collapse,
+  which would make
+
+      # BRK1039 - Windows Server Software Defined
+
+  come out as id="brk1039---windows-server-software-defined" instead of
+  master's id="brk1039-windows-server-software-defined". The visible text is
+  unchanged either way; only the id differs.
+
+  Duplicate headings are NOT reproduced: master suffixes a repeat starting at 2
+  (workaround, workaround-2, workaround-3, workaround-4) where Goldmark starts
+  at 1. Neither .Page.Store nor hugo.Store is writable from a render hook on
+  this Hugo version, so the counter cannot be carried. This affects four anchor
+  ids on one post and nothing visible; see LIMITATIONS.md.
+
+  Verified by tools/check_heading_ids.py.
+*/ -}}
+{{- $id := replaceRE "-{2,}" "-" .Anchor -}}
+{{- $id = trim $id "-" -}}
+{{- /* markdown-it-anchor's linkWrapper: an empty permalink anchor ahead of the
+       heading text. It is unstyled in style.css, so invisible either way, but
+       it is part of the markup. */ -}}
+<h{{ .Level }}{{ with .Attributes }}{{ range $k, $v := . }}{{ if ne $k "id" }} {{ $k }}="{{ $v }}"{{ end }}{{ end }}{{ end }} id="{{ $id }}"><a class="markdownIt-Anchor" href="#{{ $id }}"></a> {{ .Text | safeHTML }}</h{{ .Level }}>

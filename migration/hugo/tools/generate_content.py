@@ -114,6 +114,22 @@ def main():
     with open(exc_path, encoding="utf-8") as fh:
         excerpts = json.load(fh)
 
+    counts_path = os.path.join(FINDINGS, "golden", "category-counts.json")
+    if not os.path.exists(counts_path):
+        fail("findings/golden/category-counts.json missing - "
+             "run capture_golden.py first")
+    with open(counts_path, encoding="utf-8") as fh:
+        counts_by_url = {c["url"]: c["count"]
+                         for c in json.load(fh)}
+
+    cloud_path = os.path.join(FINDINGS, "golden", "tagcloud.json")
+    if not os.path.exists(cloud_path):
+        fail("findings/golden/tagcloud.json missing - "
+             "run capture_golden.py first")
+    with open(cloud_path, encoding="utf-8") as fh:
+        tagcloud_order = {c["tag"]: i
+                          for i, c in enumerate(json.load(fh))}
+
     rows = tax["posts"]
     if len(rows) != 63:
         fail("expected 63 posts in taxonomy.json, found %d" % len(rows))
@@ -161,7 +177,10 @@ def main():
             fail("no excerpt for %s" % r["slug"])
 
         chains = [c["slug"] for c in r["categories"]]
-        tags = r["tags"]
+        # One post carries an empty tag (a bare "- " in its front matter).
+        # Hexo drops it everywhere: no tag page, and no entry in the keywords
+        # or article:tag metas.
+        tags = [t for t in r["tags"] if t and t.strip()]
 
         # Year and month as plain strings, for archive grouping. Derived from the
         # front-matter wall-clock date, which is what Hexo's post.date.year()
@@ -176,8 +195,8 @@ def main():
         fm.append("---")
         fm.append("title: %s" % yaml_scalar(r["title"]))
         fm.append("date: %s" % yaml_scalar(date))
-        fm.append("year: %s" % yaml_scalar(year_s))
-        fm.append("month: %s" % yaml_scalar(month_s))
+        fm.append('year: "%s"' % year_s)
+        fm.append('month: "%s"' % month_s)
         if lastmod:
             fm.append("lastmod: %s" % yaml_scalar(lastmod))
         # Explicit permalink: the whole point of this generator.
@@ -190,6 +209,9 @@ def main():
         # read from master's built output; not recomputable, see
         # tools/extract_descriptions.js for why
         fm.append("description: %s" % yaml_scalar(desc))
+        # Hexo keys the article element on post.slug, which comes from the
+        # filename. The About page has none, so its id really is "page-".
+        fm.append("hexo_slug: %s" % yaml_scalar(r["slug"]))
         # harvested from master's rendered cards; contains a non-breaking space
         # in at least one post, and is emitted unescaped as Hexo did
         fm.append("excerpt: %s" % yaml_scalar(exc["excerpt"]))
@@ -229,15 +251,13 @@ def main():
 
     for c in tax["categories"]:
         slug = c["url"].replace("/topics/", "").strip("/")
-        # A parent counts every distinct post beneath it, not just posts filed
-        # directly at that node. master shows Windows = 2 (its own post plus
-        # Windows XP), so the count must be prefix-based and deduplicated.
-        prefix = slug + "/"
-        count = 0
-        for r in rows:
-            if any(ch == slug or ch.startswith(prefix)
-                   for ch in (x["slug"] for x in r["categories"])):
-                count += 1
+        # Counts are read from master's rendered sidebar rather than computed.
+        # Hexo's own count disagrees with its listing for Microsoft (42 shown,
+        # 41 listed) because one post sits under two ms sub-chains at once.
+        # Every other node agrees with a prefix-deduplicated count.
+        count = counts_by_url.get(c["url"])
+        if count is None:
+            fail("no sidebar count for %s" % c["url"])
         parent = slug.rsplit("/", 1)[0] if "/" in slug else ""
         depth = slug.count("/") + 1
         fm = [
@@ -271,6 +291,14 @@ def main():
         slug = url.replace("/tag/", "").strip("/")
         posts = sorted(tag_posts.get(t["name"], []),
                        key=lambda p: p["date_local"], reverse=True)
+        # The tagcloud order is byte-wise on the tag name, which Hugo's `sort`
+        # does not reproduce (it collates): it would put "Gist" before "GSM",
+        # where master puts "GSM" first, since 'S' (0x53) < 'i' (0x69). The
+        # order is displayed data, so it is read from master's rendered cloud
+        # and pinned rather than re-derived. The fixture keys on tag slug.
+        order = tagcloud_order.get(slug)
+        if order is None:
+            fail("tag slug %r missing from master's tagcloud order" % slug)
         fm = [
             "---",
             "title: %s" % yaml_scalar(t["name"]),
@@ -279,6 +307,7 @@ def main():
             "tag: %s" % yaml_scalar(t["name"]),
             "tag_slug: %s" % yaml_scalar(slug),
             "post_count: %d" % len(posts),
+            "cloud_order: %d" % order,
             "---",
             "",
         ]
@@ -316,9 +345,13 @@ def main():
         ]
         if rel:
             parts = rel.split("/")
-            fm.append("year: %s" % yaml_scalar(parts[0]))
+            fm.append('year: "%s"' % parts[0])
             if len(parts) > 1:
-                fm.append("month: %s" % yaml_scalar(parts[1]))
+                fm.append('month: "%s"' % parts[1])
+                # The page title renders the month as a bare number, so
+                # /archives/2007/04/ is titled "Archive: 2007/4" while the
+                # directory keeps its zero padding.
+                fm.append('month_num: "%s"' % str(int(parts[1])))
         fm.append("---")
         fm.append("")
         path = os.path.join(archives_dir, rel, "_index.md")
@@ -341,6 +374,7 @@ def main():
             or date),
         "url: /About/",
         "layout: page",
+        'hexo_slug: ""',
     ]
     if about_desc:
         fm.append("description: %s" % yaml_scalar(about_desc))

@@ -1,16 +1,5 @@
-{{- /*
-  Tag listing. Exact match on the tag name, since tags are flat.
-
-  Tag URLs keep their original case and punctuation (/tag/x64/,
-  /tag/OpsMgr-2012-R2/), which Hugo taxonomies cannot express, so the tag pages
-  are generated as explicit leaves. Tag slugs are never mapped through
-  category_map: /tag/PoSH/ and /tag/Powershell/ are separate pages.
-*/ -}}
 {{ define "main" }}
-{{- $name := .Params.tag -}}
-{{- $posts := where site.RegularPages "Type" "posts" -}}
-{{- $posts = where $posts "Params.tags" "intersect" (slice $name) -}}
-{{- $posts = $posts.ByDate.Reverse -}}
-{{- partial "archive-list.html" $posts -}}
-{{- partial "pagination.html" (.Paginate $posts) -}}
+{{- $p := partial "list-paginator.html" . -}}
+{{- partial "archive-list.html" $p.Pages -}}
+{{- partial "pagination.html" $p -}}
 {{ end }}

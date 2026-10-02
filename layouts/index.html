@@ -1,6 +1,5 @@
 {{ define "main" }}
-{{- $posts := where site.RegularPages "Type" "posts" -}}
-{{- $posts = $posts.ByDate.Reverse -}}
-{{- partial "archive-list.html" $posts -}}
-{{- partial "pagination.html" (.Paginate $posts) -}}
+{{- $p := partial "list-paginator.html" . -}}
+{{- partial "archive-list.html" $p.Pages -}}
+{{- partial "pagination.html" $p -}}
 {{ end }}

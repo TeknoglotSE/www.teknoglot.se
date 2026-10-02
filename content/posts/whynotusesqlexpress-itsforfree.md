@@ -1,12 +1,13 @@
 ---
 title: Why not use SQL Express? It’s for free!
 date: 2009-08-21 10:38:55
-year: 2009
-month: 08
+year: "2009"
+month: "08"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/sql/whynotusesqlexpress-itsforfree/
 url_encoded: /ms/sql/whynotusesqlexpress-itsforfree/
 description: Background I get this question every now and then and every time I find myself completely flabbergasted and having to look things up once again. To avoid wasting my time on the same question once aga
+hexo_slug: whynotusesqlexpress-itsforfree
 excerpt: Background I get this question every now and then and every time I find myself completely flabbergasted and having to look things up once again. To avoid wasting my time on the same question once again and perhaps help others doing the same, here’s a little guidance. Don’t get me wrong now. SQL Express has it’s applications and for a free database server, it’s not half-bad. Small development sites, minor, not that extremely important systems with lower performance and feature demands, minor website databases et cetera could do well with SQL Express. My Checklist Here’s my list of questions you have to ask to find if SQL Express is the correct choice. 1. Do your applications support SQL Express? If your application developers cannot say “Yes” to this, you’re out of luck. You could probably get their applications to run on SQL Express anyway, but application support if something goes bad will most likely be zilch. 2. Do your applications fit the hardware limitations? SQL Express is limited to 1GB RAM, 1 CPU and 4GB of databases. 1GB of RAM seems a bit tight to me for any production data. Also, on SQL Express 2005, according to Microsoft, you cannot run parallel queries. ”SQL Server Express can install and run on multiprocessor machines, but only a single CPU is used at any time. Internally, the engine limits the number of user scheduler threads to 1 so that only 1 CPU is used at a time. Features such as parallel query execution are not supported because of the single CPU limit.”
 cats:
   - ms

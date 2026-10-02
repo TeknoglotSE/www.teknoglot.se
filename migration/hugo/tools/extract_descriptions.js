@@ -43,6 +43,25 @@ function metaDescription(html) {
   return m ? m[1] : null;
 }
 
+/**
+ * Undo one round of HTML escaping.
+ *
+ * The raw attribute holds entities such as `&#x2F;` for a slash, because Hexo
+ * escaped the value on the way out. Storing that escaped text in front matter
+ * makes Hugo escape it again when it writes the attribute, producing
+ * `&amp;#x2F;` and a doubly-escaped value. Storing the decoded form lets Hugo
+ * do the single escaping pass, which matches master after decoding.
+ */
+function unescapeHtml(s) {
+  return s
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)))
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&apos;/g, "'")
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&');
+}
+
 function main() {
   const tax = JSON.parse(
     fs.readFileSync(path.join(OUT, 'taxonomy.json'), 'utf8'));
@@ -60,7 +79,8 @@ function main() {
       problems.push('no description meta in ' + key);
       return;
     }
-    if (!actual.trim()) {
+    const decoded = unescapeHtml(actual);
+    if (!decoded.trim()) {
       problems.push('empty description in ' + key);
       return;
     }
@@ -69,7 +89,7 @@ function main() {
       problems.push('suspiciously long description in ' + key +
         ' (' + actual.length + ' chars)');
     }
-    results[key] = actual;
+    results[key] = decoded;
   }
 
   for (const post of tax.posts) {

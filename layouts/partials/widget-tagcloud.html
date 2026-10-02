@@ -16,9 +16,12 @@
   A linear-in-count reading of the formula would give, say, 10.37px for a
   2-post tag instead of 11.25px, so the ranking must be reproduced exactly.
 
-  Tags are ordered by name, case-sensitively, which is why "x64" renders last.
+  Tags are ordered by name, byte-wise and case-sensitively, which is why "GSM"
+  precedes "Gist" and "x64" renders last. Hugo's `sort` collates rather than
+  comparing bytes, so the order is pinned from master's rendered cloud as
+  cloud_order and sorted numerically here. See tools/generate_content.py.
 */ -}}
-{{- $tagpages := sort (where site.Pages "Type" "tagpage") "Title" -}}
+{{- $tagpages := sort (where site.Pages "Type" "tagpage") "Params.cloud_order" -}}
 {{- $allCounts := slice -}}
 {{- range $tagpages -}}{{- $allCounts = $allCounts | append .Params.post_count -}}{{- end -}}
 {{- $distinct := sort (uniq $allCounts) -}}

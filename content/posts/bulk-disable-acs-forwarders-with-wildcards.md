@@ -1,12 +1,13 @@
 ---
 title: Bulk disable ACS Forwarders (with wildcards)
 date: 2011-07-07 10:59:24
-year: 2011
-month: 07
+year: "2011"
+month: "07"
 lastmod: 2017-06-05T10:13:43+02:00
 url: /ms/opsmgr2007/bulk-disable-acs-forwarders-with-wildcards/
 url_encoded: /ms/opsmgr2007/bulk-disable-acs-forwarders-with-wildcards/
 description: Here’s a little something-something for the wicked. Me and my apprentice is currently decommissioning an entire Management Group with a thousand (-ish) agents. Long story short, we got a new Managemen
+hexo_slug: bulk-disable-acs-forwarders-with-wildcards
 excerpt: Here’s a little something-something for the wicked. Me and my apprentice is currently decommissioning an entire Management Group with a thousand (-ish) agents. Long story short, we got a new Management Group, migrated all the agents, added a couple of hundreds more, deployed a bunch of gateways and now we are shutting down the old one. Now, uninstalling the old Management Group from all the agents is a breeze using SCCM and handling the few 20-ish servers that are left is not a biggie either. Shutting down ACS, however, is a different matter.
 cats:
   - ms

@@ -1,12 +1,13 @@
 ---
 title: In transit, again
 date: 2016-06-01 21:03:35
-year: 2016
-month: 06
+year: "2016"
+month: "06"
 lastmod: 2016-06-02T01:29:59+02:00
 url: /tb/in-transit-again/
 url_encoded: /tb/in-transit-again/
 description: We’re moving! Yep. Again. Although, it’s been a year or two since the last time.  The reason(s) Ok, so I’ve using Wordpress for quite a long time now and it’s been good. Mostly. It’s a fairly solid p
+hexo_slug: in-transit-again
 excerpt: We’re moving! Yep. Again. Although, it’s been a year or two since the last time. The reason(s) Ok, so I’ve using Wordpress for quite a long time now and it’s been good. Mostly. It’s a fairly solid platform and has a whole slew of feautures that work nicely. Before Wordpress I used Textpattern, a very slimmed, minimalistic authoring experience and my first contact with textile and similar markup/writing/notation languages. For those unaware, textile is not unlike markdown. Or should we say that markdown is not unlike textile? Considering that textile was invented by Dean Allen two years before markdown. Anyhow. Both work pretty much as good as the other, allowing the author to write in any text-editor, using easily readable and fairly logical formatting. Before that I used Movable Type, and prior to that either Dreamweaver or… well, notepad or vim. Problem with all of those platforms, however, is that they require dynamically generated webpages and technologies like PHP, Perl, .NET, Java and whatnot. That, in itself, has been a very minor issue until lately. Sure, it requires servers with logics, engines, add-ons, execution rights to the local filesystem etc, but still a minor nuisance. Mostly a financial nuisance really as active servers tend to cost money while finding static hosting for free is still pretty easy. Hell! I could put a webserver on a RaspberryPi and get good performance for a small-ish blog like mine if all I am using is static content. But, again. Not a major problem in itself. The main instigating factors to move away from Wordpress are the increasing size of the package, the lack of personal control, the lack of ease to extend my platform due to ever-expanding APIs and the fact that it is so popular that every “hacker” and it’s mother knows how to find exploits on it. My webhost, NFSN has been very good at detecting probing and brute-force attempts and automatically block public access to stuff like the login-pages and XML-RPC interfaces when that happens. I am just so sick and tired of having to constantly be on top of it with software updates, plugin updates, theme updates, security updates, spam-filtering, re-enabling the login page… Back to the basics Teknoglot.se will be served statically from now on, and it will be hosted for free on Github Pages. Using Hexo.io I can write my posts using markdown, then with a simple hexo generate --deploy generate and update the static files and publish them. No login pages to hack, no dynamic pages to exploit, no server security to worry about.
 cats:
   - tb

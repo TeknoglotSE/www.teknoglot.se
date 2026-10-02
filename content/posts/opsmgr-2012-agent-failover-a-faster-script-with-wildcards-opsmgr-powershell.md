@@ -1,12 +1,13 @@
 ---
 title: "OpsMgr 2012 Agent Failover – A Faster Script with Wildcards [#opsmgr, #powershell]"
 date: 2012-06-28 14:28:36
-year: 2012
-month: 06
+year: "2012"
+month: "06"
 lastmod: 2017-06-05T10:13:43+02:00
 url: /ms/opsmgr2012/opsmgr-2012-agent-failover-a-faster-script-with-wildcards-opsmgr-powershell/
 url_encoded: /ms/opsmgr2012/opsmgr-2012-agent-failover-a-faster-script-with-wildcards-opsmgr-powershell/
 description: Now we’re gonna make things even faster! In the previous post on the subject of Agent Fail-over in Operations Manager 2012 we created a script that will go through a selection of agents and make sure
+hexo_slug: opsmgr-2012-agent-failover-a-faster-script-with-wildcards-opsmgr-powershell
 excerpt: Now we’re gonna make things even faster! In the previous post on the subject of Agent Fail-over in Operations Manager 2012 we created a script that will go through a selection of agents and make sure that they all have up-to-date fail-over settings. We are doing the same thing in this one, but making it go faster. In my lab, it’s about five times faster in fact and I only have about 20 agents to play with. Not really a big deal, but scale it up a bit and add a few thousand agents and the pay-off will be very significant. As usual, the script will work as is, but it really is more to show the concept. You would have to add filtering to make sure you don’t mix agents behind gateway servers and agents behind management servers. Giving an agent behind a gateway a management servers as it’s fail-over server will likely not help you in any way. We will pretty quickly go “advanced” this time, so buckle up. 😉
 cats:
   - ms

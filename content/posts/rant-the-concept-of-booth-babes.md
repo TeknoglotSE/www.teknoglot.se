@@ -1,12 +1,13 @@
 ---
 title: Rant - The Concept of Booth-Babes
 date: 2012-05-08 18:18:05
-year: 2012
-month: 05
+year: "2012"
+month: "05"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /tb/rant-the-concept-of-booth-babes/
 url_encoded: /tb/rant-the-concept-of-booth-babes/
 description: Background Having visited a few conferences in the last years I have spotted a trend I didn’t think I would see in the IT-Pro sphere. You could probably call me naïve for that but logically we should
+hexo_slug: rant-the-concept-of-booth-babes
 excerpt: Background Having visited a few conferences in the last years I have spotted a trend I didn’t think I would see in the IT-Pro sphere. You could probably call me naïve for that but logically we should not encourage this trend. This is my appeal to all exhibitors of future conferences to re-evaluate the concept of booth-babes. I will not go into the genus-political part of this discussion as of now–others are more eloquent and fit to handle that–but rather some of the more pragmatic sides to ditch the BB (short for Booth-Babe) and how that would gain us visitors as well as the exhibitors. I will also keep a pretty frank, and perhaps impolite, tone in this rant of mine. So, here’s my top reasons, in no particular order, to give up the BBs.
 cats:
   - tb

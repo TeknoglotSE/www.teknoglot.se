@@ -1,27 +1,5 @@
-{{- /*
-  Archive listing: all posts, or one year, or one year and month.
-
-  The shape of the tree (which years and months exist) is taken from master's
-  output rather than derived, because it is not simply every year with posts.
-
-  Filtering is on the `year`/`month` front-matter params rather than Hugo's
-  Date.Year accessor, which does not work inside `where` on this version.
-
-  Only the root and the larger year archives paginate; years and months with ten
-  posts or fewer hold a single page and render no nav, which falls out of the
-  pagination partial checking TotalPages.
-*/ -}}
 {{ define "main" }}
-{{- $posts := where site.RegularPages "Type" "posts" -}}
-{{- $posts = $posts.ByDate.Reverse -}}
-{{- $year := .Params.year -}}
-{{- $month := .Params.month -}}
-{{- if $year -}}
-  {{- $posts = where $posts "Params.year" $year -}}
-{{- end -}}
-{{- if $month -}}
-  {{- $posts = where $posts "Params.month" $month -}}
-{{- end -}}
-{{- partial "archive-list.html" $posts -}}
-{{- partial "pagination.html" (.Paginate $posts) -}}
+{{- $p := partial "list-paginator.html" . -}}
+{{- partial "archive-list.html" $p.Pages -}}
+{{- partial "pagination.html" $p -}}
 {{ end }}

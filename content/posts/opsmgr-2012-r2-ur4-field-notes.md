@@ -1,12 +1,13 @@
 ---
 title: OpsMgr 2012 R2 UR4 - Field Notes [#opsmgr]
 date: 2014-10-30 11:41:47
-year: 2014
-month: 10
+year: "2014"
+month: "10"
 lastmod: 2016-05-25T00:33:26+02:00
 url: /ms/opsmgr2012/opsmgr-2012-r2-ur4-field-notes/
 url_encoded: /ms/opsmgr2012/opsmgr-2012-r2-ur4-field-notes/
 description: Quick and unrefined notes on Update Roll-up 4 for System Center 2012 R2 - Operations Manager  Preparation The usual routine applies. Check the KB for instructions and take not of known issues. Check i
+hexo_slug: opsmgr-2012-r2-ur4-field-notes
 excerpt: "Quick and unrefined notes on Update Roll-up 4 for System Center 2012 R2 - Operations Manager Preparation The usual routine applies. Check the KB for instructions and take not of known issues. Check if Kevin Holman has written something about it. As this is an update roll up, I pre-emptively expect that gotchas in UR3 may apply. Remember to open the update catalog in IE as the downloader is not working in other browsers. Download, unpack, toss what languages that does not apply to your organization. It is advised to disable any mail-generating alert subscriptions during the upgrade process to avoid unnecessary spammage. Issues - So Far [updated: 2014-11-03] Got a few problems with cross-platform monitoring templates not working after the update. This was due to missing files in the update package. Make sure you download the updated version! Have not updated a customer using gateways yet, so unless they have fixed the issues in UR3, expect an update to this section soon. Planning"
 cats:
   - ms

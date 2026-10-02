@@ -8,6 +8,10 @@
   "Windows". A case-folded sort would order these differently, so do not
   "fix" this.
 
+  A child <ul> is emitted only when the node actually has children. Emitting an
+  empty one would show up as <ul class="main-nav-list-child"></ul> for the
+  childless categories (Mikrotik, Technobabble), which master does not have.
+
   Input: dict with
     depth  current level, 1-based
     max    deepest level to render
@@ -22,7 +26,8 @@
 {{- $nodes := where $topics "Params.cat_parent" (default "" .parent) -}}
 {{- $nodes = sort $nodes "Title" -}}
 {{- range $nodes -}}
-<li class="{{ $cls }}-item"><a class="{{ $cls }}-link" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ if $.counts }}<span class="{{ $cls }}-count">{{ .Params.post_count }}</span>{{ end }}{{ if lt $depth $max -}}
+{{- $kids := where $topics "Params.cat_parent" .Params.cat -}}
+<li class="{{ $cls }}-item"><a class="{{ $cls }}-link" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ if $.counts }}<span class="{{ $cls }}-count">{{ .Params.post_count }}</span>{{ end }}{{ if and (lt $depth $max) (gt (len $kids) 0) -}}
 <ul class="{{ $cls }}-child">
 {{- partial "cat-tree.html" (dict "depth" (add $depth 1) "max" $max "parent" .Params.cat "cls" $cls "counts" $.counts) -}}
 </ul>

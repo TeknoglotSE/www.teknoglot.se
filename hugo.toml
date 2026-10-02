@@ -35,9 +35,19 @@ disableAliases = true
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
+      # Hexo's markdown-it-plus runs with breaks: true, so a single newline in
+      # the source becomes a <br>. This lives under `renderer`, not directly
+      # under `goldmark`; set in the wrong place it is silently ignored, which
+      # cost a long debugging detour. master has 903 <br> in article bodies.
+      hardWraps = true
       # raw <acronym>, <span>, <table>, <script> in post bodies
       unsafe = true
     [markup.goldmark.parser]
+      # markdown-it-plus puts slugified ids on content headings, e.g.
+      # "# BRK1039 - Windows Server Software Defined" becomes
+      # id="brk1039-windows-server-software-defined"
+      autoHeadingID = true
+      autoHeadingIDType = "github"
       [markup.goldmark.parser.attribute]
         block = true
         title = true

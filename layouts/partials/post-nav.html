@@ -18,10 +18,10 @@
 {{- if or $newer $older -}}
 <nav id="article-nav">
 {{- with $newer -}}
-<a href="{{ .RelPermalink }}" id="article-nav-newer" class="article-nav-link-wrap"><strong class="article-nav-caption">Newer</strong><p class="article-nav-title">{{ .Title }}</p><i class="icon fa fa-chevron-right" id="icon-chevron-right"></i></a>
+<a href="{{ .RelPermalink }}" id="article-nav-newer" class="article-nav-link-wrap"><strong class="article-nav-caption">newer</strong><p class="article-nav-title">{{ .Title }}</p><i class="icon fa fa-chevron-right" id="icon-chevron-right"></i> </a>
 {{- end -}}
 {{- with $older -}}
-<a href="{{ .RelPermalink }}" id="article-nav-older" class="article-nav-link-wrap"><strong class="article-nav-caption">Older</strong><p class="article-nav-title">{{ .Title }}</p><i class="icon fa fa-chevron-left" id="icon-chevron-left"></i></a>
+<a href="{{ .RelPermalink }}" id="article-nav-older" class="article-nav-link-wrap"><strong class="article-nav-caption">older</strong><p class="article-nav-title">{{ .Title }}</p><i class="icon fa fa-chevron-left" id="icon-chevron-left"></i> </a>
 {{- end -}}
 </nav>
 {{- end -}}

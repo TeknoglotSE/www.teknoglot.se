@@ -10,14 +10,20 @@
   existing threads stay reachable under their old ids.
 */ -}}
 {{- $layout := cond (eq .Type "posts") "post" "page" -}}
-<article id="{{ $layout }}-{{ .File.ContentBaseName }}" class="article article-single article-type-{{ $layout }}" itemscope itemprop="blogPost">
+<article id="{{ $layout }}-{{ .Params.hexo_slug }}" class="article article-single article-type-{{ $layout }}" itemscope itemprop="blogPost">
 <div class="article-inner">
 <header class="article-header"><h1 class="article-title" itemprop="name">{{ .Title }}</h1></header>
 <div class="article-subtitle">
-<a href="{{ .RelPermalink }}" class="article-date"><time datetime="{{ .Date.UTC.Format "2006-01-02T15:04:05.000Z" }}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time></a>
+{{- /* Hexo links the date through url_for(page.path). A post's path ends in a
+       slash, but the About page's is "About/index.html", so its date link
+       really does include index.html. Reproduced. */ -}}
+<a href="{{ if eq $layout "post" }}{{ .RelPermalink }}{{ else }}{{ printf "%sindex.html" .RelPermalink }}{{ end }}" class="article-date"><time datetime="{{ .Date.UTC.Format "2006-01-02T15:04:05.000Z" }}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time></a>
 {{- if .Params.tags }}
 <ul class="article-tag-list" itemprop="keywords">
-{{- range $tag := .Params.tags }}
+{{- /* The visible list is sorted by name (Hexo's list_tags defaults to
+       orderby name), unlike the keywords and article:tag metas, which keep
+       front-matter order. */ -}}
+{{- range $tag := sort .Params.tags }}
 <li class="article-tag-list-item"><a class="article-tag-list-link" href="{{ partial "tag-url.html" $tag }}" rel="tag">{{ $tag }}</a></li>
 {{- end }}
 </ul>
@@ -29,14 +35,10 @@
 <footer class="article-footer">
 {{- partial "share.html" . -}}
 </footer>
-{{- if eq $layout "post" }}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Teknoglot - After Article -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8265950273936175" data-ad-slot="2559523773" data-ad-format="auto" data-full-width-responsive="true"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-{{- end }}
 </div>
 </article>
-{{- if eq $layout "post" }}
 <section id="comments"><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></section>
-{{- end }}

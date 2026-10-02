@@ -80,6 +80,22 @@ def main():
     order = re.findall(r'<h3 class="widget-title">([^<]*)</h3>', home)
     fixtures["widget-order.json"] = json.dumps(order, indent=1)
 
+    # Category counts are DISPLAYED data, and Hexo's own count disagrees with
+    # its listing: the sidebar shows Microsoft = 42 while /topics/ms/ actually
+    # lists 41 posts. That post is filed under two ms sub-chains at once, which
+    # is what tips the count. Rather than reimplement Hexo's arithmetic, the 23
+    # displayed counts are read straight out of the rendered sidebar.
+    pairs = re.findall(
+        r'href="(/topics/[^"]+)">([^<]*)</a>'
+        r'<span class="category-list-count">(\d+)</span>', catlist)
+    if len(pairs) != 23:
+        fail("expected 23 category nodes in the sidebar, found %d" % len(pairs))
+    counts = {url: int(n) for url, _, n in pairs}
+    names = {url: name for url, name, _ in pairs}
+    fixtures["category-counts.json"] = json.dumps(
+        [{"url": u, "name": names[u], "count": counts[u]}
+         for u in sorted(counts, key=str.lower)], indent=1)
+
     recent = between(home, '<ul id="recent-post"', "</ul></div>")
     fixtures["sidebar-recent.html"] = recent
 

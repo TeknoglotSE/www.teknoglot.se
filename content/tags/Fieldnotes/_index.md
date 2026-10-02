@@ -5,4 +5,5 @@ url: /tag/Fieldnotes/
 tag: Fieldnotes
 tag_slug: Fieldnotes
 post_count: 1
+cloud_order: 10
 ---
