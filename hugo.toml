@@ -90,7 +90,6 @@ disableAliases = true
   description = "Techspeak for the socially diminished."
   rssPath = "/rss.xml"
   favicon = "/favicon.png"
-  disqusShortname = "teknoglotse"
   googleAnalytics = "UA-382656-8"
   perPage = 10
   # Tagcloud: min 10px, max 20px, interpolated by the RANK of a tag's

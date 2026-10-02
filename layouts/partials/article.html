@@ -3,8 +3,9 @@
 
   The article element and tag list carry the site's semantic attributes.
 
-  Disqus identifiers are intentionally left empty; the comment integration
-  resolves the page URL at runtime.
+  There is no comment thread here any more. The section and the Disqus embed
+  were removed: it cost a blocking script on every page and, after the
+  migration, could not have resolved the old threads anyway.
 */ -}}
 {{- $layout := cond (eq .Type "posts") "post" "page" -}}
 <article id="{{ $layout }}-{{ .File.ContentBaseName }}" class="article article-single article-type-{{ $layout }}" itemscope itemprop="blogPost">
@@ -38,4 +39,3 @@
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 </article>
-<section id="comments"><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></section>

@@ -52,11 +52,11 @@
 {{- range $i, $p := (where site.RegularPages "Type" "pages") -}}
 {{- $pagePath := strings.TrimPrefix "/" $p.RelPermalink -}}
 {{- $pageURL := printf "%s/%sindex.html" $base $pagePath -}}
-{{- if $i }},{{ end }}{"title":{{ printf "%q" $p.Title }},"date":{{ printf "%q" ($p.Date.UTC.Format "2006-01-02T15:04:05.000Z") }},"updated":{{ printf "%q" ($p.Lastmod.UTC.Format "2006-01-02T15:04:05.000Z") }},"comments":true,"path":{{ printf "%q" (printf "%sindex.html" $pagePath) }},"permalink":{{ printf "%q" $pageURL }},"excerpt":"","text":{{ printf "%q" (partial "plain-text.html" $p) }}}
+{{- if $i }},{{ end }}{"title":{{ printf "%q" $p.Title }},"date":{{ printf "%q" ($p.Date.UTC.Format "2006-01-02T15:04:05.000Z") }},"updated":{{ printf "%q" ($p.Lastmod.UTC.Format "2006-01-02T15:04:05.000Z") }},"comments":false,"path":{{ printf "%q" (printf "%sindex.html" $pagePath) }},"permalink":{{ printf "%q" $pageURL }},"excerpt":"","text":{{ printf "%q" (partial "plain-text.html" $p) }}}
 {{- end -}}
 ],"posts":[
 {{- range $i, $p := $posts -}}
-{{- if $i }},{{ end }}{"title":{{ printf "%q" $p.Title }},"slug":{{ printf "%q" $p.File.ContentBaseName }},"date":{{ printf "%q" ($p.Date.UTC.Format "2006-01-02T15:04:05.000Z") }},"updated":{{ printf "%q" ($p.Lastmod.UTC.Format "2006-01-02T15:04:05.000Z") }},"comments":true,"path":{{ printf "%q" (strings.TrimPrefix "/" $p.Params.url) }},"link":"","permalink":{{ printf "%q" (absURL $p.Params.url) }},"excerpt":{{ printf "%q" ($p.Params.excerpt | default ($p.Summary | plainify | truncate 200)) }},"text":{{ printf "%q" (partial "plain-text.html" $p) }},"categories":[
+{{- if $i }},{{ end }}{"title":{{ printf "%q" $p.Title }},"slug":{{ printf "%q" $p.File.ContentBaseName }},"date":{{ printf "%q" ($p.Date.UTC.Format "2006-01-02T15:04:05.000Z") }},"updated":{{ printf "%q" ($p.Lastmod.UTC.Format "2006-01-02T15:04:05.000Z") }},"comments":false,"path":{{ printf "%q" (strings.TrimPrefix "/" $p.Params.url) }},"link":"","permalink":{{ printf "%q" (absURL $p.Params.url) }},"excerpt":{{ printf "%q" ($p.Params.excerpt | default ($p.Summary | plainify | truncate 200)) }},"text":{{ printf "%q" (partial "plain-text.html" $p) }},"categories":[
 {{- range $j, $c := $p.Params.cats -}}{{- if $j }},{{ end }}{"name":{{ printf "%q" (index $catName $c) }},"slug":{{ printf "%q" $c }},"permalink":{{ printf "%q" (index $catLink $c) }}}{{- end -}}
 ],"tags":[
 {{- range $j, $t := $p.Params.tags -}}{{- if $j }},{{ end }}{"name":{{ printf "%q" (index $tagName $t) }},"slug":{{ printf "%q" (index $tagSlug $t) }},"permalink":{{ printf "%q" (index $tagLink $t) }}}{{- end -}}

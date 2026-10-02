@@ -1407,12 +1407,6 @@ a.article-title:hover {
   max-width: 100%;
   margin: 0 auto;
 }
-#comments {
-  padding: 30px 30px 20px;
-}
-#comments a {
-  color: #d33;
-}
 .archives-wrap {
   margin: block-margin 0;
 }
@@ -2044,8 +2038,7 @@ i.icon:before {
   #main .archive-year-wrap {
     padding: 13px 15px 12px;
   }
-  #main .main-body-content .article-single,
-  #main .main-body-content #comments {
+  #main .main-body-content .article-single {
     padding: 15px;
   }
   #main .main-body-content #page-nav {
