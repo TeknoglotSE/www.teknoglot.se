@@ -54,9 +54,31 @@ values only take effect once a matching leaf exists.
 
 ## Publishing
 
-Run `hugo --cleanDestinationDir` to regenerate `docs/`, review the generated
-diff, and test locally before committing. Deployment is handled by the owner's
-remote publishing workflow; this repository does not push automatically.
+Run `hugo --cleanDestinationDir` to regenerate `docs/`, then verify the
+permalink set, review the generated diff, and test locally before committing.
+Deployment is handled by the owner's remote publishing workflow; this
+repository does not push automatically.
+
+## Permalinks are permanent
+
+Every URL the site has ever served is in `permalinks.txt`. Check it after any
+build:
+
+```sh
+hugo --cleanDestinationDir && python3 tools/permalinks.py
+```
+
+It exits non-zero and lists additions and removals if the set moved. Adding a
+post adds a URL and that is expected. Losing one breaks inbound links, so a
+removal needs a redirect on the old path before the manifest is updated:
+
+```sh
+python3 tools/permalinks.py --update
+```
+
+Paths are recorded site-relative, so changing the domain is not a permalink
+change. The manifest is generated from the build, so run `--update` only
+against a fresh `hugo --cleanDestinationDir`, never against a stale `docs/`.
 
 ## Assets
 
