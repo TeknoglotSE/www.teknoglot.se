@@ -62,7 +62,7 @@ I went through all the other logical steps of troubleshooting an error like that
 After a bit of intense staring i noticed what you see in the screenshot.
 
 
-![SNMP Error in Wireshark](http://teknoglotse.nfshost.com/wp-content/uploads/2010/09/snmp_error_wireshark.png "SNMP Error in Wireshark")
+![SNMP Error in Wireshark](/wp-content/uploads/2010/09/snmp_error_wireshark.png "SNMP Error in Wireshark")
 
 For some reason Operations Manager does not care about what SNMP version you configure when you do the initial discovery of a network device. Even if you do specify SNMP v1, you probes may very well be using SNMP v2c instead and in many cases that will result in these SNMP GET errors in the Operations Manager event log.
 

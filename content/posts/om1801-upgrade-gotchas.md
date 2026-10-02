@@ -49,7 +49,7 @@ Make sure all SCOM Management Servers have .NET Framework 3.5 installed before a
 
 Oh, yes. If you have Linux management packs that are newer than what's included in the 1801 setup, this will fail the setup. Causing the same defunct "roll-back" that will **uninstall your Management Server**, but only after it mucks about in your databases for a bit. You'll need to **restore databases from backup** after this. 
 
-### Workaround
+### Workaround {#workaround-2}
 
 There's a few ways to get around this, all done before attempting the upgrade:
 
@@ -93,7 +93,7 @@ Parameter name: managementPack
 [11:27:10]:	Always:	:FirstManagementServer: Failed to load MP C:\install\OM1801\Setup\AMD64\..\..\ManagementPacks\Microsoft.SystemCenter.Advisor.mpb.  We will retry.
 ```
 
-### Workaround
+### Workaround {#workaround-3}
 
 As with the cross-platform management packs, you basically have two options:
 
@@ -110,7 +110,7 @@ Meaning, **you no longer have an Operations Manager Reporting Server!**
 
 This one is not as critical as the others as you can simply install OMRS again, using the 1801 setup. 
 
-### Workaround
+### Workaround {#workaround-4}
 
 Install the SCOM 2016 console on the OMRS before attempting your upgrade.  
 Yeah, I know, this is stupid.

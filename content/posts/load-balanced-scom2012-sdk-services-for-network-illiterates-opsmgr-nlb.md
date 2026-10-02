@@ -34,7 +34,11 @@ Before we go, I'd like to point to a [great article](http://systemcentertech.com
 
 Enjoy!
 
-<!--more-->
+
+
+<a id="more"></a>
+
+
 
 # Prerequisites
 
@@ -69,11 +73,11 @@ You can use this pre-flight table to take note of your IP-address, DNS Name and 
 
 Open the Network Load Balancing Manager and create a new cluster.
 
-![](http://teknoglotse.nfshost.com/wp-content/uploads/2012/05/051812_1216_Loadbalance1.png)
+![](/wp-content/uploads/2012/05/051812_1216_Loadbalance1.png)
 
 In the "New Cluster" dialogue, connect to one of your Management Servers.
 
-![](http://teknoglotse.nfshost.com/wp-content/uploads/2012/05/051812_1216_Loadbalance2.png)
+![](/wp-content/uploads/2012/05/051812_1216_Loadbalance2.png)
 
 1. Enter the name of a management server
 2. Click Connect
@@ -82,14 +86,14 @@ In the "New Cluster" dialogue, connect to one of your Management Servers.
 
 Select the settings on your first host in the cluster.
 
-![](http://teknoglotse.nfshost.com/wp-content/uploads/2012/05/051812_1216_Loadbalance3.png)
+![](/wp-content/uploads/2012/05/051812_1216_Loadbalance3.png)
 
 1. Make sure it's the correct IP-address.
 2. Click Next
 
 Set the Cluster IP-address.
 
-![](http://teknoglotse.nfshost.com/wp-content/uploads/2012/05/051812_1216_Loadbalance4.png)
+![](/wp-content/uploads/2012/05/051812_1216_Loadbalance4.png)
 
 1. Click Add
 2. Enter your Dedicated Cluster IP-Address and Subnet mask
@@ -100,7 +104,7 @@ If need additional IP-addresses, like an IPv6 address, you simply repeat step 1-
 
 Edit DNS Names and Cluster Operation Mode.
 
-![](http://teknoglotse.nfshost.com/wp-content/uploads/2012/05/051812_1216_Loadbalance5.png)
+![](/wp-content/uploads/2012/05/051812_1216_Loadbalance5.png)
 
 1. Select your Dedicated Cluster IP-address
 2. Enter your chosen Dedicated Cluster DNS Name
@@ -112,7 +116,7 @@ Edit DNS Names and Cluster Operation Mode.
 > If you want to learn more about these settings, here's the KB on the various settings: [http://support.microsoft.com/kb/323437](http://support.microsoft.com/kb/323437)
 Set your Port Rules and Affinity Settings.
 
-![](http://teknoglotse.nfshost.com/wp-content/uploads/2012/05/051812_1216_Loadbalance6.png)
+![](/wp-content/uploads/2012/05/051812_1216_Loadbalance6.png)
 
 1. Verify that Affinity is set to "Single". If not, Click "Edit…" and adjust.
 2. Click Finish
@@ -129,7 +133,11 @@ To enable name resolution you have to add your cluster DNS-name to your DNS-zone
 
 If you intend to use the cluster name from outside the local network or subnet—Operation Consoles or Powershell sessions for example—you would also need to verify that the router is able to handle the multicast packages. I am by no means a network guy, but asking the person behind that "Don't blame the network" sign to help you access a NLB cluster on network _X _from network _Y_ usually works. One way to troubleshoot this is to ping the cluster DNS-name from one of the hosts. If that works but you are still unable to ping from another network or subnet, then it might be a router setting.
 
-<!--more-->
+
+
+<a id="more"></a>
+
+
 
 # Adding Hosts to the Cluster
 
@@ -137,11 +145,11 @@ With the cluster configured and up-and-running you need to add the rest of the M
 
 In the Network Load Balancing Manager, right-click your cluster and select "Add Host To Cluster".
 
-![](http://teknoglotse.nfshost.com/wp-content/uploads/2012/05/051812_1216_Loadbalance7.png)
+![](/wp-content/uploads/2012/05/051812_1216_Loadbalance7.png)
 
 Connect to your next Management Server to be added
 
-![](http://teknoglotse.nfshost.com/wp-content/uploads/2012/05/051812_1216_Loadbalance8.png)
+![](/wp-content/uploads/2012/05/051812_1216_Loadbalance8.png)
 
 1. Enter the server name of the Management Server ("host" in cluster terminology)
 2. Click Connect
@@ -150,14 +158,14 @@ Connect to your next Management Server to be added
 
 Verify your Host Parameters
 
-![](http://teknoglotse.nfshost.com/wp-content/uploads/2012/05/051812_1216_Loadbalance9.png)
+![](/wp-content/uploads/2012/05/051812_1216_Loadbalance9.png)
 
 1. Doublecheck the IP-address
 2. Click Next
 
 Verify the Port Rules
 
-![](http://teknoglotse.nfshost.com/wp-content/uploads/2012/05/051812_1216_Loadbalance10.png)
+![](/wp-content/uploads/2012/05/051812_1216_Loadbalance10.png)
 
 1. Make sure that Load is Equal and Affinity is Single
 2. Click Finish
@@ -166,13 +174,17 @@ Verify the Port Rules
 
 After each added host it would be proper to check if it was added correctly. The easiest way is to check their statuses in the Network Load Balancing Manager. Green is generally considered good and you want your hosts to be "Converged".
 
-![](http://teknoglotse.nfshost.com/wp-content/uploads/2012/05/051812_1216_Loadbalance11.png)
+![](/wp-content/uploads/2012/05/051812_1216_Loadbalance11.png)
 
 Another way to verify functionality is to point your Operations Manager console to the Cluster DNS-name instead and connect. If you are in a lab or in an environment where it is OK to shut down Management Servers you could try that as well.
 
 Considering my note on routers in the Cluster Post-Configuration I guess it would be prudent to point out that you should try launching SDK-sessions from all networks you intend to connect from. Just to make sure that your routers are correctly configured to handle these kinds of sessions.
 
-<!--more-->
+
+
+<a id="more"></a>
+
+
 
 # Postlude
 

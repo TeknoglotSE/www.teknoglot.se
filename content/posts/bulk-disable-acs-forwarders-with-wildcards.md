@@ -26,11 +26,15 @@ Me and my apprentice is currently decommissioning an entire Management Group wit
 
 Now, uninstalling the old Management Group from all the agents is a breeze using SCCM and handling the few 20-ish servers that are left is not a biggie either. Shutting down ACS, however, is a different matter.
 
-<!--more-->
+
+
+<a id="more"></a>
+
+
 
 Although you do configure your forwarders using Operations Manager, removing the management group you were running ACS in does not mean the agents will shut down and disable the AdtAgent service or stop trying to forward audit events to your collector. Now, selecting 10 agents at the time and running the "Disable Audit Collection" task--in case you did not know, there's a limitation on how many agents you can run a task on in the Operations Console--is not my idea of a jolly good day and since Powershell is a bucket of joy in comparison; here's a script for you all!
 
-[DisableACSForwarders](http://teknoglotse.nfshost.com/wp-content/uploads/2011/07/DisableACSForwarders.zip)
+[DisableACSForwarders](/wp-content/uploads/2011/07/DisableACSForwarders.zip)
 
 It is zipped to avoid security alerts, but as with any script found on the internet I implore to to read the code before actually running it.
 
@@ -64,7 +68,11 @@ As you might already have realized, the wildcard search does not require actual 
 
 For the source code, read on!
 
-<!--more-->
+
+
+<a id="more"></a>
+
+
 
 ```powershell
 ## Using parameters for RMS and wildcard search

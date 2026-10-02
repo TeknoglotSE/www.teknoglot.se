@@ -45,4 +45,4 @@ Management group: MASKED
 ```
 
 This seems to be related to the discovery of public queues on _some_ servers that has none. One quick fix, or rather work-around, is to override the discovery on these servers to set `DiscoverPublic` to `False`.
-![Screenshot of Override](http://teknoglotse.nfshost.com/wp-content/uploads/2009/06/screenshot1245833173.png "screenshot1245833173")
+![Screenshot of Override](/wp-content/uploads/2009/06/screenshot1245833173.png "screenshot1245833173")

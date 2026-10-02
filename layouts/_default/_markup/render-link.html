@@ -14,5 +14,5 @@
 {{- $dest := .Destination -}}
 {{- $u := urls.Parse $dest -}}
 {{- $siteHost := (urls.Parse site.BaseURL).Host -}}
-{{- $external := and (in (slice "http" "https") $u.Scheme) (ne $u.Host $siteHost) -}}
+{{- $external := and (eq .Page.Type "posts") (in (slice "http" "https") $u.Scheme) (ne $u.Host $siteHost) -}}
 <a href="{{ $dest }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>

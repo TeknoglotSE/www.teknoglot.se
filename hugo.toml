@@ -1,5 +1,5 @@
 baseURL = "https://www.teknoglot.se/"
-languageCode = "en"
+locale = "en"
 title = "teknoglot:"
 themeColor = "#dd3333"
 
@@ -60,10 +60,20 @@ disableAliases = true
     wrapperClass = "highlight"
     tabWidth = 4
 
-# Hugo's stock RSS and sitemap outputs do not match the Hexo generators, so
-# only HTML is emitted here; the rest are custom output formats below.
+[outputFormats]
+  # hexo-generator-json-content, consumed by Insight.js at /content.json
+  [outputFormats.contentjson]
+    mediaType = "application/json"
+    baseName = "content"
+    isPlainText = true
+    notAlternative = true
+  # Keep the established public feed URL while using Hugo's built-in RSS
+  # renderer. No custom RSS template is involved.
+  [outputFormats.RSS]
+    baseName = "rss"
+
 [outputs]
-  home = ["HTML"]
+  home = ["HTML", "contentjson", "RSS"]
   section = ["HTML"]
   taxonomy = ["HTML"]
   term = ["HTML"]

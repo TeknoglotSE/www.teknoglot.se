@@ -25,7 +25,11 @@ I will not go into the genus-political part of this discussion as of now--others
 
 So, here's my top reasons, in no particular order, to give up the BBs.
 
-<!--more-->
+
+
+<a id="more"></a>
+
+
 
 ## Reason #1 - BBs is disrupting the purpose of the exhibition
 

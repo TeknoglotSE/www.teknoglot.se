@@ -103,3 +103,48 @@ state before any work started.
 
 Correction: an earlier draft of `TASKS.md` had every task checked. That was a
 transcription error, not progress. Only P0 is complete.
+
+## 2026-10-02 — Scratch build and output verification
+
+The owner approved allowing sitemap and RSS output to differ from Hexo. Removed
+the custom sitemap/RSS templates and output-format wiring; Hugo now uses its
+built-in `sitemap.xml` and `rss.xml`, while `content.json` remains custom for
+Insight search. The scratch build emits 254 HTML pages, 63 posts in
+`content.json`, 23 categories, 94 tags, valid built-in XML outputs, and no
+AppleDouble sidecars. The generated path set matches master modulo the nine
+documented Linux casing moves.
+
+Remaining parity work: the structural comparator reports 173/245 comparable
+pages identical and 72 differing. The largest groups are legacy Markdown/code
+rendering differences and listing-page text differences. The About-page
+external-link behavior and eight post image metadata cases were aligned with
+master, and the duplicate-heading counter in
+`om1801-upgrade-gotchas.md` is pinned to the master's IDs and heading
+verification now passes all 35 pages. The output has not been published into
+`docs/`.
+
+## 2026-10-02 — Local image URL rewrite
+
+The content generator now rewrites old `www.teknoglot.se` and
+`teknoglotse.nfshost.com` `/wp-content/uploads/...` URLs to root-relative paths
+only when the matching file exists under `static/`. Unavailable external URLs
+remain unchanged. The multi-image OpsMgr and SquaredUp posts now serve their
+images from `/wp-content/uploads/...` under Hugo.
+
+## 2026-10-02 — Owner local smoke test
+
+Owner reports that image checks, navigation/layout checks, permalink checks,
+RSS, and the Insight search box all work locally. Remaining owner checks are
+the sitemap, responsive/mobile presentation, and external integrations.
+
+The owner subsequently confirmed that sitemap output and window resizing work.
+Disqus and Google Analytics are intentionally deferred to live deployment,
+where their external origins and production configuration can be exercised.
+
+## 2026-10-02 — Post-migration authoring decision
+
+The migration tools are explicitly one-time conversion and verification tools.
+After switch-over, Hugo's `content/` becomes the canonical authoring source and
+future posts should use native Hugo tooling such as `hugo new`. A follow-up
+task was added for archetypes, native section/taxonomy layouts, workflow
+documentation, and retiring the old Hexo inputs from the normal publish path.

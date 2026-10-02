@@ -42,7 +42,11 @@ _(updated 2014-09-02)_
 *   A few agents that was updated using Windows Update did not report as updated. Repair fixed that nuisance.
 
 *   Had to flush the cache on a few Gateways to avoid heartbeat failures from their agents. Only daisy-chained ones if I recall correctly.
-<!--more-->
+
+
+<a id="more"></a>
+
+
 
 ## Planning
 

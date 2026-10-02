@@ -8,8 +8,9 @@ characters, so relying on it would silently change permalinks. Reading the
 permalink Hexo actually emitted and pinning it as data removes the entire
 class of risk.
 
-Post *bodies* are copied byte-for-byte (everything after the original front
-matter) so that markdown rendering is unaffected by this migration.
+Post *bodies* are copied from the original source, with only migration-safe
+rewrites: local image assets are changed to root-relative URLs when the file is
+present in `static/`, and Hexo's excerpt marker is preserved as an anchor.
 
 Category and tag pages are generated as explicit content leaves rather than
 using Hugo taxonomies, because the site's category URLs are nested
@@ -33,6 +34,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
 POSTS_SRC = os.path.join(REPO, "source", "_posts")
 FINDINGS = os.path.join(REPO, "migration", "hugo", "findings")
 CONTENT = os.path.join(REPO, "content")
+STATIC = os.path.join(REPO, "static")
 
 # posts whose category pages must exist but hold no post of their own
 # (produced by the inline flow-array anomaly in 20180906-*.md)
@@ -51,6 +53,22 @@ def split_front_matter(path):
     if not m:
         return "", text
     return m.group(1), text[m.end():]
+
+
+def rewrite_local_image_urls(body):
+    """Use local static assets when the old absolute URL is available locally."""
+    pattern = re.compile(
+        r"https?://(?:www\.teknoglot\.se|teknoglotse\.nfshost\.com)"
+        r"(?P<path>/wp-content/uploads/[^\s\"')>]+)"
+    )
+
+    def replace(match):
+        path = match.group("path")
+        if os.path.isfile(os.path.join(STATIC, path.lstrip("/"))):
+            return path
+        return match.group(0)
+
+    return pattern.sub(replace, body)
 
 
 def yaml_scalar(value):
@@ -159,6 +177,26 @@ def main():
     for r in rows:
         src = os.path.join(POSTS_SRC, r["file"])
         raw, body = split_front_matter(src)
+        body = rewrite_local_image_urls(body)
+        # Hexo's excerpt marker is also rendered as an empty anchor in the
+        # article body. Hugo consumes the marker as a summary separator, so
+        # preserve the visible anchor explicitly; summaries use the harvested
+        # Hexo excerpts below rather than Hugo's automatic split.
+        body = body.replace("<!--more-->", '\n\n<a id="more"></a>\n\n')
+        # Hexo starts duplicate heading suffixes at 2, while Goldmark starts
+        # them at 1. Pin the one repeated heading sequence whose anchor IDs
+        # are part of the legacy public output.
+        if r["file"] == "20180827-om1801-upgrade-gotchas.md":
+            workaround = 0
+            lines = []
+            for line in body.splitlines(keepends=True):
+                if line.rstrip("\r\n") == "### Workaround":
+                    workaround += 1
+                    if workaround > 1:
+                        ending = line[len(line.rstrip("\r\n")):]
+                        line = "### Workaround {#workaround-%d}%s" % (workaround, ending)
+                lines.append(line)
+            body = "".join(lines)
 
         # Hugo wants the local wall-clock time; the site timezone is set in
         # hugo.toml so this reproduces Hexo's local->UTC rendering.

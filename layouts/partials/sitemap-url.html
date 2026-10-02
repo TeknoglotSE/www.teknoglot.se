@@ -1,0 +1,16 @@
+{{- /*
+  One <url> entry for a child sitemap.
+
+  Input dict: loc (absolute), lastmod (pre-formatted string, or "" for the
+  homepage, which master emits without a lastmod), changefreq, priority.
+
+  master emits the homepage entry with no lastmod at all and daily/1, and
+  everything else weekly with a per-file priority: posts 0.6, pages 0.8,
+  categories and tags 0.2.
+*/ -}}
+    <url>
+        <loc>{{ .loc }}</loc>{{ if .lastmod }}
+        <lastmod>{{ .lastmod }}</lastmod>{{ end }}
+        <changefreq>{{ .changefreq }}</changefreq>
+        <priority>{{ .priority }}</priority>
+    </url>

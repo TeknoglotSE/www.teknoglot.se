@@ -25,7 +25,11 @@ Sorry for the inconvenience!
 
 ps. Post from the old site is a jump ahead.
 
-<!--more-->
+
+
+<a id="more"></a>
+
+
 
 Hi all,
 

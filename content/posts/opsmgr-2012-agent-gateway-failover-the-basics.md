@@ -25,7 +25,11 @@ I have [previously](http://www.teknoglot.se/ms/opsmgr2007/replacechange-a-gatewa
 
 Now that System Center 2012 Operations Manager is RTM and users are starting to explore the differences between the versions I see more and more questions on how you do, in OpsMgr 2012, what you did in OpsMgr 2007. In a few posts henceforth I will go through Agent and Gateway server fail-over configuration and management. In this first post I'll look at the very basics of fail-over configuration, the cmdlets to use and some one-liners.
 
-<!--more-->
+
+
+<a id="more"></a>
+
+
 
 ### The cmdlet
 

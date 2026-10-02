@@ -21,8 +21,8 @@
 {{- if .Params.tags }}
 <ul class="article-tag-list" itemprop="keywords">
 {{- /* The visible list is sorted by name (Hexo's list_tags defaults to
-       orderby name), unlike the keywords and article:tag metas, which keep
-       front-matter order. */ -}}
+        orderby name), unlike the keywords and article:tag metas, which keep
+        front-matter order. */ -}}
 {{- range $tag := sort .Params.tags }}
 <li class="article-tag-list-item"><a class="article-tag-list-link" href="{{ partial "tag-url.html" $tag }}" rel="tag">{{ $tag }}</a></li>
 {{- end }}
@@ -30,7 +30,7 @@
 {{- end }}
 </div>
 <div class="article-entry" itemprop="articleBody">
-{{ .Content }}
+{{ replace .Content "<p><a id=\"more\"></a></p>" "<a id=\"more\"></a>" | safeHTML }}
 </div>
 <footer class="article-footer">
 {{- partial "share.html" . -}}

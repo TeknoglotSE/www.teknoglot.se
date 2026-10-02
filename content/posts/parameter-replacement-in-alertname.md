@@ -44,7 +44,7 @@ Just in case you happen to be a regular mortal, here's the step-by-step guide. ;
 
 In this example I have created a silly-simple Alert Generating EventLog rule in wich I have added some parameters to the description. It pretty much looks like this:
 
-![Alert Description Dialog](http://teknoglotse.nfshost.com/wp-content/uploads/2012/04/ParamReplacement_AlertDescriptionDialog.png)
+![Alert Description Dialog](/wp-content/uploads/2012/04/ParamReplacement_AlertDescriptionDialog.png)
 
 Saving the MP at this point I will have a new WriteAlert action with a bunch of parameters and a displaystring with a unique ID.
 The resulting XML-code for the WriteAlert action looks like this:

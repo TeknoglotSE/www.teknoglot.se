@@ -26,7 +26,11 @@ As usual, the script will work as is, but it really is more to show the concept.
 
 We will pretty quickly go "advanced" this time, so buckle up. ;)
 
-<!--more-->
+
+
+<a id="more"></a>
+
+
 
 Being a slight modification of the script in the last post I am not going to go through those details. Use that post if you need references to the Inputs, the OpsMgr 2012 Modules, Management Group connection and gathering your agents and management servers.
 
