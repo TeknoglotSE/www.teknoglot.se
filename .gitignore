@@ -1,2 +1,7 @@
 public/
 node_modules/
+
+# AppleDouble sidecar files. This volume regenerates them as files are
+# edited, and they previously caused "non-monotonic index" git errors.
+._*
+.DS_Store
