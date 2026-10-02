@@ -1,0 +1,2399 @@
+{
+ "generated_from": "docs/content.json + docs/post-sitemap.xml",
+ "posts": [
+  {
+   "file": "quick-hack-send-sms-through-powershell-powershell.md",
+   "slug": "quick-hack-send-sms-through-powershell-powershell",
+   "url": "/code/posh/quick-hack-send-sms-through-powershell-powershell/",
+   "dir": "code/posh/quick-hack-send-sms-through-powershell-powershell/",
+   "date_local": "2012-05-15T13:14:00.000Z",
+   "title": "Quick-Hack: Send SMS through Powershell [#powershell]",
+   "categories": [
+    {
+     "name": "Code",
+     "slug": "code"
+    },
+    {
+     "name": "PoSH",
+     "slug": "code/posh"
+    }
+   ],
+   "tags": [
+    "PoSH",
+    "GSM",
+    "Quick-hack",
+    "SMS"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "20160705-Resize-all-images-in-a-Word-document-with-vbs-macro.md",
+   "slug": "Resize-all-images-in-a-Word-document-with-vbs-macro",
+   "url": "/code/vbs/Resize-all-images-in-a-Word-document-with-vbs-macro/",
+   "dir": "code/vbs/Resize-all-images-in-a-Word-document-with-vbs-macro/",
+   "date_local": "2016-07-05T20:08:26.000Z",
+   "title": "Resize all images in a Word document with #vbs #macro",
+   "categories": [
+    {
+     "name": "Code",
+     "slug": "code"
+    },
+    {
+     "name": "VBS",
+     "slug": "code/vbs"
+    }
+   ],
+   "tags": [
+    "VBScript",
+    "Macro",
+    "Word",
+    "Office"
+   ],
+   "fm_keys": [
+    "title",
+    "date",
+    "tags",
+    "categories"
+   ],
+   "notes": []
+  },
+  {
+   "file": "w3socket-in-vbscript.md",
+   "slug": "w3socket-in-vbscript",
+   "url": "/code/vbs/w3socket-in-vbscript/",
+   "dir": "code/vbs/w3socket-in-vbscript/",
+   "date_local": "2007-04-21T14:10:05.000Z",
+   "title": "w3Socket in VBScript",
+   "categories": [
+    {
+     "name": "Code",
+     "slug": "code"
+    },
+    {
+     "name": "VBS",
+     "slug": "code/vbs"
+    }
+   ],
+   "tags": [
+    "Script"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "20170928-MSIgnite-2017-BRK1039-Windows-Server-Software-Defined.md",
+   "slug": "MSIgnite-2017-BRK1039-Windows-Server-Software-Defined",
+   "url": "/Events/MSIgnite-2017/MSIgnite-2017-BRK1039-Windows-Server-Software-Defined/",
+   "dir": "Events/MSIgnite-2017/MSIgnite-2017-BRK1039-Windows-Server-Software-Defined/",
+   "date_local": "2017-09-26T08:23:13.000Z",
+   "title": "#MSIgnite 2017: BRK1039 - Windows Server Software Defined",
+   "categories": [
+    {
+     "name": "Events",
+     "slug": "Events"
+    },
+    {
+     "name": "MSIgnite 2017",
+     "slug": "Events/MSIgnite-2017"
+    }
+   ],
+   "tags": [
+    "MSIgnite",
+    "Presentation Notes",
+    "Hyper-Converged",
+    "WSSD"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "20170928-MSIgnite-2017-GS01-Microsoft-for-the-Modern-Data-Estate.md",
+   "slug": "MSIgnite-2017-GS01-Microsoft-for-the-Modern-Data-Estate",
+   "url": "/Events/MSIgnite-2017/MSIgnite-2017-GS01-Microsoft-for-the-Modern-Data-Estate/",
+   "dir": "Events/MSIgnite-2017/MSIgnite-2017-GS01-Microsoft-for-the-Modern-Data-Estate/",
+   "date_local": "2017-09-25T13:34:36.000Z",
+   "title": "#MSIgnite 2017: GS01 - Microsoft for the Modern Data Estate",
+   "categories": [
+    {
+     "name": "Events",
+     "slug": "Events"
+    },
+    {
+     "name": "MSIgnite 2017",
+     "slug": "Events/MSIgnite-2017"
+    }
+   ],
+   "tags": [
+    "MSIgnite",
+    "Presentation Notes",
+    "SQL 2017",
+    "Machine Learning",
+    "SQL on Linux"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "20170928-MSIgnite-2017-KEY01-Vision-Keynote.md",
+   "slug": "MSIgnite-2017-KEY01-Vision-Keynote",
+   "url": "/Events/MSIgnite-2017/MSIgnite-2017-KEY01-Vision-Keynote/",
+   "dir": "Events/MSIgnite-2017/MSIgnite-2017-KEY01-Vision-Keynote/",
+   "date_local": "2017-09-25T08:05:33.000Z",
+   "title": "#MSIgnite 2017: KEY01 - Vision Keynote",
+   "categories": [
+    {
+     "name": "Events",
+     "slug": "Events"
+    },
+    {
+     "name": "MSIgnite 2017",
+     "slug": "Events/MSIgnite-2017"
+    }
+   ],
+   "tags": [
+    "MSIgnite",
+    "Presentation Notes"
+   ],
+   "fm_keys": [
+    "title",
+    "date",
+    "tags",
+    "categories"
+   ],
+   "notes": []
+  },
+  {
+   "file": "20170928-MSIgnite-2017-TK01-Create-a-Modern-Workplace-with-Microsoft-365.md",
+   "slug": "MSIgnite-2017-TK01-Create-a-Modern-Workplace-with-Microsoft-365",
+   "url": "/Events/MSIgnite-2017/MSIgnite-2017-TK01-Create-a-Modern-Workplace-with-Microsoft-365/",
+   "dir": "Events/MSIgnite-2017/MSIgnite-2017-TK01-Create-a-Modern-Workplace-with-Microsoft-365/",
+   "date_local": "2017-09-25T10:17:15.000Z",
+   "title": "#MSIgnite 2017: TK01 - Create a Modern Workplace with Microsoft 365",
+   "categories": [
+    {
+     "name": "Events",
+     "slug": "Events"
+    },
+    {
+     "name": "MSIgnite 2017",
+     "slug": "Events/MSIgnite-2017"
+    }
+   ],
+   "tags": [
+    "MSIgnite",
+    "Presentation Notes",
+    "Office 365",
+    "Microsoft 265",
+    "Yammer",
+    "Technical Keynote",
+    "Microsoft Teams",
+    "SharePoint",
+    "Advanced Threat Protection",
+    "OneDrive",
+    "Windows"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "my-impression-of-ext4-wth.md",
+   "slug": "my-impression-of-ext4-wth",
+   "url": "/linux/my-impression-of-ext4-wth/",
+   "dir": "linux/my-impression-of-ext4-wth/",
+   "date_local": "2009-09-17T17:43:47.000Z",
+   "title": "My impression of EXT4 -- WTH!?",
+   "categories": [
+    {
+     "name": "Linux",
+     "slug": "linux"
+    }
+   ],
+   "tags": [
+    "Rant",
+    "Linux"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "install-linuxis21-rhes5.md",
+   "slug": "install-linuxis21-rhes5",
+   "url": "/linux/rhes/install-linuxis21-rhes5/",
+   "dir": "linux/rhes/install-linuxis21-rhes5/",
+   "date_local": "2010-08-31T10:06:04.000Z",
+   "title": "Installing Linux Integration Services v2.1 on Red Hat ES 5",
+   "categories": [
+    {
+     "name": "Linux",
+     "slug": "linux"
+    },
+    {
+     "name": "RedHat ES",
+     "slug": "linux/rhes"
+    }
+   ],
+   "tags": [
+    "How-To",
+    "Hyper-V",
+    "Linux",
+    "RedHat",
+    "RHES5"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "linux-discovery-not-enough-entropy.md",
+   "slug": "linux-discovery-not-enough-entropy",
+   "url": "/linux/sles/linux-discovery-not-enough-entropy/",
+   "dir": "linux/sles/linux-discovery-not-enough-entropy/",
+   "date_local": "2009-12-02T11:37:08.000Z",
+   "title": "Linux Discovery – Not Enough Entropy",
+   "categories": [
+    {
+     "name": "Linux",
+     "slug": "linux"
+    },
+    {
+     "name": "SLES",
+     "slug": "linux/sles"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "How-To",
+    "Linux",
+    "TroubleShooting",
+    "X-Plat"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "nvidia-problems-in-ubuntu-810.md",
+   "slug": "nvidia-problems-in-ubuntu-810",
+   "url": "/linux/ubuntu/nvidia-problems-in-ubuntu-810/",
+   "dir": "linux/ubuntu/nvidia-problems-in-ubuntu-810/",
+   "date_local": "2008-11-10T08:20:14.000Z",
+   "title": "NVidia problems in Ubuntu 8.10",
+   "categories": [
+    {
+     "name": "Linux",
+     "slug": "linux"
+    },
+    {
+     "name": "Ubuntu",
+     "slug": "linux/ubuntu"
+    }
+   ],
+   "tags": [
+    "Drivers",
+    "NVidia"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "virtual-openvpn-server-at-home.md",
+   "slug": "virtual-openvpn-server-at-home",
+   "url": "/linux/virtual-openvpn-server-at-home/",
+   "dir": "linux/virtual-openvpn-server-at-home/",
+   "date_local": "2011-09-28T06:37:39.000Z",
+   "title": "Virtual OpenVPN Server at Home",
+   "categories": [
+    {
+     "name": "Linux",
+     "slug": "linux"
+    }
+   ],
+   "tags": [
+    "Linux",
+    "OpenVPN",
+    "Virtual Appliance"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "cloudflare-dynamic-dns-mikrotik.md",
+   "slug": "cloudflare-dynamic-dns-mikrotik",
+   "url": "/mikrotik/cloudflare-dynamic-dns-mikrotik/",
+   "dir": "mikrotik/cloudflare-dynamic-dns-mikrotik/",
+   "date_local": "2014-08-25T11:37:36.000Z",
+   "title": "Cloudflare as Dynamic DNS [#cloudflare #mikrotik #script]",
+   "categories": [
+    {
+     "name": "Mikrotik",
+     "slug": "mikrotik"
+    }
+   ],
+   "tags": [
+    "PoSH",
+    "Script",
+    "DNS",
+    "Invoke-RestMethod",
+    "Mikrotik",
+    "RouterOS"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "20180906-Upgrading-OpsMgr-1801-to-1807-Fieldnotes.md",
+   "slug": "Upgrading-OpsMgr-1801-to-1807-Fieldnotes",
+   "url": "/ms/opsmgr1801/Upgrading-OpsMgr-1801-to-1807-Fieldnotes/",
+   "dir": "ms/opsmgr1801/Upgrading-OpsMgr-1801-to-1807-Fieldnotes/",
+   "date_local": "2018-09-06T12:42:51.000Z",
+   "title": "Upgrading #OpsMgr 1801 to 1807 - Fieldnotes",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "Fieldnotes",
+     "slug": "Fieldnotes"
+    },
+    {
+     "name": "OpsMgr",
+     "slug": "Fieldnotes/OpsMgr"
+    },
+    {
+     "name": "OpsMgr 1807",
+     "slug": "ms/opsmgr1807"
+    },
+    {
+     "name": "OpsMgr 1801",
+     "slug": "ms/opsmgr1801"
+    }
+   ],
+   "tags": [
+    "Fieldnotes"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "categories",
+    "date"
+   ],
+   "notes": [
+    "inline flow array(s): [Fieldnotes,OpsMgr], [Microsoft,OpsMgr 1807], [Microsoft,OpsMgr 1801]"
+   ]
+  },
+  {
+   "file": "bulk-disable-acs-forwarders-with-wildcards.md",
+   "slug": "bulk-disable-acs-forwarders-with-wildcards",
+   "url": "/ms/opsmgr2007/bulk-disable-acs-forwarders-with-wildcards/",
+   "dir": "ms/opsmgr2007/bulk-disable-acs-forwarders-with-wildcards/",
+   "date_local": "2011-07-07T08:59:24.000Z",
+   "title": "Bulk disable ACS Forwarders (with wildcards)",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "ACS",
+    "OpsMgr",
+    "PoSH",
+    "Script"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "change-gateway-powershell-script.md",
+   "slug": "change-gateway-powershell-script",
+   "url": "/ms/opsmgr2007/change-gateway-powershell-script/",
+   "dir": "ms/opsmgr2007/change-gateway-powershell-script/",
+   "date_local": "2010-03-31T13:27:08.000Z",
+   "title": "Change Gateway Powershell Script",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "PoSH",
+    "Script"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "clearing-disabled-discovery.md",
+   "slug": "clearing-disabled-discovery",
+   "url": "/ms/opsmgr2007/clearing-disabled-discovery/",
+   "dir": "ms/opsmgr2007/clearing-disabled-discovery/",
+   "date_local": "2009-04-20T08:15:15.000Z",
+   "title": "Clearing Disabled Discovery in OpsMgr 2007",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Script",
+    "How-To"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "esent-error-when-modifying-opsmgr-agent.md",
+   "slug": "esent-error-when-modifying-opsmgr-agent",
+   "url": "/ms/opsmgr2007/esent-error-when-modifying-opsmgr-agent/",
+   "dir": "ms/opsmgr2007/esent-error-when-modifying-opsmgr-agent/",
+   "date_local": "2010-03-19T09:34:17.000Z",
+   "title": "ESENT Error When Modifying OpsMgr Agent",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "Windows",
+    "OpsMgr",
+    "Errors",
+    "How-To",
+    "Windows Installer",
+    "WMI"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "health-rollup-not-working-in-exchange-management-pack.md",
+   "slug": "health-rollup-not-working-in-exchange-management-pack",
+   "url": "/ms/opsmgr2007/health-rollup-not-working-in-exchange-management-pack/",
+   "dir": "ms/opsmgr2007/health-rollup-not-working-in-exchange-management-pack/",
+   "date_local": "2009-10-14T10:17:08.000Z",
+   "title": "Health Rollup not working in Exchange Management Pack",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "Errors",
+    "Exchange",
+    "Management Pack",
+    "TechNet"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "microsoft-adds-support-for-suse-11-in-opsmgr-r2.md",
+   "slug": "microsoft-adds-support-for-suse-11-in-opsmgr-r2",
+   "url": "/ms/opsmgr2007/microsoft-adds-support-for-suse-11-in-opsmgr-r2/",
+   "dir": "ms/opsmgr2007/microsoft-adds-support-for-suse-11-in-opsmgr-r2/",
+   "date_local": "2009-10-16T05:59:10.000Z",
+   "title": "Microsoft Adds support for SUSE 11 in OpsMgr R2",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Management Pack",
+    "X-Plat",
+    "SUSE 11"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "msmq-3-mp-for-opsmgr-v6065870-released.md",
+   "slug": "msmq-3-mp-for-opsmgr-v6065870-released",
+   "url": "/ms/opsmgr2007/msmq-3-mp-for-opsmgr-v6065870-released/",
+   "dir": "ms/opsmgr2007/msmq-3-mp-for-opsmgr-v6065870-released/",
+   "date_local": "2009-04-28T13:30:18.000Z",
+   "title": "MSMQ 3 MP for OpsMgr v.6.0.6587.0 Released",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Management Pack",
+    "MSMQ"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "msmq-4-and-msmq-5-mp-for-opsmgr-released-finally.md",
+   "slug": "msmq-4-and-msmq-5-mp-for-opsmgr-released-finally",
+   "url": "/ms/opsmgr2007/msmq-4-and-msmq-5-mp-for-opsmgr-released-finally/",
+   "dir": "ms/opsmgr2007/msmq-4-and-msmq-5-mp-for-opsmgr-released-finally/",
+   "date_local": "2010-04-06T10:09:57.000Z",
+   "title": "MSMQ 4 and MSMQ 5 MP for OpsMgr Released! (finally)",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "Management Pack",
+    "MSMQ"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "msmq-mp-subscriptoutofrange.md",
+   "slug": "msmq-mp-subscriptoutofrange",
+   "url": "/ms/opsmgr2007/msmq-mp-subscriptoutofrange/",
+   "dir": "ms/opsmgr2007/msmq-mp-subscriptoutofrange/",
+   "date_local": "2009-06-24T07:51:01.000Z",
+   "title": "MSMQ Management Pack: Subscript Out of Range",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Errors",
+    "MSMQ",
+    "Fixed",
+    "Quick-fix"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "networkadaptercheck-fails-on-win2k.md",
+   "slug": "networkadaptercheck-fails-on-win2k",
+   "url": "/ms/opsmgr2007/networkadaptercheck-fails-on-win2k/",
+   "dir": "ms/opsmgr2007/networkadaptercheck-fails-on-win2k/",
+   "date_local": "2009-04-26T09:21:18.000Z",
+   "title": "NetworkAdapterCheck.vbs fails on Windows 2000",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Script",
+    "Errors",
+    "Management Pack"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "opsmgr-2007-connectivity-map.md",
+   "slug": "opsmgr-2007-connectivity-map",
+   "url": "/ms/opsmgr2007/opsmgr-2007-connectivity-map/",
+   "dir": "ms/opsmgr2007/opsmgr-2007-connectivity-map/",
+   "date_local": "2011-05-17T09:47:18.000Z",
+   "title": "OpsMgr 2007 Connectivity Map",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Quick Reference"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "opsmgr-2007-r2-documentation.md",
+   "slug": "opsmgr-2007-r2-documentation",
+   "url": "/ms/opsmgr2007/opsmgr-2007-r2-documentation/",
+   "dir": "ms/opsmgr2007/opsmgr-2007-r2-documentation/",
+   "date_local": "2011-08-08T20:52:27.000Z",
+   "title": "OpsMgr 2007 R2 Documentation",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "Rant",
+    "Sillyness",
+    "Teach a Man to Fish"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "parameter-replacement-in-alertname.md",
+   "slug": "parameter-replacement-in-alertname",
+   "url": "/ms/opsmgr2007/parameter-replacement-in-alertname/",
+   "dir": "ms/opsmgr2007/parameter-replacement-in-alertname/",
+   "date_local": "2012-04-09T20:04:48.000Z",
+   "title": "Parameter Replacement in AlertName",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "MP Development"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "quick-demo-add-windows-performance-collection-rule-opsmgr-mpauthoring.md",
+   "slug": "quick-demo-add-windows-performance-collection-rule-opsmgr-mpauthoring",
+   "url": "/ms/opsmgr2007/quick-demo-add-windows-performance-collection-rule-opsmgr-mpauthoring/",
+   "dir": "ms/opsmgr2007/quick-demo-add-windows-performance-collection-rule-opsmgr-mpauthoring/",
+   "date_local": "2013-02-21T08:25:39.000Z",
+   "title": "Quick Demo - Add Windows Performance Collection Rule [#opsmgr, #mpauthoring]",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Management Pack",
+    "MP Development",
+    "Video"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "replacechange-a-gateway-server.md",
+   "slug": "replacechange-a-gateway-server",
+   "url": "/ms/opsmgr2007/replacechange-a-gateway-server/",
+   "dir": "ms/opsmgr2007/replacechange-a-gateway-server/",
+   "date_local": "2009-09-24T10:32:35.000Z",
+   "title": "Replace/Change a Gateway Server",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "PoSH",
+    "Script",
+    "How-To"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "snmp-get-errors-in-eventlog.md",
+   "slug": "snmp-get-errors-in-eventlog",
+   "url": "/ms/opsmgr2007/snmp-get-errors-in-eventlog/",
+   "dir": "ms/opsmgr2007/snmp-get-errors-in-eventlog/",
+   "date_local": "2010-09-02T20:28:07.000Z",
+   "title": "SNMP GET Errors in OpsMgr EventLog",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Errors",
+    "Management Pack",
+    "TroubleShooting"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "sql-managementpack-survey-make-your-voice-heard.md",
+   "slug": "sql-managementpack-survey-make-your-voice-heard",
+   "url": "/ms/opsmgr2007/sql-managementpack-survey-make-your-voice-heard/",
+   "dir": "ms/opsmgr2007/sql-managementpack-survey-make-your-voice-heard/",
+   "date_local": "2009-10-07T12:24:37.000Z",
+   "title": "SQL ManagementPack Survey – Make your voice heard",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "Management Pack",
+    "SQL Server"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "tcp-port-check-use-with-caution.md",
+   "slug": "tcp-port-check-use-with-caution",
+   "url": "/ms/opsmgr2007/tcp-port-check-use-with-caution/",
+   "dir": "ms/opsmgr2007/tcp-port-check-use-with-caution/",
+   "date_local": "2009-08-27T12:39:43.000Z",
+   "title": "The TCP Port Check: Use with caution!",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Errors",
+    "Unix"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "updated-mp-for-system-center-configurations-manager-2007-sp2-on-x64.md",
+   "slug": "updated-mp-for-system-center-configurations-manager-2007-sp2-on-x64",
+   "url": "/ms/opsmgr2007/updated-mp-for-system-center-configurations-manager-2007-sp2-on-x64/",
+   "dir": "ms/opsmgr2007/updated-mp-for-system-center-configurations-manager-2007-sp2-on-x64/",
+   "date_local": "2009-11-03T11:13:00.000Z",
+   "title": "Updated: MP for System Center Configurations Manager 2007 SP2 on x64",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Management Pack",
+    "x64"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "updated-msmq-management-pack.md",
+   "slug": "updated-msmq-management-pack",
+   "url": "/ms/opsmgr2007/updated-msmq-management-pack/",
+   "dir": "ms/opsmgr2007/updated-msmq-management-pack/",
+   "date_local": "2009-12-23T08:57:38.000Z",
+   "title": "Updated MSMQ Management Pack v6.0.6615.0!",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Management Pack",
+    "MSMQ"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "updated-operations-manager-2007-r2-management-pack.md",
+   "slug": "updated-operations-manager-2007-r2-management-pack",
+   "url": "/ms/opsmgr2007/updated-operations-manager-2007-r2-management-pack/",
+   "dir": "ms/opsmgr2007/updated-operations-manager-2007-r2-management-pack/",
+   "date_local": "2009-10-14T09:29:00.000Z",
+   "title": "Updated: Operations Manager 2007 R2 Management Pack",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Management Pack"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "windows-server-2008-nlb-m-for-opsmgr-released.md",
+   "slug": "windows-server-2008-nlb-m-for-opsmgr-released",
+   "url": "/ms/opsmgr2007/windows-server-2008-nlb-m-for-opsmgr-released/",
+   "dir": "ms/opsmgr2007/windows-server-2008-nlb-m-for-opsmgr-released/",
+   "date_local": "2009-04-29T10:59:54.000Z",
+   "title": "Windows Server 2008 NLB MP for OpsMgr released",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2007",
+     "slug": "ms/opsmgr2007"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Management Pack"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "Event-Id-4001-–-“Cannot-Add-Type”-in-SQL-MP-6-6-4-0-for-OpsMgr2012.md",
+   "slug": "Event-Id-4001-–-“Cannot-Add-Type”-in-SQL-MP-6-6-4-0-for-OpsMgr2012",
+   "url": "/ms/opsmgr2012/Event-Id-4001-%E2%80%93-%E2%80%9CCannot-Add-Type%E2%80%9D-in-SQL-MP-6-6-4-0-for-OpsMgr2012/",
+   "dir": "ms/opsmgr2012/Event-Id-4001-–-“Cannot-Add-Type”-in-SQL-MP-6-6-4-0-for-OpsMgr2012/",
+   "date_local": "2016-02-15T11:22:28.000Z",
+   "title": "Event Id 4001 – “Cannot Add Type” in [#SQL] MP 6.6.4.0 for [#OpsMgr2012]",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2012",
+     "slug": "ms/opsmgr2012"
+    }
+   ],
+   "tags": [],
+   "fm_keys": [
+    "title",
+    "date",
+    "tags",
+    "category"
+   ],
+   "notes": [
+    "singular `category:` key"
+   ]
+  },
+  {
+   "file": "introduction-to-tg-winautosvc-v1.md",
+   "slug": "introduction-to-tg-winautosvc-v1",
+   "url": "/ms/opsmgr2012/introduction-to-tg-winautosvc-v1/",
+   "dir": "ms/opsmgr2012/introduction-to-tg-winautosvc-v1/",
+   "date_local": "2011-04-29T09:35:47.000Z",
+   "title": "Introduction to TG WinAutoSvc v1",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2012",
+     "slug": "ms/opsmgr2012"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Management Pack",
+    "MP Development"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "load-balanced-scom2012-sdk-services-for-network-illiterates-opsmgr-nlb.md",
+   "slug": "load-balanced-scom2012-sdk-services-for-network-illiterates-opsmgr-nlb",
+   "url": "/ms/opsmgr2012/load-balanced-scom2012-sdk-services-for-network-illiterates-opsmgr-nlb/",
+   "dir": "ms/opsmgr2012/load-balanced-scom2012-sdk-services-for-network-illiterates-opsmgr-nlb/",
+   "date_local": "2012-05-18T11:16:51.000Z",
+   "title": "Load-balanced SCOM2012 SDK Services for Network Illiterates [#opsmgr, #nlb]",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2012",
+     "slug": "ms/opsmgr2012"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "How-To",
+    "Highly-Available",
+    "NLB",
+    "Tutorial"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "opsmgr-2012-agent-failover-a-faster-script-with-wildcards-opsmgr-powershell.md",
+   "slug": "opsmgr-2012-agent-failover-a-faster-script-with-wildcards-opsmgr-powershell",
+   "url": "/ms/opsmgr2012/opsmgr-2012-agent-failover-a-faster-script-with-wildcards-opsmgr-powershell/",
+   "dir": "ms/opsmgr2012/opsmgr-2012-agent-failover-a-faster-script-with-wildcards-opsmgr-powershell/",
+   "date_local": "2012-06-28T12:28:36.000Z",
+   "title": "OpsMgr 2012 Agent Failover – A Faster Script with Wildcards [#opsmgr, #powershell]",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2012",
+     "slug": "ms/opsmgr2012"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "PoSH",
+    "Script",
+    "Fail-over"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "opsmgr-2012-agent-failover-simple-script-with-wildcards-opsmgr-powershell.md",
+   "slug": "opsmgr-2012-agent-failover-simple-script-with-wildcards-opsmgr-powershell",
+   "url": "/ms/opsmgr2012/opsmgr-2012-agent-failover-simple-script-with-wildcards-opsmgr-powershell/",
+   "dir": "ms/opsmgr2012/opsmgr-2012-agent-failover-simple-script-with-wildcards-opsmgr-powershell/",
+   "date_local": "2012-06-21T08:58:13.000Z",
+   "title": "OpsMgr 2012 Agent Failover - Simple Script with Wildcards [#opsmgr, #powershell]",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2012",
+     "slug": "ms/opsmgr2012"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "PoSH",
+    "Fail-over"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "opsmgr-2012-agent-gateway-failover-the-basics.md",
+   "slug": "opsmgr-2012-agent-gateway-failover-the-basics",
+   "url": "/ms/opsmgr2012/opsmgr-2012-agent-gateway-failover-the-basics/",
+   "dir": "ms/opsmgr2012/opsmgr-2012-agent-gateway-failover-the-basics/",
+   "date_local": "2012-05-30T12:12:37.000Z",
+   "title": "OpsMgr 2012 Agent & Gateway Failover - The Basics [#opsmgr, #powershell]",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2012",
+     "slug": "ms/opsmgr2012"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "PoSH",
+    "How-To",
+    "Fail-over",
+    "Scripts"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "opsmgr-2012-r2-ur4-field-notes.md",
+   "slug": "opsmgr-2012-r2-ur4-field-notes",
+   "url": "/ms/opsmgr2012/opsmgr-2012-r2-ur4-field-notes/",
+   "dir": "ms/opsmgr2012/opsmgr-2012-r2-ur4-field-notes/",
+   "date_local": "2014-10-30T10:41:47.000Z",
+   "title": "OpsMgr 2012 R2 UR4 - Field Notes [#opsmgr]",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2012",
+     "slug": "ms/opsmgr2012"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Field Notes",
+    "Update Rollup"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "opsmgr2012r2ur3-field-notes.md",
+   "slug": "opsmgr2012r2ur3-field-notes",
+   "url": "/ms/opsmgr2012/opsmgr2012r2ur3-field-notes/",
+   "dir": "ms/opsmgr2012/opsmgr2012r2ur3-field-notes/",
+   "date_local": "2014-09-02T09:30:18.000Z",
+   "title": "OpsMgr 2012 R2 UR3 - Field Notes [#opsmgr]",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2012",
+     "slug": "ms/opsmgr2012"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Field Notes",
+    "Update Rollup"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "PoSH-Grid-Dashboard-for-RDSH.md",
+   "slug": "PoSH-Grid-Dashboard-for-RDSH",
+   "url": "/ms/opsmgr2012/PoSH-Grid-Dashboard-for-RDSH/",
+   "dir": "ms/opsmgr2012/PoSH-Grid-Dashboard-for-RDSH/",
+   "date_local": "2016-06-13T22:01:27.000Z",
+   "title": "PoSH Grid Dashboard for RDSH [#opsmgr]",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2012",
+     "slug": "ms/opsmgr2012"
+    }
+   ],
+   "tags": [
+    "Powershell",
+    "OpsMgr 2012 R2",
+    "HowTo"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "20161013-Set-SCOMMaintenanceModeDeluxe.md",
+   "slug": "Set-SCOMMaintenanceModeDeluxe",
+   "url": "/ms/opsmgr2012/Set-SCOMMaintenanceModeDeluxe/",
+   "dir": "ms/opsmgr2012/Set-SCOMMaintenanceModeDeluxe/",
+   "date_local": "2016-10-12T22:21:03.000Z",
+   "title": "Set-SCOMMaintenanceMode Deluxe ed. [#opsmgr #powershell]",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2012",
+     "slug": "ms/opsmgr2012"
+    }
+   ],
+   "tags": [
+    "Powershell",
+    "OpsMgr 2012 R2",
+    "Gist"
+   ],
+   "fm_keys": [
+    "title",
+    "s",
+    "date",
+    "tags",
+    "categories"
+   ],
+   "notes": [
+    "front-matter `s:` key (typo for slug); ignored by Hexo"
+   ]
+  },
+  {
+   "file": "squaredup-installation.md",
+   "slug": "squaredup-installation",
+   "url": "/ms/opsmgr2012/squaredup-installation/",
+   "dir": "ms/opsmgr2012/squaredup-installation/",
+   "date_local": "2014-09-09T14:38:36.000Z",
+   "title": "SquaredUp Installation - Manual? Pfffft! [#opsmgr #squaredup]",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2012",
+     "slug": "ms/opsmgr2012"
+    }
+   ],
+   "tags": [
+    "OpsMgr",
+    "Field Notes",
+    "SquaredUp"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "20180827-om1801-upgrade-gotchas.md",
+   "slug": "om1801-upgrade-gotchas",
+   "url": "/ms/opsmgr2016/om1801-upgrade-gotchas/",
+   "dir": "ms/opsmgr2016/om1801-upgrade-gotchas/",
+   "date_local": "2018-08-27T13:42:17.000Z",
+   "title": "#OpsMgr 1801 Upgrade - The Fail Anthology",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "OpsMgr 2016",
+     "slug": "ms/opsmgr2016"
+    }
+   ],
+   "tags": [
+    "OpsMgr 1801",
+    "OpsMgr 2016",
+    "Upgrade",
+    "Issues",
+    "Rant"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "s",
+    "categories",
+    "date"
+   ],
+   "notes": [
+    "front-matter `s:` key (typo for slug); ignored by Hexo"
+   ]
+  },
+  {
+   "file": "installing-sql-reporting-services-2005-on-windows-2008-x64.md",
+   "slug": "installing-sql-reporting-services-2005-on-windows-2008-x64",
+   "url": "/ms/sql/installing-sql-reporting-services-2005-on-windows-2008-x64/",
+   "dir": "ms/sql/installing-sql-reporting-services-2005-on-windows-2008-x64/",
+   "date_local": "2009-11-02T13:33:27.000Z",
+   "title": "Installing SQL Reporting Services 2005 on Windows 2008 x64",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "SQL Server",
+     "slug": "ms/sql"
+    }
+   ],
+   "tags": [
+    "How-To",
+    "IIS7",
+    "Reporting Services",
+    "x64",
+    "OpsMgr 2007"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "regain-sysadmin-access-to-sql2005-or-sql2008.md",
+   "slug": "regain-sysadmin-access-to-sql2005-or-sql2008",
+   "url": "/ms/sql/regain-sysadmin-access-to-sql2005-or-sql2008/",
+   "dir": "ms/sql/regain-sysadmin-access-to-sql2005-or-sql2008/",
+   "date_local": "2009-11-19T13:08:10.000Z",
+   "title": "(re)Gain sysadmin access to SQL2005 or SQL2008",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "SQL Server",
+     "slug": "ms/sql"
+    }
+   ],
+   "tags": [
+    "How-To",
+    "SQL Server",
+    "SQL Server 2005",
+    "SQL Server 2008"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "whynotusesqlexpress-itsforfree.md",
+   "slug": "whynotusesqlexpress-itsforfree",
+   "url": "/ms/sql/whynotusesqlexpress-itsforfree/",
+   "dir": "ms/sql/whynotusesqlexpress-itsforfree/",
+   "date_local": "2009-08-21T08:38:55.000Z",
+   "title": "Why not use SQL Express? It’s for free!",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "SQL Server",
+     "slug": "ms/sql"
+    }
+   ],
+   "tags": [
+    "Checklist",
+    "SQL Express 2005",
+    "SQL Express 2008"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "cannot-delete-files-with-long-paths.md",
+   "slug": "cannot-delete-files-with-long-paths",
+   "url": "/ms/windows/cannot-delete-files-with-long-paths/",
+   "dir": "ms/windows/cannot-delete-files-with-long-paths/",
+   "date_local": "2009-10-21T07:39:17.000Z",
+   "title": "Cannot Delete Files with Long Paths?",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "Windows",
+     "slug": "ms/windows"
+    }
+   ],
+   "tags": [
+    "Windows",
+    "Errors",
+    "KB",
+    "Windows 2008",
+    "Windows Vista",
+    "Windows XP"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "silly-hibernation-doo-doo-on-winxp.md",
+   "slug": "silly-hibernation-doo-doo-on-winxp",
+   "url": "/ms/windows/winxp/silly-hibernation-doo-doo-on-winxp/",
+   "dir": "ms/windows/winxp/silly-hibernation-doo-doo-on-winxp/",
+   "date_local": "2006-12-03T11:55:52.000Z",
+   "title": "Silly Hibernation doo-doo on WinXP",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "Windows",
+     "slug": "ms/windows"
+    },
+    {
+     "name": "Windows XP",
+     "slug": "ms/windows/winxp"
+    }
+   ],
+   "tags": [
+    "KB",
+    "Drivers"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "intel-drivers-causes-old-school-freezes-on-windows-vista.md",
+   "slug": "intel-drivers-causes-old-school-freezes-on-windows-vista",
+   "url": "/ms/winvista/intel-drivers-causes-old-school-freezes-on-windows-vista/",
+   "dir": "ms/winvista/intel-drivers-causes-old-school-freezes-on-windows-vista/",
+   "date_local": "2007-12-01T11:31:55.000Z",
+   "title": "Intel Drivers causes old-school freezes on Windows Vista",
+   "categories": [
+    {
+     "name": "Microsoft",
+     "slug": "ms"
+    },
+    {
+     "name": "Windows Vista",
+     "slug": "ms/winvista"
+    }
+   ],
+   "tags": [
+    "Drivers"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "im-moving-finally.md",
+   "slug": "im-moving-finally",
+   "url": "/tb/im-moving-finally/",
+   "dir": "tb/im-moving-finally/",
+   "date_local": "2011-02-01T11:10:52.000Z",
+   "title": "I'm moving (finally)",
+   "categories": [
+    {
+     "name": "Technobabble",
+     "slug": "tb"
+    }
+   ],
+   "tags": [],
+   "fm_keys": [
+    "title",
+    "id",
+    "categories",
+    "date",
+    "tags"
+   ],
+   "notes": []
+  },
+  {
+   "file": "in-transit-again.md",
+   "slug": "in-transit-again",
+   "url": "/tb/in-transit-again/",
+   "dir": "tb/in-transit-again/",
+   "date_local": "2016-06-01T19:03:35.000Z",
+   "title": "In transit, again",
+   "categories": [
+    {
+     "name": "Technobabble",
+     "slug": "tb"
+    }
+   ],
+   "tags": [
+    "Teknoglot",
+    "Hexo",
+    "Wordpress"
+   ],
+   "fm_keys": [
+    "title",
+    "date",
+    "tags",
+    "categories"
+   ],
+   "notes": []
+  },
+  {
+   "file": "lets-split.md",
+   "slug": "lets-split",
+   "url": "/tb/lets-split/",
+   "dir": "tb/lets-split/",
+   "date_local": "2009-04-16T01:27:06.000Z",
+   "title": "Let's split!",
+   "categories": [
+    {
+     "name": "Technobabble",
+     "slug": "tb"
+    }
+   ],
+   "tags": [],
+   "fm_keys": [
+    "title",
+    "id",
+    "categories",
+    "date",
+    "tags"
+   ],
+   "notes": []
+  },
+  {
+   "file": "menu-problems.md",
+   "slug": "menu-problems",
+   "url": "/tb/menu-problems/",
+   "dir": "tb/menu-problems/",
+   "date_local": "2012-06-21T06:01:50.000Z",
+   "title": "Menu Problems!",
+   "categories": [
+    {
+     "name": "Technobabble",
+     "slug": "tb"
+    }
+   ],
+   "tags": [
+    "Teknoglot"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "move-complete-welcome-to-teknoglot-se.md",
+   "slug": "move-complete-welcome-to-teknoglot-se",
+   "url": "/tb/move-complete-welcome-to-teknoglot-se/",
+   "dir": "tb/move-complete-welcome-to-teknoglot-se/",
+   "date_local": "2011-02-04T13:07:41.000Z",
+   "title": "Move complete, welcome to teknoglot.se!",
+   "categories": [
+    {
+     "name": "Technobabble",
+     "slug": "tb"
+    }
+   ],
+   "tags": [],
+   "fm_keys": [
+    "title",
+    "id",
+    "categories",
+    "date",
+    "tags"
+   ],
+   "notes": []
+  },
+  {
+   "file": "quest-software-acquires-exc-and-vizioncore.md",
+   "slug": "quest-software-acquires-exc-and-vizioncore",
+   "url": "/tb/quest-software-acquires-exc-and-vizioncore/",
+   "dir": "tb/quest-software-acquires-exc-and-vizioncore/",
+   "date_local": "2008-01-30T11:09:18.000Z",
+   "title": "Quest Software acquires eXc and VizionCore",
+   "categories": [
+    {
+     "name": "Technobabble",
+     "slug": "tb"
+    }
+   ],
+   "tags": [
+    "OpsMgr"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "rant-the-concept-of-booth-babes.md",
+   "slug": "rant-the-concept-of-booth-babes",
+   "url": "/tb/rant-the-concept-of-booth-babes/",
+   "dir": "tb/rant-the-concept-of-booth-babes/",
+   "date_local": "2012-05-08T16:18:05.000Z",
+   "title": "Rant - The Concept of Booth-Babes",
+   "categories": [
+    {
+     "name": "Technobabble",
+     "slug": "tb"
+    }
+   ],
+   "tags": [
+    "Rant",
+    "Conference"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  },
+  {
+   "file": "server-problems-fixed-hopefully.md",
+   "slug": "server-problems-fixed-hopefully",
+   "url": "/tb/server-problems-fixed-hopefully/",
+   "dir": "tb/server-problems-fixed-hopefully/",
+   "date_local": "2011-04-27T19:50:12.000Z",
+   "title": "Server problems fixed! (hopefully)",
+   "categories": [
+    {
+     "name": "Technobabble",
+     "slug": "tb"
+    }
+   ],
+   "tags": [],
+   "fm_keys": [
+    "title",
+    "id",
+    "categories",
+    "date",
+    "tags"
+   ],
+   "notes": []
+  },
+  {
+   "file": "sluggish-performance-on-teknoglot.md",
+   "slug": "sluggish-performance-on-teknoglot",
+   "url": "/tb/sluggish-performance-on-teknoglot/",
+   "dir": "tb/sluggish-performance-on-teknoglot/",
+   "date_local": "2011-04-19T20:14:02.000Z",
+   "title": "Sluggish performance on teknoglot",
+   "categories": [
+    {
+     "name": "Technobabble",
+     "slug": "tb"
+    }
+   ],
+   "tags": [
+    "Teknoglot"
+   ],
+   "fm_keys": [
+    "title",
+    "tags",
+    "id",
+    "categories",
+    "date"
+   ],
+   "notes": []
+  }
+ ],
+ "categories": [
+  {
+   "url": "/topics/code/",
+   "name": "Code"
+  },
+  {
+   "url": "/topics/code/posh/",
+   "name": "PoSH"
+  },
+  {
+   "url": "/topics/code/vbs/",
+   "name": "VBS"
+  },
+  {
+   "url": "/topics/Events/",
+   "name": "Events"
+  },
+  {
+   "url": "/topics/Events/MSIgnite-2017/",
+   "name": "MSIgnite 2017"
+  },
+  {
+   "url": "/topics/Fieldnotes/",
+   "name": "Fieldnotes"
+  },
+  {
+   "url": "/topics/Fieldnotes/OpsMgr/",
+   "name": "OpsMgr"
+  },
+  {
+   "url": "/topics/linux/",
+   "name": "Linux"
+  },
+  {
+   "url": "/topics/linux/rhes/",
+   "name": "RedHat ES"
+  },
+  {
+   "url": "/topics/linux/sles/",
+   "name": "SLES"
+  },
+  {
+   "url": "/topics/linux/ubuntu/",
+   "name": "Ubuntu"
+  },
+  {
+   "url": "/topics/mikrotik/",
+   "name": "Mikrotik"
+  },
+  {
+   "url": "/topics/ms/",
+   "name": "Microsoft"
+  },
+  {
+   "url": "/topics/ms/opsmgr1801/",
+   "name": "OpsMgr 1801"
+  },
+  {
+   "url": "/topics/ms/opsmgr1807/",
+   "name": "OpsMgr 1807"
+  },
+  {
+   "url": "/topics/ms/opsmgr2007/",
+   "name": "OpsMgr 2007"
+  },
+  {
+   "url": "/topics/ms/opsmgr2012/",
+   "name": "OpsMgr 2012"
+  },
+  {
+   "url": "/topics/ms/opsmgr2016/",
+   "name": "OpsMgr 2016"
+  },
+  {
+   "url": "/topics/ms/sql/",
+   "name": "SQL Server"
+  },
+  {
+   "url": "/topics/ms/windows/",
+   "name": "Windows"
+  },
+  {
+   "url": "/topics/ms/windows/winxp/",
+   "name": "Windows XP"
+  },
+  {
+   "url": "/topics/ms/winvista/",
+   "name": "Windows Vista"
+  },
+  {
+   "url": "/topics/tb/",
+   "name": "Technobabble"
+  }
+ ],
+ "tags": [
+  {
+   "url": "/tag/ACS/",
+   "name": "ACS"
+  },
+  {
+   "url": "/tag/Advanced-Threat-Protection/",
+   "name": "Advanced Threat Protection"
+  },
+  {
+   "url": "/tag/Checklist/",
+   "name": "Checklist"
+  },
+  {
+   "url": "/tag/Conference/",
+   "name": "Conference"
+  },
+  {
+   "url": "/tag/DNS/",
+   "name": "DNS"
+  },
+  {
+   "url": "/tag/Drivers/",
+   "name": "Drivers"
+  },
+  {
+   "url": "/tag/Errors/",
+   "name": "Errors"
+  },
+  {
+   "url": "/tag/Exchange/",
+   "name": "Exchange"
+  },
+  {
+   "url": "/tag/Fail-over/",
+   "name": "Fail-over"
+  },
+  {
+   "url": "/tag/Field-Notes/",
+   "name": "Field Notes"
+  },
+  {
+   "url": "/tag/Fieldnotes/",
+   "name": "Fieldnotes"
+  },
+  {
+   "url": "/tag/Fixed/",
+   "name": "Fixed"
+  },
+  {
+   "url": "/tag/Gist/",
+   "name": "Gist"
+  },
+  {
+   "url": "/tag/GSM/",
+   "name": "GSM"
+  },
+  {
+   "url": "/tag/Hexo/",
+   "name": "Hexo"
+  },
+  {
+   "url": "/tag/Highly-Available/",
+   "name": "Highly-Available"
+  },
+  {
+   "url": "/tag/How-To/",
+   "name": "How-To"
+  },
+  {
+   "url": "/tag/HowTo/",
+   "name": "HowTo"
+  },
+  {
+   "url": "/tag/Hyper-Converged/",
+   "name": "Hyper-Converged"
+  },
+  {
+   "url": "/tag/Hyper-V/",
+   "name": "Hyper-V"
+  },
+  {
+   "url": "/tag/IIS7/",
+   "name": "IIS7"
+  },
+  {
+   "url": "/tag/Invoke-RestMethod/",
+   "name": "Invoke-RestMethod"
+  },
+  {
+   "url": "/tag/Issues/",
+   "name": "Issues"
+  },
+  {
+   "url": "/tag/KB/",
+   "name": "KB"
+  },
+  {
+   "url": "/tag/Linux/",
+   "name": "Linux"
+  },
+  {
+   "url": "/tag/Machine-Learning/",
+   "name": "Machine Learning"
+  },
+  {
+   "url": "/tag/Macro/",
+   "name": "Macro"
+  },
+  {
+   "url": "/tag/Management-Pack/",
+   "name": "Management Pack"
+  },
+  {
+   "url": "/tag/Microsoft-265/",
+   "name": "Microsoft 265"
+  },
+  {
+   "url": "/tag/Microsoft-Teams/",
+   "name": "Microsoft Teams"
+  },
+  {
+   "url": "/tag/Mikrotik/",
+   "name": "Mikrotik"
+  },
+  {
+   "url": "/tag/MP-Development/",
+   "name": "MP Development"
+  },
+  {
+   "url": "/tag/MSIgnite/",
+   "name": "MSIgnite"
+  },
+  {
+   "url": "/tag/MSMQ/",
+   "name": "MSMQ"
+  },
+  {
+   "url": "/tag/NLB/",
+   "name": "NLB"
+  },
+  {
+   "url": "/tag/NVidia/",
+   "name": "NVidia"
+  },
+  {
+   "url": "/tag/Office-365/",
+   "name": "Office 365"
+  },
+  {
+   "url": "/tag/Office/",
+   "name": "Office"
+  },
+  {
+   "url": "/tag/OneDrive/",
+   "name": "OneDrive"
+  },
+  {
+   "url": "/tag/OpenVPN/",
+   "name": "OpenVPN"
+  },
+  {
+   "url": "/tag/OpsMgr-1801/",
+   "name": "OpsMgr 1801"
+  },
+  {
+   "url": "/tag/OpsMgr-2007/",
+   "name": "OpsMgr 2007"
+  },
+  {
+   "url": "/tag/OpsMgr-2012-R2/",
+   "name": "OpsMgr 2012 R2"
+  },
+  {
+   "url": "/tag/OpsMgr-2016/",
+   "name": "OpsMgr 2016"
+  },
+  {
+   "url": "/tag/OpsMgr/",
+   "name": "OpsMgr"
+  },
+  {
+   "url": "/tag/PoSH/",
+   "name": "PoSH"
+  },
+  {
+   "url": "/tag/Powershell/",
+   "name": "Powershell"
+  },
+  {
+   "url": "/tag/Presentation-Notes/",
+   "name": "Presentation Notes"
+  },
+  {
+   "url": "/tag/Quick-fix/",
+   "name": "Quick-fix"
+  },
+  {
+   "url": "/tag/Quick-hack/",
+   "name": "Quick-hack"
+  },
+  {
+   "url": "/tag/Quick-Reference/",
+   "name": "Quick Reference"
+  },
+  {
+   "url": "/tag/Rant/",
+   "name": "Rant"
+  },
+  {
+   "url": "/tag/RedHat/",
+   "name": "RedHat"
+  },
+  {
+   "url": "/tag/Reporting-Services/",
+   "name": "Reporting Services"
+  },
+  {
+   "url": "/tag/RHES5/",
+   "name": "RHES5"
+  },
+  {
+   "url": "/tag/RouterOS/",
+   "name": "RouterOS"
+  },
+  {
+   "url": "/tag/Script/",
+   "name": "Script"
+  },
+  {
+   "url": "/tag/Scripts/",
+   "name": "Scripts"
+  },
+  {
+   "url": "/tag/SharePoint/",
+   "name": "SharePoint"
+  },
+  {
+   "url": "/tag/Sillyness/",
+   "name": "Sillyness"
+  },
+  {
+   "url": "/tag/SMS/",
+   "name": "SMS"
+  },
+  {
+   "url": "/tag/SQL-2017/",
+   "name": "SQL 2017"
+  },
+  {
+   "url": "/tag/SQL-Express-2005/",
+   "name": "SQL Express 2005"
+  },
+  {
+   "url": "/tag/SQL-Express-2008/",
+   "name": "SQL Express 2008"
+  },
+  {
+   "url": "/tag/SQL-on-Linux/",
+   "name": "SQL on Linux"
+  },
+  {
+   "url": "/tag/SQL-Server-2005/",
+   "name": "SQL Server 2005"
+  },
+  {
+   "url": "/tag/SQL-Server-2008/",
+   "name": "SQL Server 2008"
+  },
+  {
+   "url": "/tag/SQL-Server/",
+   "name": "SQL Server"
+  },
+  {
+   "url": "/tag/SquaredUp/",
+   "name": "SquaredUp"
+  },
+  {
+   "url": "/tag/SUSE-11/",
+   "name": "SUSE 11"
+  },
+  {
+   "url": "/tag/Teach-a-Man-to-Fish/",
+   "name": "Teach a Man to Fish"
+  },
+  {
+   "url": "/tag/TechNet/",
+   "name": "TechNet"
+  },
+  {
+   "url": "/tag/Technical-Keynote/",
+   "name": "Technical Keynote"
+  },
+  {
+   "url": "/tag/Teknoglot/",
+   "name": "Teknoglot"
+  },
+  {
+   "url": "/tag/TroubleShooting/",
+   "name": "TroubleShooting"
+  },
+  {
+   "url": "/tag/Tutorial/",
+   "name": "Tutorial"
+  },
+  {
+   "url": "/tag/Unix/",
+   "name": "Unix"
+  },
+  {
+   "url": "/tag/Update-Rollup/",
+   "name": "Update Rollup"
+  },
+  {
+   "url": "/tag/Upgrade/",
+   "name": "Upgrade"
+  },
+  {
+   "url": "/tag/VBScript/",
+   "name": "VBScript"
+  },
+  {
+   "url": "/tag/Video/",
+   "name": "Video"
+  },
+  {
+   "url": "/tag/Virtual-Appliance/",
+   "name": "Virtual Appliance"
+  },
+  {
+   "url": "/tag/Windows-2008/",
+   "name": "Windows 2008"
+  },
+  {
+   "url": "/tag/Windows-Installer/",
+   "name": "Windows Installer"
+  },
+  {
+   "url": "/tag/Windows-Vista/",
+   "name": "Windows Vista"
+  },
+  {
+   "url": "/tag/Windows-XP/",
+   "name": "Windows XP"
+  },
+  {
+   "url": "/tag/Windows/",
+   "name": "Windows"
+  },
+  {
+   "url": "/tag/WMI/",
+   "name": "WMI"
+  },
+  {
+   "url": "/tag/Word/",
+   "name": "Word"
+  },
+  {
+   "url": "/tag/Wordpress/",
+   "name": "Wordpress"
+  },
+  {
+   "url": "/tag/WSSD/",
+   "name": "WSSD"
+  },
+  {
+   "url": "/tag/X-Plat/",
+   "name": "X-Plat"
+  },
+  {
+   "url": "/tag/x64/",
+   "name": "x64"
+  },
+  {
+   "url": "/tag/Yammer/",
+   "name": "Yammer"
+  }
+ ]
+}

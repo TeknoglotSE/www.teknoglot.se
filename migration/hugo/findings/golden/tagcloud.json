@@ -1,0 +1,378 @@
+[
+ {
+  "tag": "ACS",
+  "size": 10.0
+ },
+ {
+  "tag": "Advanced-Threat-Protection",
+  "size": 10.0
+ },
+ {
+  "tag": "Checklist",
+  "size": 10.0
+ },
+ {
+  "tag": "Conference",
+  "size": 10.0
+ },
+ {
+  "tag": "DNS",
+  "size": 10.0
+ },
+ {
+  "tag": "Drivers",
+  "size": 12.5
+ },
+ {
+  "tag": "Errors",
+  "size": 15.0
+ },
+ {
+  "tag": "Exchange",
+  "size": 10.0
+ },
+ {
+  "tag": "Fail-over",
+  "size": 12.5
+ },
+ {
+  "tag": "Field-Notes",
+  "size": 12.5
+ },
+ {
+  "tag": "Fieldnotes",
+  "size": 10.0
+ },
+ {
+  "tag": "Fixed",
+  "size": 10.0
+ },
+ {
+  "tag": "GSM",
+  "size": 10.0
+ },
+ {
+  "tag": "Gist",
+  "size": 10.0
+ },
+ {
+  "tag": "Hexo",
+  "size": 10.0
+ },
+ {
+  "tag": "Highly-Available",
+  "size": 10.0
+ },
+ {
+  "tag": "How-To",
+  "size": 17.5
+ },
+ {
+  "tag": "HowTo",
+  "size": 10.0
+ },
+ {
+  "tag": "Hyper-Converged",
+  "size": 10.0
+ },
+ {
+  "tag": "Hyper-V",
+  "size": 10.0
+ },
+ {
+  "tag": "IIS7",
+  "size": 10.0
+ },
+ {
+  "tag": "Invoke-RestMethod",
+  "size": 10.0
+ },
+ {
+  "tag": "Issues",
+  "size": 10.0
+ },
+ {
+  "tag": "KB",
+  "size": 11.25
+ },
+ {
+  "tag": "Linux",
+  "size": 13.75
+ },
+ {
+  "tag": "MP-Development",
+  "size": 12.5
+ },
+ {
+  "tag": "MSIgnite",
+  "size": 13.75
+ },
+ {
+  "tag": "MSMQ",
+  "size": 13.75
+ },
+ {
+  "tag": "Machine-Learning",
+  "size": 10.0
+ },
+ {
+  "tag": "Macro",
+  "size": 10.0
+ },
+ {
+  "tag": "Management-Pack",
+  "size": 18.75
+ },
+ {
+  "tag": "Microsoft-265",
+  "size": 10.0
+ },
+ {
+  "tag": "Microsoft-Teams",
+  "size": 10.0
+ },
+ {
+  "tag": "Mikrotik",
+  "size": 10.0
+ },
+ {
+  "tag": "NLB",
+  "size": 10.0
+ },
+ {
+  "tag": "NVidia",
+  "size": 10.0
+ },
+ {
+  "tag": "Office",
+  "size": 10.0
+ },
+ {
+  "tag": "Office-365",
+  "size": 10.0
+ },
+ {
+  "tag": "OneDrive",
+  "size": 10.0
+ },
+ {
+  "tag": "OpenVPN",
+  "size": 10.0
+ },
+ {
+  "tag": "OpsMgr",
+  "size": 20.0
+ },
+ {
+  "tag": "OpsMgr-1801",
+  "size": 10.0
+ },
+ {
+  "tag": "OpsMgr-2007",
+  "size": 10.0
+ },
+ {
+  "tag": "OpsMgr-2012-R2",
+  "size": 11.25
+ },
+ {
+  "tag": "OpsMgr-2016",
+  "size": 10.0
+ },
+ {
+  "tag": "PoSH",
+  "size": 16.25
+ },
+ {
+  "tag": "Powershell",
+  "size": 11.25
+ },
+ {
+  "tag": "Presentation-Notes",
+  "size": 13.75
+ },
+ {
+  "tag": "Quick-Reference",
+  "size": 10.0
+ },
+ {
+  "tag": "Quick-fix",
+  "size": 10.0
+ },
+ {
+  "tag": "Quick-hack",
+  "size": 10.0
+ },
+ {
+  "tag": "RHES5",
+  "size": 10.0
+ },
+ {
+  "tag": "Rant",
+  "size": 13.75
+ },
+ {
+  "tag": "RedHat",
+  "size": 10.0
+ },
+ {
+  "tag": "Reporting-Services",
+  "size": 10.0
+ },
+ {
+  "tag": "RouterOS",
+  "size": 10.0
+ },
+ {
+  "tag": "SMS",
+  "size": 10.0
+ },
+ {
+  "tag": "SQL-2017",
+  "size": 10.0
+ },
+ {
+  "tag": "SQL-Express-2005",
+  "size": 10.0
+ },
+ {
+  "tag": "SQL-Express-2008",
+  "size": 10.0
+ },
+ {
+  "tag": "SQL-Server",
+  "size": 11.25
+ },
+ {
+  "tag": "SQL-Server-2005",
+  "size": 10.0
+ },
+ {
+  "tag": "SQL-Server-2008",
+  "size": 10.0
+ },
+ {
+  "tag": "SQL-on-Linux",
+  "size": 10.0
+ },
+ {
+  "tag": "SUSE-11",
+  "size": 10.0
+ },
+ {
+  "tag": "Script",
+  "size": 16.25
+ },
+ {
+  "tag": "Scripts",
+  "size": 10.0
+ },
+ {
+  "tag": "SharePoint",
+  "size": 10.0
+ },
+ {
+  "tag": "Sillyness",
+  "size": 10.0
+ },
+ {
+  "tag": "SquaredUp",
+  "size": 10.0
+ },
+ {
+  "tag": "Teach-a-Man-to-Fish",
+  "size": 10.0
+ },
+ {
+  "tag": "TechNet",
+  "size": 10.0
+ },
+ {
+  "tag": "Technical-Keynote",
+  "size": 10.0
+ },
+ {
+  "tag": "Teknoglot",
+  "size": 12.5
+ },
+ {
+  "tag": "TroubleShooting",
+  "size": 11.25
+ },
+ {
+  "tag": "Tutorial",
+  "size": 10.0
+ },
+ {
+  "tag": "Unix",
+  "size": 10.0
+ },
+ {
+  "tag": "Update-Rollup",
+  "size": 11.25
+ },
+ {
+  "tag": "Upgrade",
+  "size": 10.0
+ },
+ {
+  "tag": "VBScript",
+  "size": 10.0
+ },
+ {
+  "tag": "Video",
+  "size": 10.0
+ },
+ {
+  "tag": "Virtual-Appliance",
+  "size": 10.0
+ },
+ {
+  "tag": "WMI",
+  "size": 10.0
+ },
+ {
+  "tag": "WSSD",
+  "size": 10.0
+ },
+ {
+  "tag": "Windows",
+  "size": 12.5
+ },
+ {
+  "tag": "Windows-2008",
+  "size": 10.0
+ },
+ {
+  "tag": "Windows-Installer",
+  "size": 10.0
+ },
+ {
+  "tag": "Windows-Vista",
+  "size": 10.0
+ },
+ {
+  "tag": "Windows-XP",
+  "size": 10.0
+ },
+ {
+  "tag": "Word",
+  "size": 10.0
+ },
+ {
+  "tag": "Wordpress",
+  "size": 10.0
+ },
+ {
+  "tag": "X-Plat",
+  "size": 11.25
+ },
+ {
+  "tag": "Yammer",
+  "size": 10.0
+ },
+ {
+  "tag": "x64",
+  "size": 11.25
+ }
+]
