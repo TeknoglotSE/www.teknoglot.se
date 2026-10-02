@@ -52,6 +52,38 @@ Hugo taxonomy can express. The listing pages resolve their links through the
 `content/topics/` and `content/tags/` leaves, so a new post's `cats` and `tags`
 values only take effect once a matching leaf exists.
 
+## Writing
+
+Each content kind has its own archetype, so `hugo new` fills in what can be
+derived from the path:
+
+```sh
+hugo new posts/my-post.md               # title, date, cats, url
+hugo new topics/ms/opsmgr2013/_index.md # cat, cat_parent, url from the path
+hugo new tags/Kubernetes/_index.md      # tag, tag_slug, url from the path
+hugo new archives/2026/_index.md        # year
+hugo new archives/2026/10/_index.md     # year and month
+```
+
+A post needs no `description` and no `excerpt`: both fall back to a summary
+Hugo generates from the body. Pin them only to control the wording.
+
+A new period needs archive leaves before its posts can appear in the archive.
+The same holds for a new category or tag, which needs a leaf under
+`content/topics/` or `content/tags/`.
+
+Two things to know:
+
+- **Future-dated posts are not built.** Hugo skips a page dated later than the
+  build, so a `date:` in the future makes the post silently disappear. Date a
+  post in the past when publishing it now.
+- **A tag needs a `cloud_order`.** It is the one number here that cannot be
+  derived. The cloud is ordered byte-wise by name, so `Gist` precedes `GSM`,
+  while Hugo's own sort collates and reverses those. The archetype parks a new
+  tag at 999; only the cloud's reading order depends on the value.
+
+The permalink guard reads the git index, so stage new files before checking it.
+
 ## Publishing
 
 Run `hugo --cleanDestinationDir` to regenerate `docs/`, then verify the

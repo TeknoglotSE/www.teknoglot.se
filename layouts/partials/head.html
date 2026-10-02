@@ -49,7 +49,10 @@
 {{- if $isPost -}}
 <meta name="keywords" content="{{ delimit (.Params.tags | default slice) "," }}">
 {{- end -}}
-{{- $desc := .Params.description | default site.Params.description -}}
+{{- /* .Description is the front-matter description when there is one, and a
+       summary of the page when there is not. Reading .Params.description here
+       sent an unpinned post back to the site tagline instead. */ -}}
+{{- $desc := .Description | default site.Params.description -}}
 <meta name="description" content="{{ $desc }}">
 {{- $ogTitle := cond $isSingle .Title site.Title -}}
 {{- $ogType := cond $isPost "article" "website" -}}

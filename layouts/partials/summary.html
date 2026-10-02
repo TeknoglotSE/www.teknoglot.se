@@ -3,8 +3,9 @@
 
   The excerpt lives in front matter rather than being derived, because it is
   much longer than a summary would be and carries a non-breaking space in at
-  least one post. The published site emitted it unescaped, so it is rendered with
-  safeHTML to match.
+  least one post. The published site emitted it unescaped, so it is rendered
+  with safeHTML to match. A post with no excerpt falls back to Hugo's own
+  summary, so new posts need not carry one.
 */ -}}
 <article class="article article-summary"><div class="article-summary-inner">
 <div class="article-meta">
@@ -12,5 +13,6 @@
 <p class="date"><time datetime="{{ .Date.UTC.Format "2006-01-02T15:04:05.000Z" }}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time></p>
 </div>
 <h1 class="article-title" itemprop="name"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-<p class="article-excerpt">{{ .Params.excerpt | safeHTML }}</p>
+{{- $excerpt := .Params.excerpt | default .Summary -}}
+<p class="article-excerpt">{{ $excerpt | safeHTML }}</p>
 </div></article>
