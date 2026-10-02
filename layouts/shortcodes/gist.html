@@ -1,0 +1,95 @@
+{{- /*
+  Embed a GitHub gist at build time.
+
+      {{< gist b3f044aa77894ed80d82f8849a48035b >}}
+      {{< gist b3f044aa77894ed80d82f8849a48035b "Set-SCOMMaintenanceModeDeluxe.ps1" >}}
+
+  With one argument the single file is embedded. With two, that named file is.
+  A multi-file gist with no filename embeds every file in name order, each under
+  a caption, since otherwise there is no telling them apart.
+
+  The gist is fetched from the GitHub API during the build and highlighted with
+  the site's own [markup.highlight] settings, so a gist comes out wrapped in the
+  same <div class="highlight"> as a fenced code block. Nothing runs in the
+  reader's browser: the usual gist.github.com/<id>.js embed injects a
+  stylesheet and document.write at runtime, which is the same third-party cost
+  the Disqus embed carried.
+
+  A gist that cannot be resolved fails the build rather than rendering an empty
+  box. That is deliberate. resources.GetRemote returns nil instead of an error
+  on a 404, so "no response" has to be checked for separately, and silence there
+  is what allowed one post to publish a literal {% gist %} macro for months.
+
+  Responses are cached on disk by Hugo under its own cache directory, keyed by
+  URL and options, so only the first build reaches the network.
+*/ -}}
+{{- /* %v, not %s: Hugo types an all-digit argument as an integer, and %s on an
+       int prints %!s(int=0). Gist ids are hex so this should never happen, but
+       a garbled id in an error message is worse than a clean one. */ -}}
+{{- $id := printf "%v" (.Get 0) -}}
+{{- $want := "" -}}
+{{- if gt (len .Params) 1 }}{{ $want = printf "%v" (.Get 1) }}{{ end -}}
+
+{{- $url := printf "https://api.github.com/gists/%s" $id -}}
+{{- $opts := dict "headers" (dict
+      "Accept" "application/vnd.github+json"
+      "User-Agent" "teknoglot.se-hugo-build") -}}
+
+{{- $data := dict -}}
+{{- $res := try (resources.GetRemote $url $opts) -}}
+{{- if $res.Err -}}
+  {{- errorf "gist %s: could not fetch %s: %s" $id $url $res.Err -}}
+{{- else if not $res.Value -}}
+  {{- errorf "gist %s: %s returned nothing. Deleted, private, or renamed?" $id $url -}}
+{{- else -}}
+  {{- $data = $res.Value.Content | transform.Unmarshal -}}
+{{- end -}}
+
+{{- /* GitHub's language names, where they differ from Chroma's. Chroma
+       resolves some 300 lexers case-insensitively, so anything absent here is
+       passed through lower-cased and either matches a lexer or falls back to
+       plain text. An unrecognised gist degrades; it never fails. "vba" is
+       mapped because Chroma has no lexer by that name, and without a mapping
+       the block loses its highlight wrapper and renders unstyled. */ -}}
+{{- $langs := dict
+      "c#" "csharp"
+      "c++" "cpp"
+      "shell" "bash"
+      "vim script" "viml"
+      "vba" "vb"
+      "visual basic for applications" "vb"
+      "text" "" -}}
+
+{{- $all := slice -}}
+{{- range $k, $_ := $data.files -}}{{- $all = $all | append $k -}}{{- end -}}
+{{- $all = sort $all -}}
+
+{{- $names := slice -}}
+{{- if $want -}}
+  {{- if in $all $want -}}
+    {{- $names = slice $want -}}
+  {{- else -}}
+    {{- errorf "gist %s has no file named %q. It has: %s" $id $want (delimit $all ", ") -}}
+  {{- end -}}
+{{- else -}}
+  {{- $names = $all -}}
+{{- end -}}
+
+{{- range $names -}}
+  {{- $f := index $data.files . -}}
+  {{- if not (isset $f "content") -}}
+    {{- errorf "gist %s: file %q has no content in the API response. It is past the 1MB limit and needs its own raw_url fetch." $id . -}}
+  {{- end -}}
+  {{- $lang := "" -}}
+  {{- with $f.language -}}
+    {{- $lang = index $langs (lower (trim . " ")) | default (lower (trim . " ")) -}}
+  {{- end -}}
+  {{- if gt (len $names) 1 }}
+<p class="gist-file-name">{{ . }}</p>
+  {{- end -}}
+  {{- /* The language is the second positional argument, not an options key. An
+         options "lang" is silently ignored and the block comes out as plain
+         text. Every other option is deliberately left unset so the sitewide
+         [markup.highlight] settings apply, exactly as to a fenced code block. */ -}}
+  {{- if $lang }}{{ transform.Highlight $f.content $lang }}{{ else }}{{ transform.Highlight $f.content }}{{ end -}}
+{{- end -}}

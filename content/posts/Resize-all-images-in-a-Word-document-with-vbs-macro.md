@@ -55,7 +55,8 @@ It is, currently, very specific for my templates but it's very easy to modify it
 Give it a little love, and we could add options for width as well, but I dont need that right now.
 
 And for those who don't want to travel all the way to Github, here's the script in it's current form.
-<script src="https://gist.github.com/stegenfeldt/5d81ab5c57a3d20397a6b04a75b882e0.js"></script>
+
+{{< gist 5d81ab5c57a3d20397a6b04a75b882e0 >}}
 
 
 

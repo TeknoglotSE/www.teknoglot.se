@@ -1,5 +1,8 @@
 public/
 
+# Hugo's resourceDir, holding generated caches for assets and images.
+resources/
+
 # Hugo's build lock, created and removed by every build.
 .hugo_build.lock
 

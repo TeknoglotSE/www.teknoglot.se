@@ -25,5 +25,5 @@ I've uploaded it as a public gist on github, so feel free to add adapt it to you
 
 # Here's the gist
 
-{% gist  b3f044aa77894ed80d82f8849a48035b Set-SCOMMaintenanceModeDeluxe.ps1 %}
+{{< gist b3f044aa77894ed80d82f8849a48035b "Set-SCOMMaintenanceModeDeluxe.ps1" >}}
 
