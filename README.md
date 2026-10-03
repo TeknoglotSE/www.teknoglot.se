@@ -84,6 +84,28 @@ Two things to know:
 
 The permalink guard reads the git index, so stage new files before checking it.
 
+## Style
+
+`STYLE.md` documents the voice, measured rather than guessed: American spelling,
+sentence-case headings, the 5-to-35 word spread in sentence length that is the
+voice rather than a defect, the recurring heading vocabulary per genre, and an
+explicit list of the things an agent must not "improve". Read it before drafting
+a post or editing an existing one.
+
+`tools/style.py` checks the mechanical subset before you commit:
+
+```sh
+python3 tools/style.py                    # changed posts, against HEAD
+python3 tools/style.py --against <rev>    # against an older revision
+python3 tools/style.py content/posts/x.md # one file
+```
+
+It reports and never rewrites, and it exits non-zero on findings. Every rule is
+phrased as a *change* against the previous committed version, so the existing
+corpus can never fail for being old, and a rewrite that quietly strips the
+author's contractions or first person shows up as a removal. The rules that are
+implemented, and the ones that are not, are listed at the end of `STYLE.md`.
+
 ## Publishing
 
 Run `hugo --cleanDestinationDir` to regenerate `docs/`, then verify the
